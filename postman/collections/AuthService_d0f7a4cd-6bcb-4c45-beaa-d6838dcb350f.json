@@ -1,0 +1,731 @@
+{
+    "info": {
+        "_postman_id": "33a890b2-a355-41d3-94be-7265e4665398",
+        "name": "AuthService",
+        "description": "\n",
+        "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+    },
+    "item": [
+        {
+            "name": "SignIn",
+            "id": "fa264ac5-4a75-4bc0-a84f-eedcf2891ca3",
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true,
+                "disabledSystemHeaders": {
+                    "content-type": true
+                }
+            },
+            "request": {
+                "method": "POST",
+                "header": [
+                    {
+                        "key": "Content-Type",
+                        "value": "text/xml; charset=utf-8"
+                    },
+                    {
+                        "key": "SOAPAction",
+                        "value": "http://AutodeskDM/Filestore/Auth/1/7/2020/AuthService/SignIn"
+                    }
+                ],
+                "body": {
+                    "mode": "raw",
+                    "raw": "<x:Envelope\n    xmlns:x=\"http://schemas.xmlsoap.org/soap/envelope/\"\n    xmlns:ns=\"http://AutodeskDM/Filestore/Auth/1/7/2020/\"\n    xmlns:ser=\"http://AutodeskDM/Services\">\n    <x:Header>\n        <ser:SecurityHeader>\n            <ser:Ticket>?</ser:Ticket>\n            <ser:UserId>0</ser:UserId>\n        </ser:SecurityHeader>\n    </x:Header>\n    <x:Body>\n        <ns:SignIn>\n            <ns:dataServer>{{Server}}</ns:dataServer>\n            <ns:userName>{{User}}</ns:userName>\n            <ns:userPassword></ns:userPassword>\n            <ns:knowledgeVault>{{Database}}</ns:knowledgeVault>\n        </ns:SignIn>\n    </x:Body>\n</x:Envelope>\n",
+                    "options": {
+                        "raw": {
+                            "language": "xml"
+                        }
+                    }
+                },
+                "url": {
+                    "raw": "{{AuthServiceSoapBaseUrl}}/AutodeskDM/Services/Filestore/v26/AuthService.svc",
+                    "host": [
+                        "{{AuthServiceSoapBaseUrl}}"
+                    ],
+                    "path": [
+                        "AutodeskDM",
+                        "Services",
+                        "Filestore",
+                        "v26",
+                        "AuthService.svc"
+                    ]
+                }
+            },
+            "response": [
+                {
+                    "id": "1ca1cb00-6b5f-4a2a-8c16-bfdf61a14a20",
+                    "name": "SignIn response",
+                    "originalRequest": {
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "text/xml; charset=utf-8"
+                            },
+                            {
+                                "key": "SOAPAction",
+                                "value": "http://AutodeskDM/Filestore/Auth/1/7/2020/AuthService/SignIn"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "<x:Envelope\n    xmlns:x=\"http://schemas.xmlsoap.org/soap/envelope/\"\n    xmlns:ns=\"http://AutodeskDM/Filestore/Auth/1/7/2020/\"\n    xmlns:ser=\"http://AutodeskDM/Services\">\n    <x:Header>\n        <ser:SecurityHeader>\n            <ser:Ticket>?</ser:Ticket>\n            <ser:UserId>0</ser:UserId>\n        </ser:SecurityHeader>\n    </x:Header>\n    <x:Body>\n        <ns:SignIn>\n            <ns:dataServer>{{Server}}</ns:dataServer>\n            <ns:userName>{{User}}</ns:userName>\n            <ns:userPassword></ns:userPassword>\n            <ns:knowledgeVault>{{Database}}</ns:knowledgeVault>\n        </ns:SignIn>\n    </x:Body>\n</x:Envelope>",
+                            "options": {
+                                "raw": {
+                                    "language": "xml"
+                                }
+                            }
+                        },
+                        "url": {
+                            "raw": "{{AuthServiceSoapBaseUrl}}/AutodeskDM/Services/Filestore/v26/AuthService.svc",
+                            "host": [
+                                "{{AuthServiceSoapBaseUrl}}"
+                            ],
+                            "path": [
+                                "AutodeskDM",
+                                "Services",
+                                "Filestore",
+                                "v26",
+                                "AuthService.svc"
+                            ]
+                        }
+                    },
+                    "status": "OK",
+                    "code": 200,
+                    "_postman_previewlanguage": "xml",
+                    "header": [
+                        {
+                            "key": "Cache-Control",
+                            "value": "private"
+                        },
+                        {
+                            "key": "Content-Type",
+                            "value": "text/xml; charset=utf-8"
+                        },
+                        {
+                            "key": "Server",
+                            "value": "Microsoft-IIS/10.0"
+                        },
+                        {
+                            "key": "X-AspNet-Version",
+                            "value": "4.0.30319"
+                        },
+                        {
+                            "key": "X-Powered-By",
+                            "value": "ASP.NET"
+                        },
+                        {
+                            "key": "Date",
+                            "value": "Mon, 06 Dec 2021 08:19:32 GMT"
+                        },
+                        {
+                            "key": "Content-Length",
+                            "value": "421"
+                        }
+                    ],
+                    "cookie": [],
+                    "responseTime": null,
+                    "body": "<s:Envelope xmlns:s=\"http://schemas.xmlsoap.org/soap/envelope/\">\n    <s:Header>\n        <SecurityHeader xmlns=\"http://AutodeskDM/Services\">\n            <Ticket>66dc8b10-8017-437e-8902-6a35aed7633b</Ticket>\n            <UserId>2</UserId>\n        </SecurityHeader>\n    </s:Header>\n    <s:Body xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\">\n        <SignInResponse xmlns=\"http://AutodeskDM/Filestore/Auth/1/7/2020/\"/>\n    </s:Body>\n</s:Envelope>"
+                }
+            ]
+        },
+        {
+            "name": "SignInGetLicense",
+            "id": "5e3bddb0-513c-4f36-84ed-29694403a516",
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "request": {
+                "method": "POST",
+                "header": [
+                    {
+                        "key": "Content-Type",
+                        "value": "text/xml; charset=utf-8"
+                    },
+                    {
+                        "key": "SOAPAction",
+                        "value": "http://AutodeskDM/Filestore/Auth/1/7/2020/AuthService/SignInGetLicense"
+                    }
+                ],
+                "body": {
+                    "mode": "raw",
+                    "raw": "<x:Envelope\n    xmlns:x=\"http://schemas.xmlsoap.org/soap/envelope/\"\n    xmlns:ns=\"http://AutodeskDM/Filestore/Auth/1/7/2020/\"\n    xmlns:ser=\"http://AutodeskDM/Services\">\n    <x:Header>\n        <ser:SecurityHeader>\n            <ser:Ticket>?</ser:Ticket>\n            <ser:UserId>0</ser:UserId>\n        </ser:SecurityHeader>\n    </x:Header>\n    <x:Body>\n        <ns:SignInGetLicense>\n            <ns:dataServer>{{Server}}</ns:dataServer>\n            <ns:userName>{{User}}</ns:userName>\n            <ns:userPassword>{{Password}}</ns:userPassword>\n            <ns:knowledgeVault>{{Database}}</ns:knowledgeVault>\n        </ns:SignInGetLicense>\n    </x:Body>\n</x:Envelope>",
+                    "options": {
+                        "raw": {
+                            "language": "xml"
+                        }
+                    }
+                },
+                "url": {
+                    "raw": "{{AuthServiceSoapBaseUrl}}/AutodeskDM/Services/Filestore/v26/AuthService.svc",
+                    "host": [
+                        "{{AuthServiceSoapBaseUrl}}"
+                    ],
+                    "path": [
+                        "AutodeskDM",
+                        "Services",
+                        "Filestore",
+                        "v26",
+                        "AuthService.svc"
+                    ]
+                }
+            },
+            "response": [
+                {
+                    "id": "8b05085d-bc6e-4e2f-8764-b553340615f8",
+                    "name": "SignInGetLicense response",
+                    "originalRequest": {
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "text/xml; charset=utf-8"
+                            },
+                            {
+                                "key": "SOAPAction",
+                                "value": "http://AutodeskDM/Filestore/Auth/1/7/2020/AuthService/SignInGetLicense"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "<x:Envelope\n    xmlns:x=\"http://schemas.xmlsoap.org/soap/envelope/\"\n    xmlns:ns=\"http://AutodeskDM/Filestore/Auth/1/7/2020/\"\n    xmlns:ser=\"http://AutodeskDM/Services\">\n    <x:Header>\n        <ser:SecurityHeader>\n            <ser:Ticket>?</ser:Ticket>\n            <ser:UserId>0</ser:UserId>\n        </ser:SecurityHeader>\n    </x:Header>\n    <x:Body>\n        <ns:SignInAltLicense>\n            <ns:dataServer>{{Server}}</ns:dataServer>\n            <ns:userName>{{User}}</ns:userName>\n            <ns:userPassword>{{Password}}</ns:userPassword>\n            <ns:knowledgeVault>{{Database}}</ns:knowledgeVault>\n            <ns:p>{{base64Binary}}</ns:p>\n        </ns:SignInAltLicense>\n    </x:Body>\n</x:Envelope>\n",
+                            "options": {
+                                "raw": {
+                                    "language": "xml"
+                                }
+                            }
+                        },
+                        "url": {
+                            "raw": "http://10.10.4.4/AutodeskDM/Services/Filestore/v26/AuthService.svc",
+                            "protocol": "http",
+                            "host": [
+                                "10",
+                                "10",
+                                "4",
+                                "4"
+                            ],
+                            "path": [
+                                "AutodeskDM",
+                                "Services",
+                                "Filestore",
+                                "v26",
+                                "AuthService.svc"
+                            ]
+                        }
+                    },
+                    "status": "OK",
+                    "code": 200,
+                    "_postman_previewlanguage": "xml",
+                    "header": [
+                        {
+                            "key": "Content-Type",
+                            "value": "text/xml; charset=utf-8"
+                        }
+                    ],
+                    "cookie": [],
+                    "responseTime": null,
+                    "body": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<soap:Envelope xmlns:soap=\"http://schemas.xmlsoap.org/soap/envelope/\">\n\t<soap:Body>\n\t\t<error>The element or type could not be found SignInGetLicenseResponse</error>\n\t</soap:Body>\n</soap:Envelope>\n"
+                },
+                {
+                    "id": "4b4e1aff-9938-4c55-ab44-0f3651a97c9c",
+                    "name": "SignInGetLicense",
+                    "originalRequest": {
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "text/xml; charset=utf-8"
+                            },
+                            {
+                                "key": "SOAPAction",
+                                "value": "http://AutodeskDM/Filestore/Auth/1/7/2020/AuthService/SignInGetLicense"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "<x:Envelope\n    xmlns:x=\"http://schemas.xmlsoap.org/soap/envelope/\"\n    xmlns:ns=\"http://AutodeskDM/Filestore/Auth/1/7/2020/\"\n    xmlns:ser=\"http://AutodeskDM/Services\">\n    <x:Header>\n        <ser:SecurityHeader>\n            <ser:Ticket>?</ser:Ticket>\n            <ser:UserId>0</ser:UserId>\n        </ser:SecurityHeader>\n    </x:Header>\n    <x:Body>\n        <ns:SignInGetLicense>\n            <ns:dataServer>{{Server}}</ns:dataServer>\n            <ns:userName>{{User}}</ns:userName>\n            <ns:userPassword>{{Password}}</ns:userPassword>\n            <ns:knowledgeVault>{{Database}}</ns:knowledgeVault>\n        </ns:SignInGetLicense>\n    </x:Body>\n</x:Envelope>",
+                            "options": {
+                                "raw": {
+                                    "language": "xml"
+                                }
+                            }
+                        },
+                        "url": {
+                            "raw": "{{AuthServiceSoapBaseUrl}}/AutodeskDM/Services/Filestore/v26/AuthService.svc",
+                            "host": [
+                                "{{AuthServiceSoapBaseUrl}}"
+                            ],
+                            "path": [
+                                "AutodeskDM",
+                                "Services",
+                                "Filestore",
+                                "v26",
+                                "AuthService.svc"
+                            ]
+                        }
+                    },
+                    "status": "Internal Server Error",
+                    "code": 500,
+                    "_postman_previewlanguage": "xml",
+                    "header": [
+                        {
+                            "key": "Cache-Control",
+                            "value": "private"
+                        },
+                        {
+                            "key": "Content-Type",
+                            "value": "text/xml; charset=utf-8"
+                        },
+                        {
+                            "key": "Server",
+                            "value": "Microsoft-IIS/10.0"
+                        },
+                        {
+                            "key": "X-AspNet-Version",
+                            "value": "4.0.30319"
+                        },
+                        {
+                            "key": "X-Powered-By",
+                            "value": "ASP.NET"
+                        },
+                        {
+                            "key": "Date",
+                            "value": "Mon, 06 Dec 2021 08:44:01 GMT"
+                        },
+                        {
+                            "key": "Content-Length",
+                            "value": "1686"
+                        }
+                    ],
+                    "cookie": [],
+                    "responseTime": null,
+                    "body": "<s:Envelope xmlns:s=\"http://schemas.xmlsoap.org/soap/envelope/\">\n    <s:Body>\n        <s:Fault>\n            <faultcode>s:Server</faultcode>\n            <faultstring xml:lang=\"en-US\">319</faultstring>\n            <detail>\n                <sl:sldetail xmlns:sl=\"http://streamline.autodesk.com/faultschema\">\n                    <sl:errorcode>319</sl:errorcode>\n                    <sl:mesg-id>637743770415490279</sl:mesg-id>\n                    <sl:param sl:pid=\"1\">Authorize failed with status ADLSDK_STATUS_LICENSE_CHECKOUT_ERROR</sl:param>\n                    <sl:stack>   at Connectivity.Filestore.Licensing.LicenseCheckOut(Int64 userId, String username, Byte[] p, LicenseMode mode)&#xD;\n   at Connectivity.Filestore.AuthenticationService.OnSessionCreated(SecurityHeader session, String username, LicenseMode licenseMode, Byte[] p)&#xD;\n   at Connectivity.Filestore.AuthenticationService.CreateSession(AuthCredentials creds, String dataServer, String knowledgeVault, LicenseMode licenseMode, Byte[] p, SecurityHeader oldSession)&#xD;\n   at Connectivity.Web.Filestore.v26.AuthService.SignInGetLicense(String dataServer, String userName, String userPassword, String knowledgeVault)&#xD;\n   at SyncInvokeSignInGetLicense(Object , Object[] , Object[] )&#xD;\n   at System.ServiceModel.Dispatcher.SyncMethodInvoker.Invoke(Object instance, Object[] inputs, Object[]&amp; outputs)&#xD;\n   at System.ServiceModel.Dispatcher.DispatchOperationRuntime.InvokeBegin(MessageRpc&amp; rpc)&#xD;\n   at System.ServiceModel.Dispatcher.ImmutableDispatchRuntime.ProcessMessage5(MessageRpc&amp; rpc)&#xD;\n   at System.ServiceModel.Dispatcher.ImmutableDispatchRuntime.ProcessMessage11(MessageRpc&amp; rpc)&#xD;\n   at System.ServiceModel.Dispatcher.MessageRpc.Process(Boolean isOperationContextSet)</sl:stack>\n                </sl:sldetail>\n            </detail>\n        </s:Fault>\n    </s:Body>\n</s:Envelope>"
+                }
+            ]
+        },
+        {
+            "name": "SignInAltLicense",
+            "id": "caadb96c-0355-492c-9581-6f3c4308e10d",
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "request": {
+                "method": "POST",
+                "header": [
+                    {
+                        "key": "Content-Type",
+                        "value": "text/xml; charset=utf-8"
+                    },
+                    {
+                        "key": "SOAPAction",
+                        "value": "http://AutodeskDM/Filestore/Auth/1/7/2020/AuthService/SignInAltLicense"
+                    }
+                ],
+                "body": {
+                    "mode": "raw",
+                    "raw": "<x:Envelope\n    xmlns:x=\"http://schemas.xmlsoap.org/soap/envelope/\"\n    xmlns:ns=\"http://AutodeskDM/Filestore/Auth/1/7/2020/\"\n    xmlns:ser=\"http://AutodeskDM/Services\">\n    <x:Header>\n        <ser:SecurityHeader>\n            <ser:Ticket>?</ser:Ticket>\n            <ser:UserId>0</ser:UserId>\n        </ser:SecurityHeader>\n    </x:Header>\n    <x:Body>\n        <ns:SignInAltLicense>\n            <ns:dataServer>{{Server}}</ns:dataServer>\n            <ns:userName>{{User}}</ns:userName>\n            <ns:userPassword>{{Password}}</ns:userPassword>\n            <ns:knowledgeVault>{{Database}}</ns:knowledgeVault>\n            <ns:p>{{base64Binary}}</ns:p>\n        </ns:SignInAltLicense>\n    </x:Body>\n</x:Envelope>",
+                    "options": {
+                        "raw": {
+                            "language": "xml"
+                        }
+                    }
+                },
+                "url": {
+                    "raw": "{{AuthServiceSoapBaseUrl}}/AutodeskDM/Services/Filestore/v26/AuthService.svc",
+                    "host": [
+                        "{{AuthServiceSoapBaseUrl}}"
+                    ],
+                    "path": [
+                        "AutodeskDM",
+                        "Services",
+                        "Filestore",
+                        "v26",
+                        "AuthService.svc"
+                    ]
+                }
+            },
+            "response": [
+                {
+                    "id": "b9fc9ace-78cd-40a6-9f3b-6381e1f4fba5",
+                    "name": "SignInAltLicense response",
+                    "originalRequest": {
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "text/xml; charset=utf-8"
+                            },
+                            {
+                                "key": "SOAPAction",
+                                "value": "http://AutodeskDM/Filestore/Auth/1/7/2020/AuthService/SignInAltLicense"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<soap:Envelope xmlns:soap=\"http://schemas.xmlsoap.org/soap/envelope/\">\n\t<soap:Body>\n\t\t<error>The element or type could not be found SignInAltLicense</error>\n\t</soap:Body>\n</soap:Envelope>\n",
+                            "options": {
+                                "raw": {
+                                    "language": "xml"
+                                }
+                            }
+                        },
+                        "url": {
+                            "raw": "http://10.10.4.4/AutodeskDM/Services/Filestore/v26/AuthService.svc",
+                            "protocol": "http",
+                            "host": [
+                                "10",
+                                "10",
+                                "4",
+                                "4"
+                            ],
+                            "path": [
+                                "AutodeskDM",
+                                "Services",
+                                "Filestore",
+                                "v26",
+                                "AuthService.svc"
+                            ]
+                        }
+                    },
+                    "status": "OK",
+                    "code": 200,
+                    "_postman_previewlanguage": "xml",
+                    "header": [
+                        {
+                            "key": "Content-Type",
+                            "value": "text/xml; charset=utf-8"
+                        }
+                    ],
+                    "cookie": [],
+                    "responseTime": null,
+                    "body": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<soap:Envelope xmlns:soap=\"http://schemas.xmlsoap.org/soap/envelope/\">\n\t<soap:Body>\n\t\t<error>The element or type could not be found SignInAltLicenseResponse</error>\n\t</soap:Body>\n</soap:Envelope>\n"
+                }
+            ]
+        },
+        {
+            "name": "SignInReadOnly",
+            "id": "f942bddb-e6b8-49d0-9916-3e3bc96271fe",
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "request": {
+                "method": "POST",
+                "header": [
+                    {
+                        "key": "Content-Type",
+                        "value": "text/xml; charset=utf-8"
+                    },
+                    {
+                        "key": "SOAPAction",
+                        "value": "http://AutodeskDM/Filestore/Auth/1/7/2020/AuthService/SignInReadOnly"
+                    }
+                ],
+                "body": {
+                    "mode": "raw",
+                    "raw": "<x:Envelope\n    xmlns:x=\"http://schemas.xmlsoap.org/soap/envelope/\"\n    xmlns:ns=\"http://AutodeskDM/Filestore/Auth/1/7/2020/\"\n    xmlns:ser=\"http://AutodeskDM/Services\">\n    <x:Header>\n        <ser:SecurityHeader>\n            <ser:Ticket>?</ser:Ticket>\n            <ser:UserId>0</ser:UserId>\n        </ser:SecurityHeader>\n    </x:Header>\n    <x:Body>\n        <ns:SignInReadOnly>\n            <ns:dataServer>{{Server}}</ns:dataServer>\n            <ns:userName>{{User}}</ns:userName>\n            <ns:userPassword>{{Password}}</ns:userPassword>\n            <ns:knowledgeVault>{{Database}}</ns:knowledgeVault>\n            <ns:p>{{base64Binary}}</ns:p>\n        </ns:SignInReadOnly>\n    </x:Body>\n</x:Envelope>",
+                    "options": {
+                        "raw": {
+                            "language": "xml"
+                        }
+                    }
+                },
+                "url": {
+                    "raw": "{{AuthServiceSoapBaseUrl}}/AutodeskDM/Services/Filestore/v26/AuthService.svc",
+                    "host": [
+                        "{{AuthServiceSoapBaseUrl}}"
+                    ],
+                    "path": [
+                        "AutodeskDM",
+                        "Services",
+                        "Filestore",
+                        "v26",
+                        "AuthService.svc"
+                    ]
+                }
+            },
+            "response": [
+                {
+                    "id": "9bd10319-8d86-48a8-8209-b6dc01145e0d",
+                    "name": "SignInReadOnly response",
+                    "originalRequest": {
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "text/xml; charset=utf-8"
+                            },
+                            {
+                                "key": "SOAPAction",
+                                "value": "http://AutodeskDM/Filestore/Auth/1/7/2020/AuthService/SignInReadOnly"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<soap:Envelope xmlns:soap=\"http://schemas.xmlsoap.org/soap/envelope/\">\n\t<soap:Body>\n\t\t<error>The element or type could not be found SignInReadOnly</error>\n\t</soap:Body>\n</soap:Envelope>\n",
+                            "options": {
+                                "raw": {
+                                    "language": "xml"
+                                }
+                            }
+                        },
+                        "url": {
+                            "raw": "http://10.10.4.4/AutodeskDM/Services/Filestore/v26/AuthService.svc",
+                            "protocol": "http",
+                            "host": [
+                                "10",
+                                "10",
+                                "4",
+                                "4"
+                            ],
+                            "path": [
+                                "AutodeskDM",
+                                "Services",
+                                "Filestore",
+                                "v26",
+                                "AuthService.svc"
+                            ]
+                        }
+                    },
+                    "status": "OK",
+                    "code": 200,
+                    "_postman_previewlanguage": "xml",
+                    "header": [
+                        {
+                            "key": "Content-Type",
+                            "value": "text/xml; charset=utf-8"
+                        }
+                    ],
+                    "cookie": [],
+                    "responseTime": null,
+                    "body": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<soap:Envelope xmlns:soap=\"http://schemas.xmlsoap.org/soap/envelope/\">\n\t<soap:Body>\n\t\t<error>The element or type could not be found SignInReadOnlyResponse</error>\n\t</soap:Body>\n</soap:Envelope>\n"
+                }
+            ]
+        },
+        {
+            "name": "SignIn2",
+            "id": "ef006b4e-ae04-4e80-9f45-5791587ad5b8",
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "request": {
+                "method": "POST",
+                "header": [
+                    {
+                        "key": "Content-Type",
+                        "value": "text/xml; charset=utf-8"
+                    },
+                    {
+                        "key": "SOAPAction",
+                        "value": "http://AutodeskDM/Filestore/Auth/1/7/2020/AuthService/SignIn2"
+                    }
+                ],
+                "body": {
+                    "mode": "raw",
+                    "raw": "<x:Envelope\n    xmlns:x=\"http://schemas.xmlsoap.org/soap/envelope/\"\n    xmlns:ns=\"http://AutodeskDM/Filestore/Auth/1/7/2020/\"\n    xmlns:ser=\"http://AutodeskDM/Services\">\n    <x:Header>\n        <ser:SecurityHeader>\n            <ser:Ticket>?</ser:Ticket>\n            <ser:UserId>0</ser:UserId>\n        </ser:SecurityHeader>\n    </x:Header>\n    <x:Body>\n        <ns:SignIn2>\n            <ns:dataServer>{{Server}}</ns:dataServer>\n            <ns:userName>{{User}}</ns:userName>\n            <ns:userPassword>{{Password}}</ns:userPassword>\n        </ns:SignIn2>\n    </x:Body>\n</x:Envelope>\n",
+                    "options": {
+                        "raw": {
+                            "language": "xml"
+                        }
+                    }
+                },
+                "url": {
+                    "raw": "{{AuthServiceSoapBaseUrl}}/AutodeskDM/Services/Filestore/v26/AuthService.svc",
+                    "host": [
+                        "{{AuthServiceSoapBaseUrl}}"
+                    ],
+                    "path": [
+                        "AutodeskDM",
+                        "Services",
+                        "Filestore",
+                        "v26",
+                        "AuthService.svc"
+                    ]
+                }
+            },
+            "response": [
+                {
+                    "id": "32752602-a989-4ab5-b353-9c5b38acc8a4",
+                    "name": "SignIn2 response",
+                    "originalRequest": {
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "text/xml; charset=utf-8"
+                            },
+                            {
+                                "key": "SOAPAction",
+                                "value": "http://AutodeskDM/Filestore/Auth/1/7/2020/AuthService/SignIn2"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<soap:Envelope xmlns:soap=\"http://schemas.xmlsoap.org/soap/envelope/\">\n\t<soap:Body>\n\t\t<error>The element or type could not be found SignIn2</error>\n\t</soap:Body>\n</soap:Envelope>\n",
+                            "options": {
+                                "raw": {
+                                    "language": "xml"
+                                }
+                            }
+                        },
+                        "url": {
+                            "raw": "http://10.10.4.4/AutodeskDM/Services/Filestore/v26/AuthService.svc",
+                            "protocol": "http",
+                            "host": [
+                                "10",
+                                "10",
+                                "4",
+                                "4"
+                            ],
+                            "path": [
+                                "AutodeskDM",
+                                "Services",
+                                "Filestore",
+                                "v26",
+                                "AuthService.svc"
+                            ]
+                        }
+                    },
+                    "status": "OK",
+                    "code": 200,
+                    "_postman_previewlanguage": "xml",
+                    "header": [
+                        {
+                            "key": "Content-Type",
+                            "value": "text/xml; charset=utf-8"
+                        }
+                    ],
+                    "cookie": [],
+                    "responseTime": null,
+                    "body": "<s:Envelope xmlns:s=\"http://schemas.xmlsoap.org/soap/envelope/\">\n    <s:Header>\n        <SecurityHeader xmlns=\"http://AutodeskDM/Services\">\n            <Ticket>eee9c2da-03c4-4a14-9e4b-fa43622d7c7c</Ticket>\n            <UserId>2</UserId>\n        </SecurityHeader>\n    </s:Header>\n    <s:Body xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\">\n        <SignIn2Response xmlns=\"http://AutodeskDM/Filestore/Auth/1/7/2020/\"/>\n    </s:Body>\n</s:Envelope>"
+                }
+            ]
+        },
+        {
+            "name": "SignOut",
+            "id": "c417ac7d-6694-4cbe-be7c-8c4910f1b2b8",
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "request": {
+                "method": "POST",
+                "header": [
+                    {
+                        "key": "Content-Type",
+                        "value": "text/xml; charset=utf-8"
+                    },
+                    {
+                        "key": "SOAPAction",
+                        "value": "http://AutodeskDM/Filestore/Auth/1/7/2020/AuthService/SignOut"
+                    }
+                ],
+                "body": {
+                    "mode": "raw",
+                    "raw": "<x:Envelope\n    xmlns:x=\"http://schemas.xmlsoap.org/soap/envelope/\"\n    xmlns:ns=\"http://AutodeskDM/Filestore/Auth/1/7/2020/\"\n    xmlns:ser=\"http://AutodeskDM/Services\">\n    <x:Header>\n        <ser:SecurityHeader>\n            <ser:Ticket>{{Ticket}}</ser:Ticket>\n            <ser:UserId>{{UserID}}</ser:UserId>\n        </ser:SecurityHeader>\n    </x:Header>\n    <x:Body>\n        <ns:SignOut></ns:SignOut>\n    </x:Body>\n</x:Envelope>",
+                    "options": {
+                        "raw": {
+                            "language": "xml"
+                        }
+                    }
+                },
+                "url": {
+                    "raw": "{{AuthServiceSoapBaseUrl}}/AutodeskDM/Services/Filestore/v26/AuthService.svc",
+                    "host": [
+                        "{{AuthServiceSoapBaseUrl}}"
+                    ],
+                    "path": [
+                        "AutodeskDM",
+                        "Services",
+                        "Filestore",
+                        "v26",
+                        "AuthService.svc"
+                    ]
+                }
+            },
+            "response": [
+                {
+                    "id": "6de3bbf1-5332-4e55-8ef3-14f022acac87",
+                    "name": "SignOut response",
+                    "originalRequest": {
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "text/xml; charset=utf-8"
+                            },
+                            {
+                                "key": "SOAPAction",
+                                "value": "http://AutodeskDM/Filestore/Auth/1/7/2020/AuthService/SignOut"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<soap:Envelope xmlns:soap=\"http://schemas.xmlsoap.org/soap/envelope/\">\n\t<soap:Body>\n\t\t<error>The element or type could not be found SignOut</error>\n\t</soap:Body>\n</soap:Envelope>\n",
+                            "options": {
+                                "raw": {
+                                    "language": "xml"
+                                }
+                            }
+                        },
+                        "url": {
+                            "raw": "http://10.10.4.4/AutodeskDM/Services/Filestore/v26/AuthService.svc",
+                            "protocol": "http",
+                            "host": [
+                                "10",
+                                "10",
+                                "4",
+                                "4"
+                            ],
+                            "path": [
+                                "AutodeskDM",
+                                "Services",
+                                "Filestore",
+                                "v26",
+                                "AuthService.svc"
+                            ]
+                        }
+                    },
+                    "status": "OK",
+                    "code": 200,
+                    "_postman_previewlanguage": "xml",
+                    "header": [
+                        {
+                            "key": "Content-Type",
+                            "value": "text/xml; charset=utf-8"
+                        }
+                    ],
+                    "cookie": [],
+                    "responseTime": null,
+                    "body": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<soap:Envelope xmlns:soap=\"http://schemas.xmlsoap.org/soap/envelope/\">\n\t<soap:Body>\n\t\t<error>The element or type could not be found SignOutResponse</error>\n\t</soap:Body>\n</soap:Envelope>\n"
+                }
+            ]
+        }
+    ],
+    "event": [
+        {
+            "listen": "prerequest",
+            "script": {
+                "id": "6c2bdae9-071e-4a1d-af8a-b4f2e8ad7ee9",
+                "type": "text/javascript",
+                "exec": [
+                    ""
+                ]
+            }
+        },
+        {
+            "listen": "test",
+            "script": {
+                "id": "35731454-8555-40c1-9d93-1ac1b49d0425",
+                "type": "text/javascript",
+                "exec": [
+                    ""
+                ]
+            }
+        }
+    ],
+    "variable": [
+        {
+            "id": "c21ad4bf-b8c3-4de2-8960-c17f8632f500",
+            "key": "AuthServiceSoapBaseUrl",
+            "value": "http://10.10.4.4"
+        }
+    ]
+}
