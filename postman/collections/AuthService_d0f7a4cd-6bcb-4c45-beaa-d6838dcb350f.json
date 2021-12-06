@@ -29,7 +29,7 @@
                 ],
                 "body": {
                     "mode": "raw",
-                    "raw": "<x:Envelope\n    xmlns:x=\"http://schemas.xmlsoap.org/soap/envelope/\"\n    xmlns:ns=\"http://AutodeskDM/Filestore/Auth/1/7/2020/\"\n    xmlns:ser=\"http://AutodeskDM/Services\">\n    <x:Header>\n        <ser:SecurityHeader>\n            <ser:Ticket>0</ser:Ticket>\n            <ser:UserId>0</ser:UserId>\n        </ser:SecurityHeader>\n    </x:Header>\n    <x:Body>\n        <ns:SignIn>\n            <ns:dataServer>{{Server}}</ns:dataServer>\n            <ns:userName>{{User}}</ns:userName>\n            <ns:userPassword>{{Password}}</ns:userPassword>\n            <ns:knowledgeVault>{{Database}}</ns:knowledgeVault>\n        </ns:SignIn>\n    </x:Body>\n</x:Envelope>\n",
+                    "raw": "<x:Envelope\n    xmlns:x=\"http://schemas.xmlsoap.org/soap/envelope/\"\n    xmlns:ns=\"http://AutodeskDM/Filestore/Auth/1/7/2020/\"\n    xmlns:ser=\"http://AutodeskDM/Services\">\n    <x:Header>\n        <ser:SecurityHeader>\n            <ser:Ticket>0</ser:Ticket>\n            <ser:UserId>0</ser:UserId>\n        </ser:SecurityHeader>\n    </x:Header>\n    <x:Body>\n        <ns:SignIn>\n            <ns:dataServer></ns:dataServer>\n            <ns:userName></ns:userName>\n            <ns:userPassword></ns:userPassword>\n            <ns:knowledgeVault></ns:knowledgeVault>\n        </ns:SignIn>\n    </x:Body>\n</x:Envelope>",
                     "options": {
                         "raw": {
                             "language": "xml"
@@ -149,7 +149,7 @@
                 ],
                 "body": {
                     "mode": "raw",
-                    "raw": "<x:Envelope\n    xmlns:x=\"http://schemas.xmlsoap.org/soap/envelope/\"\n    xmlns:ns=\"http://AutodeskDM/Filestore/Auth/1/7/2020/\"\n    xmlns:ser=\"http://AutodeskDM/Services\">\n    <x:Header>\n        <ser:SecurityHeader>\n            <ser:Ticket>0</ser:Ticket>\n            <ser:UserId>0</ser:UserId>\n        </ser:SecurityHeader>\n    </x:Header>\n    <x:Body>\n        <ns:SignInGetLicense>\n            <ns:dataServer>{{Server}}</ns:dataServer>\n            <ns:userName>{{User}}</ns:userName>\n            <ns:userPassword>{{Password}}</ns:userPassword>\n            <ns:knowledgeVault>{{Database}}</ns:knowledgeVault>\n        </ns:SignInGetLicense>\n    </x:Body>\n</x:Envelope>",
+                    "raw": "<x:Envelope\n    xmlns:x=\"http://schemas.xmlsoap.org/soap/envelope/\"\n    xmlns:ns=\"http://AutodeskDM/Filestore/Auth/1/7/2020/\"\n    xmlns:ser=\"http://AutodeskDM/Services\">\n    <x:Header>\n        <ser:SecurityHeader>\n            <ser:Ticket>0</ser:Ticket>\n            <ser:UserId>0</ser:UserId>\n        </ser:SecurityHeader>\n    </x:Header>\n    <x:Body>\n        <ns:SignInGetLicense>\n            <ns:dataServer></ns:dataServer>\n            <ns:userName></ns:userName>\n            <ns:userPassword></ns:userPassword>\n            <ns:knowledgeVault></ns:knowledgeVault>\n        </ns:SignInGetLicense>\n    </x:Body>\n</x:Envelope>",
                     "options": {
                         "raw": {
                             "language": "xml"
@@ -269,7 +269,7 @@
                 ],
                 "body": {
                     "mode": "raw",
-                    "raw": "<x:Envelope\n    xmlns:x=\"http://schemas.xmlsoap.org/soap/envelope/\"\n    xmlns:ns=\"http://AutodeskDM/Filestore/Auth/1/7/2020/\"\n    xmlns:ser=\"http://AutodeskDM/Services\">\n    <x:Header>\n        <ser:SecurityHeader>\n            <ser:Ticket>0</ser:Ticket>\n            <ser:UserId>0</ser:UserId>\n        </ser:SecurityHeader>\n    </x:Header>\n    <x:Body>\n        <ns:SignInAltLicense>\n            <ns:dataServer>{{Server}}</ns:dataServer>\n            <ns:userName>{{User}}</ns:userName>\n            <ns:userPassword>{{Password}}</ns:userPassword>\n            <ns:knowledgeVault>{{Database}}</ns:knowledgeVault>\n            <ns:p>{{base64Binary}}</ns:p>\n        </ns:SignInAltLicense>\n    </x:Body>\n</x:Envelope>",
+                    "raw": "<x:Envelope\n    xmlns:x=\"http://schemas.xmlsoap.org/soap/envelope/\"\n    xmlns:ns=\"http://AutodeskDM/Filestore/Auth/1/7/2020/\"\n    xmlns:ser=\"http://AutodeskDM/Services\">\n    <x:Header>\n        <ser:SecurityHeader>\n            <ser:Ticket>0</ser:Ticket>\n            <ser:UserId>0</ser:UserId>\n        </ser:SecurityHeader>\n    </x:Header>\n    <x:Body>\n        <ns:SignInAltLicense>\n            <ns:dataServer></ns:dataServer>\n            <ns:userName></ns:userName>\n            <ns:userPassword></ns:userPassword>\n            <ns:knowledgeVault></ns:knowledgeVault>\n            <ns:p></ns:p>\n        </ns:SignInAltLicense>\n    </x:Body>\n</x:Envelope>",
                     "options": {
                         "raw": {
                             "language": "xml"
@@ -369,7 +369,7 @@
                 ],
                 "body": {
                     "mode": "raw",
-                    "raw": "<x:Envelope\n    xmlns:x=\"http://schemas.xmlsoap.org/soap/envelope/\"\n    xmlns:ns=\"http://AutodeskDM/Filestore/Auth/1/7/2020/\"\n    xmlns:ser=\"http://AutodeskDM/Services\">\n    <x:Header>\n        <ser:SecurityHeader>\n            <ser:Ticket>0</ser:Ticket>\n            <ser:UserId>0</ser:UserId>\n        </ser:SecurityHeader>\n    </x:Header>\n    <x:Body>\n        <ns:SignInReadOnly>\n            <ns:dataServer>{{Server}}</ns:dataServer>\n            <ns:userName>{{User}}</ns:userName>\n            <ns:userPassword>{{Password}}</ns:userPassword>\n            <ns:knowledgeVault>{{Database}}</ns:knowledgeVault>\n        </ns:SignInReadOnly>\n    </x:Body>\n</x:Envelope>",
+                    "raw": "<x:Envelope\n    xmlns:x=\"http://schemas.xmlsoap.org/soap/envelope/\"\n    xmlns:ns=\"http://AutodeskDM/Filestore/Auth/1/7/2020/\"\n    xmlns:ser=\"http://AutodeskDM/Services\">\n    <x:Header>\n        <ser:SecurityHeader>\n            <ser:Ticket>0</ser:Ticket>\n            <ser:UserId>0</ser:UserId>\n        </ser:SecurityHeader>\n    </x:Header>\n    <x:Body>\n        <ns:SignInReadOnly>\n            <ns:dataServer></ns:dataServer>\n            <ns:userName></ns:userName>\n            <ns:userPassword></ns:userPassword>\n            <ns:knowledgeVault></ns:knowledgeVault>\n        </ns:SignInReadOnly>\n    </x:Body>\n</x:Envelope>",
                     "options": {
                         "raw": {
                             "language": "xml"
@@ -469,7 +469,7 @@
                 ],
                 "body": {
                     "mode": "raw",
-                    "raw": "<x:Envelope\n    xmlns:x=\"http://schemas.xmlsoap.org/soap/envelope/\"\n    xmlns:ns=\"http://AutodeskDM/Filestore/Auth/1/7/2020/\"\n    xmlns:ser=\"http://AutodeskDM/Services\">\n    <x:Header>\n        <ser:SecurityHeader>\n            <ser:Ticket>0</ser:Ticket>\n            <ser:UserId>0</ser:UserId>\n        </ser:SecurityHeader>\n    </x:Header>\n    <x:Body>\n        <ns:SignIn2>\n            <ns:dataServer>{{Server}}</ns:dataServer>\n            <ns:userName>{{User}}</ns:userName>\n            <ns:userPassword>{{Password}}</ns:userPassword>\n        </ns:SignIn2>\n    </x:Body>\n</x:Envelope>\n",
+                    "raw": "<x:Envelope\n    xmlns:x=\"http://schemas.xmlsoap.org/soap/envelope/\"\n    xmlns:ns=\"http://AutodeskDM/Filestore/Auth/1/7/2020/\"\n    xmlns:ser=\"http://AutodeskDM/Services\">\n    <x:Header>\n        <ser:SecurityHeader>\n            <ser:Ticket>0</ser:Ticket>\n            <ser:UserId>0</ser:UserId>\n        </ser:SecurityHeader>\n    </x:Header>\n    <x:Body>\n        <ns:SignIn2>\n            <ns:dataServer></ns:dataServer>\n            <ns:userName></ns:userName>\n            <ns:userPassword></ns:userPassword>\n        </ns:SignIn2>\n    </x:Body>\n</x:Envelope>\n",
                     "options": {
                         "raw": {
                             "language": "xml"
@@ -674,7 +674,7 @@
     ],
     "variable": [
         {
-            "id": "09dedca0-f6fa-4b5e-bf3d-f424aa974cc8",
+            "id": "0f037b85-9b29-4fbe-9990-0224725f589c",
             "key": "AuthServiceSoapBaseUrl",
             "value": "http://10.10.4.4"
         }
