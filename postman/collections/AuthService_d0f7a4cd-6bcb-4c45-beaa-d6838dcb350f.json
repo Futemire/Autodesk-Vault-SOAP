@@ -2,7 +2,7 @@
     "info": {
         "_postman_id": "33a890b2-a355-41d3-94be-7265e4665398",
         "name": "AuthService",
-        "description": "\n",
+        "description": "This API collection exposes the AuthService from the Autodesk Data Management Services running on a Vault Server. The service is responsible for authenticating to the Vault server.",
         "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
     },
     "item": [
@@ -29,7 +29,7 @@
                 ],
                 "body": {
                     "mode": "raw",
-                    "raw": "<x:Envelope\n    xmlns:x=\"http://schemas.xmlsoap.org/soap/envelope/\"\n    xmlns:ns=\"http://AutodeskDM/Filestore/Auth/1/7/2020/\"\n    xmlns:ser=\"http://AutodeskDM/Services\">\n    <x:Header>\n        <ser:SecurityHeader>\n            <ser:Ticket>?</ser:Ticket>\n            <ser:UserId>0</ser:UserId>\n        </ser:SecurityHeader>\n    </x:Header>\n    <x:Body>\n        <ns:SignIn>\n            <ns:dataServer>{{Server}}</ns:dataServer>\n            <ns:userName>{{User}}</ns:userName>\n            <ns:userPassword></ns:userPassword>\n            <ns:knowledgeVault>{{Database}}</ns:knowledgeVault>\n        </ns:SignIn>\n    </x:Body>\n</x:Envelope>\n",
+                    "raw": "<x:Envelope\n    xmlns:x=\"http://schemas.xmlsoap.org/soap/envelope/\"\n    xmlns:ns=\"http://AutodeskDM/Filestore/Auth/1/7/2020/\"\n    xmlns:ser=\"http://AutodeskDM/Services\">\n    <x:Header>\n        <ser:SecurityHeader>\n            <ser:Ticket>0</ser:Ticket>\n            <ser:UserId>0</ser:UserId>\n        </ser:SecurityHeader>\n    </x:Header>\n    <x:Body>\n        <ns:SignIn>\n            <ns:dataServer>{{Server}}</ns:dataServer>\n            <ns:userName>{{User}}</ns:userName>\n            <ns:userPassword>{{Password}}</ns:userPassword>\n            <ns:knowledgeVault>{{Database}}</ns:knowledgeVault>\n        </ns:SignIn>\n    </x:Body>\n</x:Envelope>\n",
                     "options": {
                         "raw": {
                             "language": "xml"
@@ -48,7 +48,8 @@
                         "v26",
                         "AuthService.svc"
                     ]
-                }
+                },
+                "description": "Authenticates to a specific Vault via username and password."
             },
             "response": [
                 {
@@ -68,7 +69,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "<x:Envelope\n    xmlns:x=\"http://schemas.xmlsoap.org/soap/envelope/\"\n    xmlns:ns=\"http://AutodeskDM/Filestore/Auth/1/7/2020/\"\n    xmlns:ser=\"http://AutodeskDM/Services\">\n    <x:Header>\n        <ser:SecurityHeader>\n            <ser:Ticket>?</ser:Ticket>\n            <ser:UserId>0</ser:UserId>\n        </ser:SecurityHeader>\n    </x:Header>\n    <x:Body>\n        <ns:SignIn>\n            <ns:dataServer>{{Server}}</ns:dataServer>\n            <ns:userName>{{User}}</ns:userName>\n            <ns:userPassword></ns:userPassword>\n            <ns:knowledgeVault>{{Database}}</ns:knowledgeVault>\n        </ns:SignIn>\n    </x:Body>\n</x:Envelope>",
+                            "raw": "<x:Envelope\n    xmlns:x=\"http://schemas.xmlsoap.org/soap/envelope/\"\n    xmlns:ns=\"http://AutodeskDM/Filestore/Auth/1/7/2020/\"\n    xmlns:ser=\"http://AutodeskDM/Services\">\n    <x:Header>\n        <ser:SecurityHeader>\n            <ser:Ticket></ser:Ticket>\n            <ser:UserId></ser:UserId>\n        </ser:SecurityHeader>\n    </x:Header>\n    <x:Body>\n        <ns:SignIn>\n            <ns:dataServer></ns:dataServer>\n            <ns:userName></ns:userName>\n            <ns:userPassword></ns:userPassword>\n            <ns:knowledgeVault></ns:knowledgeVault>\n        </ns:SignIn>\n    </x:Body>\n</x:Envelope>",
                             "options": {
                                 "raw": {
                                     "language": "xml"
@@ -167,7 +168,8 @@
                         "v26",
                         "AuthService.svc"
                     ]
-                }
+                },
+                "description": "Authenticates to the server by getting license server-side."
             },
             "response": [
                 {
@@ -341,7 +343,8 @@
                         "v26",
                         "AuthService.svc"
                     ]
-                }
+                },
+                "description": "**Do not use**, reserved for future use."
             },
             "response": [
                 {
@@ -440,7 +443,8 @@
                         "v26",
                         "AuthService.svc"
                     ]
-                }
+                },
+                "description": "Authenticates to a specific Vault with read only permissions."
             },
             "response": [
                 {
@@ -539,7 +543,8 @@
                         "v26",
                         "AuthService.svc"
                     ]
-                }
+                },
+                "description": "Authenticates to the server but not to a specific Vault database."
             },
             "response": [
                 {
@@ -638,7 +643,8 @@
                         "v26",
                         "AuthService.svc"
                     ]
-                }
+                },
+                "description": "Clears out the authentication information and signs user out of Vault."
             },
             "response": [
                 {
@@ -658,7 +664,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<soap:Envelope xmlns:soap=\"http://schemas.xmlsoap.org/soap/envelope/\">\n\t<soap:Body>\n\t\t<error>The element or type could not be found SignOut</error>\n\t</soap:Body>\n</soap:Envelope>\n",
+                            "raw": "<x:Envelope\n    xmlns:x=\"http://schemas.xmlsoap.org/soap/envelope/\"\n    xmlns:ns=\"http://AutodeskDM/Filestore/Auth/1/7/2020/\"\n    xmlns:ser=\"http://AutodeskDM/Services\">\n    <x:Header>\n        <ser:SecurityHeader>\n            <ser:Ticket>80023b4a-c7a0-4680-b5f4-a32908b87edf</ser:Ticket>\n            <ser:UserId>2</ser:UserId>\n        </ser:SecurityHeader>\n    </x:Header>\n    <x:Body>\n        <ns:SignOut></ns:SignOut>\n    </x:Body>\n</x:Envelope>\n",
                             "options": {
                                 "raw": {
                                     "language": "xml"
@@ -694,7 +700,7 @@
                     ],
                     "cookie": [],
                     "responseTime": null,
-                    "body": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<soap:Envelope xmlns:soap=\"http://schemas.xmlsoap.org/soap/envelope/\">\n\t<soap:Body>\n\t\t<error>The element or type could not be found SignOutResponse</error>\n\t</soap:Body>\n</soap:Envelope>\n"
+                    "body": "<s:Envelope xmlns:s=\"http://schemas.xmlsoap.org/soap/envelope/\">\n    <s:Body xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\">\n        <SignOutResponse xmlns=\"http://AutodeskDM/Filestore/Auth/1/7/2020/\"/>\n    </s:Body>\n</s:Envelope>\n"
                 }
             ]
         }
@@ -723,7 +729,7 @@
     ],
     "variable": [
         {
-            "id": "c21ad4bf-b8c3-4de2-8960-c17f8632f500",
+            "id": "47d3cc9f-124a-4fe0-b956-4f10fa792c2a",
             "key": "AuthServiceSoapBaseUrl",
             "value": "http://10.10.4.4"
         }
