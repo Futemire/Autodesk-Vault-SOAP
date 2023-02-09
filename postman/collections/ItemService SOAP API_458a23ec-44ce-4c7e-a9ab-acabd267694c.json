@@ -1,14 +1,14 @@
 {
 	"info": {
-		"_postman_id": "8306e98d-5833-4dda-9211-04a7d0e0698e",
-		"name": "ItemService",
+		"_postman_id": "e4c59b0f-d28c-44e9-992e-636925d9ac0f",
+		"name": "ItemService SOAP API",
 		"description": "\n",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
 	},
 	"item": [
 		{
 			"name": "CheckRolePermissions",
-			"id": "94e0b2f9-2b1d-4434-acc3-7d4d40a8c06f",
+			"id": "5f2d4d63-203c-4d9b-a06a-53491923b457",
 			"request": {
 				"method": "POST",
 				"header": [
@@ -45,7 +45,7 @@
 			},
 			"response": [
 				{
-					"id": "e483966e-db37-41be-8135-cc8e08c4b40c",
+					"id": "0ec8521d-6db4-42b4-af17-1eb6d20e87ab",
 					"name": "CheckRolePermissions response",
 					"originalRequest": {
 						"method": "POST",
@@ -69,13 +69,10 @@
 							}
 						},
 						"url": {
-							"raw": "http://172.25.20.61/AutodeskDM/Services/v26/ItemService.svc",
+							"raw": "http://{{ServerIP}}/AutodeskDM/Services/v26/ItemService.svc",
 							"protocol": "http",
 							"host": [
-								"172",
-								"25",
-								"20",
-								"61"
+								"{{ServerIP}}"
 							],
 							"path": [
 								"AutodeskDM",
@@ -97,55 +94,12 @@
 					"cookie": [],
 					"responseTime": null,
 					"body": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<soap:Envelope xmlns:soap=\"http://schemas.xmlsoap.org/soap/envelope/\">\n\t<soap:Body>\n\t\t<CheckRolePermissionsResponse xmlns=\"http://AutodeskDM/Services/Item/1/7/2020/\">\n\t\t\t<CheckRolePermissionsResult/>\n\t\t</CheckRolePermissionsResponse>\n\t</soap:Body>\n</soap:Envelope>\n"
-				},
-				{
-					"id": "9fb851c1-e0c2-414a-9457-2a5dd29741f3",
-					"name": "CheckRolePermissions",
-					"originalRequest": {
-						"method": "POST",
-						"header": [
-							{
-								"key": "Content-Type",
-								"value": "text/xml; charset=utf-8"
-							},
-							{
-								"key": "SOAPAction",
-								"value": "http://AutodeskDM/Services/Item/1/7/2020/ItemService/CheckRolePermissions"
-							}
-						],
-						"body": {
-							"mode": "raw",
-							"raw": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<soap:Envelope xmlns:soap=\"http://schemas.xmlsoap.org/soap/envelope/\">\n\t<soap:Body>\n\t\t<CheckRolePermissions xmlns=\"http://AutodeskDM/Services/Item/1/7/2020/\">\n\t\t\t<svcMethods/>\n\t\t</CheckRolePermissions>\n\t</soap:Body>\n</soap:Envelope>\n",
-							"options": {
-								"raw": {
-									"language": "xml"
-								}
-							}
-						},
-						"url": {
-							"raw": "{{ItemServiceSoapBaseUrl}}/AutodeskDM/Services/v26/ItemService.svc",
-							"host": [
-								"{{ItemServiceSoapBaseUrl}}"
-							],
-							"path": [
-								"AutodeskDM",
-								"Services",
-								"v26",
-								"ItemService.svc"
-							]
-						}
-					},
-					"_postman_previewlanguage": null,
-					"header": null,
-					"cookie": [],
-					"responseTime": null,
-					"body": null
 				}
 			]
 		},
 		{
 			"name": "UpdateAndCommitItems",
-			"id": "41a086e1-7739-4306-93ec-58e53a325463",
+			"id": "7818fa63-dd02-4315-afad-9b4e2c1c3714",
 			"request": {
 				"method": "POST",
 				"header": [
@@ -160,7 +114,7 @@
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<soap:Envelope xmlns:soap=\"http://schemas.xmlsoap.org/soap/envelope/\">\n\t<soap:Body>\n\t\t<UpdateAndCommitItems xmlns=\"http://AutodeskDM/Services/Item/1/7/2020/\">\n\t\t\t<itemRevisions>\n\t\t\t\t<Item RevId=\"100\" RevNum=\"string\" LastModUserName=\"string\" LastModUserId=\"100\" LastModDate=\"2022-01-20T20:35:36.743Z\" MasterId=\"100\" ItemNum=\"string\" Title=\"string\" Detail=\"string\" Id=\"100\" VerNum=\"100\" Comm=\"string\" Units=\"string\" LfCycStateId=\"100\" UnitId=\"100\" NumSchmId=\"100\" CadBOMStruct=\"Normal\" ControlledByChangeOrder=\"true\" MaxCommittedId=\"100\" IsCloaked=\"true\" Locked=\"true\">\n\t\t\t\t\t<Cat CatId=\"100\" CatName=\"string\"/>\n\t\t\t\t\t<LfCyc LfCycStateId=\"100\" LfCycDefId=\"100\" Consume=\"true\" Obsolete=\"true\"/>\n\t\t\t\t</Item>\n\t\t\t</itemRevisions>\n\t\t</UpdateAndCommitItems>\n\t</soap:Body>\n</soap:Envelope>\n",
+					"raw": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<soap:Envelope xmlns:soap=\"http://schemas.xmlsoap.org/soap/envelope/\">\n\t<soap:Body>\n\t\t<UpdateAndCommitItems xmlns=\"http://AutodeskDM/Services/Item/1/7/2020/\">\n\t\t\t<itemRevisions>\n\t\t\t\t<Item RevId=\"100\" RevNum=\"string\" LastModUserName=\"string\" LastModUserId=\"100\" LastModDate=\"2023-02-09T19:11:46.876Z\" MasterId=\"100\" ItemNum=\"string\" Title=\"string\" Detail=\"string\" Id=\"100\" VerNum=\"100\" Comm=\"string\" Units=\"string\" LfCycStateId=\"100\" UnitId=\"100\" NumSchmId=\"100\" CadBOMStruct=\"Normal\" ControlledByChangeOrder=\"true\" MaxCommittedId=\"100\" IsCloaked=\"true\" Locked=\"true\">\n\t\t\t\t\t<Cat CatId=\"100\" CatName=\"string\"/>\n\t\t\t\t\t<LfCyc LfCycStateId=\"100\" LfCycDefId=\"100\" Consume=\"true\" Obsolete=\"true\"/>\n\t\t\t\t</Item>\n\t\t\t</itemRevisions>\n\t\t</UpdateAndCommitItems>\n\t</soap:Body>\n</soap:Envelope>\n",
 					"options": {
 						"raw": {
 							"language": "xml"
@@ -168,10 +122,9 @@
 					}
 				},
 				"url": {
-					"raw": "http://{{ServerIP}}/AutodeskDM/Services/v26/ItemService.svc",
-					"protocol": "http",
+					"raw": "{{ItemServiceSoapBaseUrl}}/AutodeskDM/Services/v26/ItemService.svc",
 					"host": [
-						"{{ServerIP}}"
+						"{{ItemServiceSoapBaseUrl}}"
 					],
 					"path": [
 						"AutodeskDM",
@@ -183,7 +136,7 @@
 			},
 			"response": [
 				{
-					"id": "71bd7163-cc77-4f99-ab47-0c80ac9767fb",
+					"id": "4b4098e8-4b34-43e1-a25a-1521a6183c67",
 					"name": "UpdateAndCommitItems response",
 					"originalRequest": {
 						"method": "POST",
@@ -199,7 +152,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<soap:Envelope xmlns:soap=\"http://schemas.xmlsoap.org/soap/envelope/\">\n\t<soap:Body>\n\t\t<UpdateAndCommitItems xmlns=\"http://AutodeskDM/Services/Item/1/7/2020/\">\n\t\t\t<itemRevisions>\n\t\t\t\t<Item RevId=\"100\" RevNum=\"string\" LastModUserName=\"string\" LastModUserId=\"100\" LastModDate=\"2022-01-20T20:35:36.743Z\" MasterId=\"100\" ItemNum=\"string\" Title=\"string\" Detail=\"string\" Id=\"100\" VerNum=\"100\" Comm=\"string\" Units=\"string\" LfCycStateId=\"100\" UnitId=\"100\" NumSchmId=\"100\" CadBOMStruct=\"Normal\" ControlledByChangeOrder=\"true\" MaxCommittedId=\"100\" IsCloaked=\"true\" Locked=\"true\">\n\t\t\t\t\t<Cat CatId=\"100\" CatName=\"string\"/>\n\t\t\t\t\t<LfCyc LfCycStateId=\"100\" LfCycDefId=\"100\" Consume=\"true\" Obsolete=\"true\"/>\n\t\t\t\t</Item>\n\t\t\t</itemRevisions>\n\t\t</UpdateAndCommitItems>\n\t</soap:Body>\n</soap:Envelope>\n",
+							"raw": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<soap:Envelope xmlns:soap=\"http://schemas.xmlsoap.org/soap/envelope/\">\n\t<soap:Body>\n\t\t<UpdateAndCommitItems xmlns=\"http://AutodeskDM/Services/Item/1/7/2020/\">\n\t\t\t<itemRevisions>\n\t\t\t\t<Item RevId=\"100\" RevNum=\"string\" LastModUserName=\"string\" LastModUserId=\"100\" LastModDate=\"2023-02-09T19:11:46.876Z\" MasterId=\"100\" ItemNum=\"string\" Title=\"string\" Detail=\"string\" Id=\"100\" VerNum=\"100\" Comm=\"string\" Units=\"string\" LfCycStateId=\"100\" UnitId=\"100\" NumSchmId=\"100\" CadBOMStruct=\"Normal\" ControlledByChangeOrder=\"true\" MaxCommittedId=\"100\" IsCloaked=\"true\" Locked=\"true\">\n\t\t\t\t\t<Cat CatId=\"100\" CatName=\"string\"/>\n\t\t\t\t\t<LfCyc LfCycStateId=\"100\" LfCycDefId=\"100\" Consume=\"true\" Obsolete=\"true\"/>\n\t\t\t\t</Item>\n\t\t\t</itemRevisions>\n\t\t</UpdateAndCommitItems>\n\t</soap:Body>\n</soap:Envelope>\n",
 							"options": {
 								"raw": {
 									"language": "xml"
@@ -207,13 +160,10 @@
 							}
 						},
 						"url": {
-							"raw": "http://172.25.20.61/AutodeskDM/Services/v26/ItemService.svc",
+							"raw": "http://{{ServerIP}}/AutodeskDM/Services/v26/ItemService.svc",
 							"protocol": "http",
 							"host": [
-								"172",
-								"25",
-								"20",
-								"61"
+								"{{ServerIP}}"
 							],
 							"path": [
 								"AutodeskDM",
@@ -240,7 +190,7 @@
 		},
 		{
 			"name": "UpdateItemFileAssociations",
-			"id": "84db9a11-0eaa-498b-881c-a68d2950ca5e",
+			"id": "a7175a0d-ad30-4215-87e5-d4dea8637ec9",
 			"request": {
 				"method": "POST",
 				"header": [
@@ -277,7 +227,7 @@
 			},
 			"response": [
 				{
-					"id": "cf92b55b-559f-4f18-baef-def847256d74",
+					"id": "d810e419-d068-43f7-b328-cec482b36d54",
 					"name": "UpdateItemFileAssociations response",
 					"originalRequest": {
 						"method": "POST",
@@ -301,13 +251,10 @@
 							}
 						},
 						"url": {
-							"raw": "http://172.25.20.61/AutodeskDM/Services/v26/ItemService.svc",
+							"raw": "http://{{ServerIP}}/AutodeskDM/Services/v26/ItemService.svc",
 							"protocol": "http",
 							"host": [
-								"172",
-								"25",
-								"20",
-								"61"
+								"{{ServerIP}}"
 							],
 							"path": [
 								"AutodeskDM",
@@ -328,13 +275,13 @@
 					],
 					"cookie": [],
 					"responseTime": null,
-					"body": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<soap:Envelope xmlns:soap=\"http://schemas.xmlsoap.org/soap/envelope/\">\n\t<soap:Body>\n\t\t<UpdateItemFileAssociationsResponse xmlns=\"http://AutodeskDM/Services/Item/1/7/2020/\">\n\t\t\t<UpdateItemFileAssociationsResult RevId=\"100\" RevNum=\"string\" LastModUserName=\"string\" LastModUserId=\"100\" LastModDate=\"2022-01-20T20:35:36.743Z\" MasterId=\"100\" ItemNum=\"string\" Title=\"string\" Detail=\"string\" Id=\"100\" VerNum=\"100\" Comm=\"string\" Units=\"string\" LfCycStateId=\"100\" UnitId=\"100\" NumSchmId=\"100\" CadBOMStruct=\"Normal\" ControlledByChangeOrder=\"true\" MaxCommittedId=\"100\" IsCloaked=\"true\" Locked=\"true\">\n\t\t\t\t<Cat CatId=\"100\" CatName=\"string\"/>\n\t\t\t\t<LfCyc LfCycStateId=\"100\" LfCycDefId=\"100\" Consume=\"true\" Obsolete=\"true\"/>\n\t\t\t</UpdateItemFileAssociationsResult>\n\t\t</UpdateItemFileAssociationsResponse>\n\t</soap:Body>\n</soap:Envelope>\n"
+					"body": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<soap:Envelope xmlns:soap=\"http://schemas.xmlsoap.org/soap/envelope/\">\n\t<soap:Body>\n\t\t<UpdateItemFileAssociationsResponse xmlns=\"http://AutodeskDM/Services/Item/1/7/2020/\">\n\t\t\t<UpdateItemFileAssociationsResult RevId=\"100\" RevNum=\"string\" LastModUserName=\"string\" LastModUserId=\"100\" LastModDate=\"2023-02-09T19:11:46.876Z\" MasterId=\"100\" ItemNum=\"string\" Title=\"string\" Detail=\"string\" Id=\"100\" VerNum=\"100\" Comm=\"string\" Units=\"string\" LfCycStateId=\"100\" UnitId=\"100\" NumSchmId=\"100\" CadBOMStruct=\"Normal\" ControlledByChangeOrder=\"true\" MaxCommittedId=\"100\" IsCloaked=\"true\" Locked=\"true\">\n\t\t\t\t<Cat CatId=\"100\" CatName=\"string\"/>\n\t\t\t\t<LfCyc LfCycStateId=\"100\" LfCycDefId=\"100\" Consume=\"true\" Obsolete=\"true\"/>\n\t\t\t</UpdateItemFileAssociationsResult>\n\t\t</UpdateItemFileAssociationsResponse>\n\t</soap:Body>\n</soap:Envelope>\n"
 				}
 			]
 		},
 		{
 			"name": "UpdateAttachments",
-			"id": "46139f51-80a7-4c51-8be0-6d1a41a81a5e",
+			"id": "ad04b050-5b63-4a92-b784-7439d196c11a",
 			"request": {
 				"method": "POST",
 				"header": [
@@ -371,7 +318,7 @@
 			},
 			"response": [
 				{
-					"id": "488a2d1e-c34c-4aea-bf6d-5f5c16cd6ebb",
+					"id": "2400334f-7d74-47c4-a22a-b3cd4c0ef836",
 					"name": "UpdateAttachments response",
 					"originalRequest": {
 						"method": "POST",
@@ -395,13 +342,10 @@
 							}
 						},
 						"url": {
-							"raw": "http://172.25.20.61/AutodeskDM/Services/v26/ItemService.svc",
+							"raw": "http://{{ServerIP}}/AutodeskDM/Services/v26/ItemService.svc",
 							"protocol": "http",
 							"host": [
-								"172",
-								"25",
-								"20",
-								"61"
+								"{{ServerIP}}"
 							],
 							"path": [
 								"AutodeskDM",
@@ -422,13 +366,13 @@
 					],
 					"cookie": [],
 					"responseTime": null,
-					"body": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<soap:Envelope xmlns:soap=\"http://schemas.xmlsoap.org/soap/envelope/\">\n\t<soap:Body>\n\t\t<UpdateAttachmentsResponse xmlns=\"http://AutodeskDM/Services/Item/1/7/2020/\">\n\t\t\t<UpdateAttachmentsResult RevId=\"100\" RevNum=\"string\" LastModUserName=\"string\" LastModUserId=\"100\" LastModDate=\"2022-01-20T20:35:36.744Z\" MasterId=\"100\" ItemNum=\"string\" Title=\"string\" Detail=\"string\" Id=\"100\" VerNum=\"100\" Comm=\"string\" Units=\"string\" LfCycStateId=\"100\" UnitId=\"100\" NumSchmId=\"100\" CadBOMStruct=\"Normal\" ControlledByChangeOrder=\"true\" MaxCommittedId=\"100\" IsCloaked=\"true\" Locked=\"true\">\n\t\t\t\t<Cat CatId=\"100\" CatName=\"string\"/>\n\t\t\t\t<LfCyc LfCycStateId=\"100\" LfCycDefId=\"100\" Consume=\"true\" Obsolete=\"true\"/>\n\t\t\t</UpdateAttachmentsResult>\n\t\t</UpdateAttachmentsResponse>\n\t</soap:Body>\n</soap:Envelope>\n"
+					"body": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<soap:Envelope xmlns:soap=\"http://schemas.xmlsoap.org/soap/envelope/\">\n\t<soap:Body>\n\t\t<UpdateAttachmentsResponse xmlns=\"http://AutodeskDM/Services/Item/1/7/2020/\">\n\t\t\t<UpdateAttachmentsResult RevId=\"100\" RevNum=\"string\" LastModUserName=\"string\" LastModUserId=\"100\" LastModDate=\"2023-02-09T19:11:46.877Z\" MasterId=\"100\" ItemNum=\"string\" Title=\"string\" Detail=\"string\" Id=\"100\" VerNum=\"100\" Comm=\"string\" Units=\"string\" LfCycStateId=\"100\" UnitId=\"100\" NumSchmId=\"100\" CadBOMStruct=\"Normal\" ControlledByChangeOrder=\"true\" MaxCommittedId=\"100\" IsCloaked=\"true\" Locked=\"true\">\n\t\t\t\t<Cat CatId=\"100\" CatName=\"string\"/>\n\t\t\t\t<LfCyc LfCycStateId=\"100\" LfCycDefId=\"100\" Consume=\"true\" Obsolete=\"true\"/>\n\t\t\t</UpdateAttachmentsResult>\n\t\t</UpdateAttachmentsResponse>\n\t</soap:Body>\n</soap:Envelope>\n"
 				}
 			]
 		},
 		{
 			"name": "ReassignComponentsToDifferentItems",
-			"id": "d7d93f58-7db2-4490-95a5-79a55178bd69",
+			"id": "55809510-ae1a-46e6-a33f-ed91cd4ca88f",
 			"request": {
 				"method": "POST",
 				"header": [
@@ -465,7 +409,7 @@
 			},
 			"response": [
 				{
-					"id": "b27a1d68-794a-44db-a6ae-a3caec989a18",
+					"id": "d80f1563-1e72-440b-af91-1d01cfeba640",
 					"name": "ReassignComponentsToDifferentItems response",
 					"originalRequest": {
 						"method": "POST",
@@ -489,13 +433,10 @@
 							}
 						},
 						"url": {
-							"raw": "http://172.25.20.61/AutodeskDM/Services/v26/ItemService.svc",
+							"raw": "http://{{ServerIP}}/AutodeskDM/Services/v26/ItemService.svc",
 							"protocol": "http",
 							"host": [
-								"172",
-								"25",
-								"20",
-								"61"
+								"{{ServerIP}}"
 							],
 							"path": [
 								"AutodeskDM",
@@ -516,13 +457,13 @@
 					],
 					"cookie": [],
 					"responseTime": null,
-					"body": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<soap:Envelope xmlns:soap=\"http://schemas.xmlsoap.org/soap/envelope/\">\n\t<soap:Body>\n\t\t<ReassignComponentsToDifferentItemsResponse xmlns=\"http://AutodeskDM/Services/Item/1/7/2020/\">\n\t\t\t<ReassignComponentsToDifferentItemsResult>\n\t\t\t\t<Item RevId=\"100\" RevNum=\"string\" LastModUserName=\"string\" LastModUserId=\"100\" LastModDate=\"2022-01-20T20:35:36.745Z\" MasterId=\"100\" ItemNum=\"string\" Title=\"string\" Detail=\"string\" Id=\"100\" VerNum=\"100\" Comm=\"string\" Units=\"string\" LfCycStateId=\"100\" UnitId=\"100\" NumSchmId=\"100\" CadBOMStruct=\"Normal\" ControlledByChangeOrder=\"true\" MaxCommittedId=\"100\" IsCloaked=\"true\" Locked=\"true\">\n\t\t\t\t\t<Cat CatId=\"100\" CatName=\"string\"/>\n\t\t\t\t\t<LfCyc LfCycStateId=\"100\" LfCycDefId=\"100\" Consume=\"true\" Obsolete=\"true\"/>\n\t\t\t\t</Item>\n\t\t\t</ReassignComponentsToDifferentItemsResult>\n\t\t</ReassignComponentsToDifferentItemsResponse>\n\t</soap:Body>\n</soap:Envelope>\n"
+					"body": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<soap:Envelope xmlns:soap=\"http://schemas.xmlsoap.org/soap/envelope/\">\n\t<soap:Body>\n\t\t<ReassignComponentsToDifferentItemsResponse xmlns=\"http://AutodeskDM/Services/Item/1/7/2020/\">\n\t\t\t<ReassignComponentsToDifferentItemsResult>\n\t\t\t\t<Item RevId=\"100\" RevNum=\"string\" LastModUserName=\"string\" LastModUserId=\"100\" LastModDate=\"2023-02-09T19:11:46.877Z\" MasterId=\"100\" ItemNum=\"string\" Title=\"string\" Detail=\"string\" Id=\"100\" VerNum=\"100\" Comm=\"string\" Units=\"string\" LfCycStateId=\"100\" UnitId=\"100\" NumSchmId=\"100\" CadBOMStruct=\"Normal\" ControlledByChangeOrder=\"true\" MaxCommittedId=\"100\" IsCloaked=\"true\" Locked=\"true\">\n\t\t\t\t\t<Cat CatId=\"100\" CatName=\"string\"/>\n\t\t\t\t\t<LfCyc LfCycStateId=\"100\" LfCycDefId=\"100\" Consume=\"true\" Obsolete=\"true\"/>\n\t\t\t\t</Item>\n\t\t\t</ReassignComponentsToDifferentItemsResult>\n\t\t</ReassignComponentsToDifferentItemsResponse>\n\t</soap:Body>\n</soap:Envelope>\n"
 				}
 			]
 		},
 		{
 			"name": "DeleteItems",
-			"id": "49159d6b-d36f-4506-a660-0e0dc55fce68",
+			"id": "30e35db2-5f46-4231-97bc-a7f3da0bc1af",
 			"request": {
 				"method": "POST",
 				"header": [
@@ -559,7 +500,7 @@
 			},
 			"response": [
 				{
-					"id": "3270ed3e-5ced-44d3-ab8a-2efd506dd27c",
+					"id": "88b5ff14-50f6-4d7e-b3ea-811f1c25ab67",
 					"name": "DeleteItems response",
 					"originalRequest": {
 						"method": "POST",
@@ -583,13 +524,10 @@
 							}
 						},
 						"url": {
-							"raw": "http://172.25.20.61/AutodeskDM/Services/v26/ItemService.svc",
+							"raw": "http://{{ServerIP}}/AutodeskDM/Services/v26/ItemService.svc",
 							"protocol": "http",
 							"host": [
-								"172",
-								"25",
-								"20",
-								"61"
+								"{{ServerIP}}"
 							],
 							"path": [
 								"AutodeskDM",
@@ -616,7 +554,7 @@
 		},
 		{
 			"name": "DeleteItemsUnconditional",
-			"id": "b964ac1d-3d8c-4818-ad90-45011dd3d4bd",
+			"id": "4aac2582-cad5-41e5-ad22-00c402baefdd",
 			"request": {
 				"method": "POST",
 				"header": [
@@ -653,7 +591,7 @@
 			},
 			"response": [
 				{
-					"id": "bba62127-8146-4dfc-b18d-89006acb9818",
+					"id": "8c45e7dc-91db-47b2-a854-f5f4a562cf84",
 					"name": "DeleteItemsUnconditional response",
 					"originalRequest": {
 						"method": "POST",
@@ -677,13 +615,10 @@
 							}
 						},
 						"url": {
-							"raw": "http://172.25.20.61/AutodeskDM/Services/v26/ItemService.svc",
+							"raw": "http://{{ServerIP}}/AutodeskDM/Services/v26/ItemService.svc",
 							"protocol": "http",
 							"host": [
-								"172",
-								"25",
-								"20",
-								"61"
+								"{{ServerIP}}"
 							],
 							"path": [
 								"AutodeskDM",
@@ -710,7 +645,7 @@
 		},
 		{
 			"name": "GetItemDeleteRestrictionsByIds",
-			"id": "c5c60c9b-24ca-4997-9c98-d9a7a06bc0aa",
+			"id": "4a030301-9a3e-432a-9738-48079ff193d4",
 			"request": {
 				"method": "POST",
 				"header": [
@@ -747,7 +682,7 @@
 			},
 			"response": [
 				{
-					"id": "e17b46d3-5dae-4df8-ac11-aefd52ceb388",
+					"id": "833220db-302d-4b97-8ecd-f89442ce393f",
 					"name": "GetItemDeleteRestrictionsByIds response",
 					"originalRequest": {
 						"method": "POST",
@@ -771,13 +706,10 @@
 							}
 						},
 						"url": {
-							"raw": "http://172.25.20.61/AutodeskDM/Services/v26/ItemService.svc",
+							"raw": "http://{{ServerIP}}/AutodeskDM/Services/v26/ItemService.svc",
 							"protocol": "http",
 							"host": [
-								"172",
-								"25",
-								"20",
-								"61"
+								"{{ServerIP}}"
 							],
 							"path": [
 								"AutodeskDM",
@@ -804,7 +736,7 @@
 		},
 		{
 			"name": "GetLatestItemByItemMasterId",
-			"id": "a2459937-2096-4f6d-87a6-44adb77b345c",
+			"id": "afbb6b8d-c763-431a-b85a-8170c08efba4",
 			"request": {
 				"method": "POST",
 				"header": [
@@ -841,7 +773,7 @@
 			},
 			"response": [
 				{
-					"id": "234fc039-223f-451b-a3ec-766fdf1d729a",
+					"id": "93726961-021a-4027-af6d-8ac6efdc8e9c",
 					"name": "GetLatestItemByItemMasterId response",
 					"originalRequest": {
 						"method": "POST",
@@ -865,13 +797,10 @@
 							}
 						},
 						"url": {
-							"raw": "http://172.25.20.61/AutodeskDM/Services/v26/ItemService.svc",
+							"raw": "http://{{ServerIP}}/AutodeskDM/Services/v26/ItemService.svc",
 							"protocol": "http",
 							"host": [
-								"172",
-								"25",
-								"20",
-								"61"
+								"{{ServerIP}}"
 							],
 							"path": [
 								"AutodeskDM",
@@ -892,13 +821,13 @@
 					],
 					"cookie": [],
 					"responseTime": null,
-					"body": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<soap:Envelope xmlns:soap=\"http://schemas.xmlsoap.org/soap/envelope/\">\n\t<soap:Body>\n\t\t<GetLatestItemByItemMasterIdResponse xmlns=\"http://AutodeskDM/Services/Item/1/7/2020/\">\n\t\t\t<GetLatestItemByItemMasterIdResult RevId=\"100\" RevNum=\"string\" LastModUserName=\"string\" LastModUserId=\"100\" LastModDate=\"2022-01-20T20:35:36.747Z\" MasterId=\"100\" ItemNum=\"string\" Title=\"string\" Detail=\"string\" Id=\"100\" VerNum=\"100\" Comm=\"string\" Units=\"string\" LfCycStateId=\"100\" UnitId=\"100\" NumSchmId=\"100\" CadBOMStruct=\"Normal\" ControlledByChangeOrder=\"true\" MaxCommittedId=\"100\" IsCloaked=\"true\" Locked=\"true\">\n\t\t\t\t<Cat CatId=\"100\" CatName=\"string\"/>\n\t\t\t\t<LfCyc LfCycStateId=\"100\" LfCycDefId=\"100\" Consume=\"true\" Obsolete=\"true\"/>\n\t\t\t</GetLatestItemByItemMasterIdResult>\n\t\t</GetLatestItemByItemMasterIdResponse>\n\t</soap:Body>\n</soap:Envelope>\n"
+					"body": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<soap:Envelope xmlns:soap=\"http://schemas.xmlsoap.org/soap/envelope/\">\n\t<soap:Body>\n\t\t<GetLatestItemByItemMasterIdResponse xmlns=\"http://AutodeskDM/Services/Item/1/7/2020/\">\n\t\t\t<GetLatestItemByItemMasterIdResult RevId=\"100\" RevNum=\"string\" LastModUserName=\"string\" LastModUserId=\"100\" LastModDate=\"2023-02-09T19:11:46.878Z\" MasterId=\"100\" ItemNum=\"string\" Title=\"string\" Detail=\"string\" Id=\"100\" VerNum=\"100\" Comm=\"string\" Units=\"string\" LfCycStateId=\"100\" UnitId=\"100\" NumSchmId=\"100\" CadBOMStruct=\"Normal\" ControlledByChangeOrder=\"true\" MaxCommittedId=\"100\" IsCloaked=\"true\" Locked=\"true\">\n\t\t\t\t<Cat CatId=\"100\" CatName=\"string\"/>\n\t\t\t\t<LfCyc LfCycStateId=\"100\" LfCycDefId=\"100\" Consume=\"true\" Obsolete=\"true\"/>\n\t\t\t</GetLatestItemByItemMasterIdResult>\n\t\t</GetLatestItemByItemMasterIdResponse>\n\t</soap:Body>\n</soap:Envelope>\n"
 				}
 			]
 		},
 		{
 			"name": "GetLatestItemsByItemMasterIds",
-			"id": "b50f0801-80e8-4fad-8bf5-206126adec2b",
+			"id": "6f565041-efd7-473e-940e-8a2ede705248",
 			"request": {
 				"method": "POST",
 				"header": [
@@ -935,7 +864,7 @@
 			},
 			"response": [
 				{
-					"id": "cb2fdfc8-41d8-4d9f-8171-0741b2872e22",
+					"id": "05fa516c-1c21-4ca5-b40c-2b47075e9f45",
 					"name": "GetLatestItemsByItemMasterIds response",
 					"originalRequest": {
 						"method": "POST",
@@ -959,13 +888,10 @@
 							}
 						},
 						"url": {
-							"raw": "http://172.25.20.61/AutodeskDM/Services/v26/ItemService.svc",
+							"raw": "http://{{ServerIP}}/AutodeskDM/Services/v26/ItemService.svc",
 							"protocol": "http",
 							"host": [
-								"172",
-								"25",
-								"20",
-								"61"
+								"{{ServerIP}}"
 							],
 							"path": [
 								"AutodeskDM",
@@ -986,13 +912,13 @@
 					],
 					"cookie": [],
 					"responseTime": null,
-					"body": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<soap:Envelope xmlns:soap=\"http://schemas.xmlsoap.org/soap/envelope/\">\n\t<soap:Body>\n\t\t<GetLatestItemsByItemMasterIdsResponse xmlns=\"http://AutodeskDM/Services/Item/1/7/2020/\">\n\t\t\t<GetLatestItemsByItemMasterIdsResult>\n\t\t\t\t<Item RevId=\"100\" RevNum=\"string\" LastModUserName=\"string\" LastModUserId=\"100\" LastModDate=\"2022-01-20T20:35:36.747Z\" MasterId=\"100\" ItemNum=\"string\" Title=\"string\" Detail=\"string\" Id=\"100\" VerNum=\"100\" Comm=\"string\" Units=\"string\" LfCycStateId=\"100\" UnitId=\"100\" NumSchmId=\"100\" CadBOMStruct=\"Normal\" ControlledByChangeOrder=\"true\" MaxCommittedId=\"100\" IsCloaked=\"true\" Locked=\"true\">\n\t\t\t\t\t<Cat CatId=\"100\" CatName=\"string\"/>\n\t\t\t\t\t<LfCyc LfCycStateId=\"100\" LfCycDefId=\"100\" Consume=\"true\" Obsolete=\"true\"/>\n\t\t\t\t</Item>\n\t\t\t</GetLatestItemsByItemMasterIdsResult>\n\t\t</GetLatestItemsByItemMasterIdsResponse>\n\t</soap:Body>\n</soap:Envelope>\n"
+					"body": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<soap:Envelope xmlns:soap=\"http://schemas.xmlsoap.org/soap/envelope/\">\n\t<soap:Body>\n\t\t<GetLatestItemsByItemMasterIdsResponse xmlns=\"http://AutodeskDM/Services/Item/1/7/2020/\">\n\t\t\t<GetLatestItemsByItemMasterIdsResult>\n\t\t\t\t<Item RevId=\"100\" RevNum=\"string\" LastModUserName=\"string\" LastModUserId=\"100\" LastModDate=\"2023-02-09T19:11:46.879Z\" MasterId=\"100\" ItemNum=\"string\" Title=\"string\" Detail=\"string\" Id=\"100\" VerNum=\"100\" Comm=\"string\" Units=\"string\" LfCycStateId=\"100\" UnitId=\"100\" NumSchmId=\"100\" CadBOMStruct=\"Normal\" ControlledByChangeOrder=\"true\" MaxCommittedId=\"100\" IsCloaked=\"true\" Locked=\"true\">\n\t\t\t\t\t<Cat CatId=\"100\" CatName=\"string\"/>\n\t\t\t\t\t<LfCyc LfCycStateId=\"100\" LfCycDefId=\"100\" Consume=\"true\" Obsolete=\"true\"/>\n\t\t\t\t</Item>\n\t\t\t</GetLatestItemsByItemMasterIdsResult>\n\t\t</GetLatestItemsByItemMasterIdsResponse>\n\t</soap:Body>\n</soap:Envelope>\n"
 				}
 			]
 		},
 		{
 			"name": "GetItemsByRevisionIds",
-			"id": "e264f95c-315b-499b-a173-6abfa1478d93",
+			"id": "344fdcda-c5cf-4858-9702-3d70df128666",
 			"request": {
 				"method": "POST",
 				"header": [
@@ -1029,7 +955,7 @@
 			},
 			"response": [
 				{
-					"id": "74b7cad5-2337-4c4c-bda0-8c4e77efdb98",
+					"id": "b6a2ae01-96be-42da-8f6e-cce809363459",
 					"name": "GetItemsByRevisionIds response",
 					"originalRequest": {
 						"method": "POST",
@@ -1053,13 +979,10 @@
 							}
 						},
 						"url": {
-							"raw": "http://172.25.20.61/AutodeskDM/Services/v26/ItemService.svc",
+							"raw": "http://{{ServerIP}}/AutodeskDM/Services/v26/ItemService.svc",
 							"protocol": "http",
 							"host": [
-								"172",
-								"25",
-								"20",
-								"61"
+								"{{ServerIP}}"
 							],
 							"path": [
 								"AutodeskDM",
@@ -1080,13 +1003,13 @@
 					],
 					"cookie": [],
 					"responseTime": null,
-					"body": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<soap:Envelope xmlns:soap=\"http://schemas.xmlsoap.org/soap/envelope/\">\n\t<soap:Body>\n\t\t<GetItemsByRevisionIdsResponse xmlns=\"http://AutodeskDM/Services/Item/1/7/2020/\">\n\t\t\t<GetItemsByRevisionIdsResult>\n\t\t\t\t<Item RevId=\"100\" RevNum=\"string\" LastModUserName=\"string\" LastModUserId=\"100\" LastModDate=\"2022-01-20T20:35:36.748Z\" MasterId=\"100\" ItemNum=\"string\" Title=\"string\" Detail=\"string\" Id=\"100\" VerNum=\"100\" Comm=\"string\" Units=\"string\" LfCycStateId=\"100\" UnitId=\"100\" NumSchmId=\"100\" CadBOMStruct=\"Normal\" ControlledByChangeOrder=\"true\" MaxCommittedId=\"100\" IsCloaked=\"true\" Locked=\"true\">\n\t\t\t\t\t<Cat CatId=\"100\" CatName=\"string\"/>\n\t\t\t\t\t<LfCyc LfCycStateId=\"100\" LfCycDefId=\"100\" Consume=\"true\" Obsolete=\"true\"/>\n\t\t\t\t</Item>\n\t\t\t</GetItemsByRevisionIdsResult>\n\t\t</GetItemsByRevisionIdsResponse>\n\t</soap:Body>\n</soap:Envelope>\n"
+					"body": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<soap:Envelope xmlns:soap=\"http://schemas.xmlsoap.org/soap/envelope/\">\n\t<soap:Body>\n\t\t<GetItemsByRevisionIdsResponse xmlns=\"http://AutodeskDM/Services/Item/1/7/2020/\">\n\t\t\t<GetItemsByRevisionIdsResult>\n\t\t\t\t<Item RevId=\"100\" RevNum=\"string\" LastModUserName=\"string\" LastModUserId=\"100\" LastModDate=\"2023-02-09T19:11:46.879Z\" MasterId=\"100\" ItemNum=\"string\" Title=\"string\" Detail=\"string\" Id=\"100\" VerNum=\"100\" Comm=\"string\" Units=\"string\" LfCycStateId=\"100\" UnitId=\"100\" NumSchmId=\"100\" CadBOMStruct=\"Normal\" ControlledByChangeOrder=\"true\" MaxCommittedId=\"100\" IsCloaked=\"true\" Locked=\"true\">\n\t\t\t\t\t<Cat CatId=\"100\" CatName=\"string\"/>\n\t\t\t\t\t<LfCyc LfCycStateId=\"100\" LfCycDefId=\"100\" Consume=\"true\" Obsolete=\"true\"/>\n\t\t\t\t</Item>\n\t\t\t</GetItemsByRevisionIdsResult>\n\t\t</GetItemsByRevisionIdsResponse>\n\t</soap:Body>\n</soap:Envelope>\n"
 				}
 			]
 		},
 		{
 			"name": "GetItemHistoryByItemMasterId",
-			"id": "38f9088f-a1d6-4dba-87d0-789f495c2aba",
+			"id": "0510dea8-e6ba-46b8-bf40-1fc7bc7edb65",
 			"request": {
 				"method": "POST",
 				"header": [
@@ -1123,7 +1046,7 @@
 			},
 			"response": [
 				{
-					"id": "07f8812b-3bb7-4eed-bc13-31be3b976824",
+					"id": "a3fab934-5608-4cb8-bb10-8abbfdec33c8",
 					"name": "GetItemHistoryByItemMasterId response",
 					"originalRequest": {
 						"method": "POST",
@@ -1147,13 +1070,10 @@
 							}
 						},
 						"url": {
-							"raw": "http://172.25.20.61/AutodeskDM/Services/v26/ItemService.svc",
+							"raw": "http://{{ServerIP}}/AutodeskDM/Services/v26/ItemService.svc",
 							"protocol": "http",
 							"host": [
-								"172",
-								"25",
-								"20",
-								"61"
+								"{{ServerIP}}"
 							],
 							"path": [
 								"AutodeskDM",
@@ -1174,13 +1094,13 @@
 					],
 					"cookie": [],
 					"responseTime": null,
-					"body": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<soap:Envelope xmlns:soap=\"http://schemas.xmlsoap.org/soap/envelope/\">\n\t<soap:Body>\n\t\t<GetItemHistoryByItemMasterIdResponse xmlns=\"http://AutodeskDM/Services/Item/1/7/2020/\">\n\t\t\t<GetItemHistoryByItemMasterIdResult>\n\t\t\t\t<Item RevId=\"100\" RevNum=\"string\" LastModUserName=\"string\" LastModUserId=\"100\" LastModDate=\"2022-01-20T20:35:36.748Z\" MasterId=\"100\" ItemNum=\"string\" Title=\"string\" Detail=\"string\" Id=\"100\" VerNum=\"100\" Comm=\"string\" Units=\"string\" LfCycStateId=\"100\" UnitId=\"100\" NumSchmId=\"100\" CadBOMStruct=\"Normal\" ControlledByChangeOrder=\"true\" MaxCommittedId=\"100\" IsCloaked=\"true\" Locked=\"true\">\n\t\t\t\t\t<Cat CatId=\"100\" CatName=\"string\"/>\n\t\t\t\t\t<LfCyc LfCycStateId=\"100\" LfCycDefId=\"100\" Consume=\"true\" Obsolete=\"true\"/>\n\t\t\t\t</Item>\n\t\t\t</GetItemHistoryByItemMasterIdResult>\n\t\t</GetItemHistoryByItemMasterIdResponse>\n\t</soap:Body>\n</soap:Envelope>\n"
+					"body": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<soap:Envelope xmlns:soap=\"http://schemas.xmlsoap.org/soap/envelope/\">\n\t<soap:Body>\n\t\t<GetItemHistoryByItemMasterIdResponse xmlns=\"http://AutodeskDM/Services/Item/1/7/2020/\">\n\t\t\t<GetItemHistoryByItemMasterIdResult>\n\t\t\t\t<Item RevId=\"100\" RevNum=\"string\" LastModUserName=\"string\" LastModUserId=\"100\" LastModDate=\"2023-02-09T19:11:46.879Z\" MasterId=\"100\" ItemNum=\"string\" Title=\"string\" Detail=\"string\" Id=\"100\" VerNum=\"100\" Comm=\"string\" Units=\"string\" LfCycStateId=\"100\" UnitId=\"100\" NumSchmId=\"100\" CadBOMStruct=\"Normal\" ControlledByChangeOrder=\"true\" MaxCommittedId=\"100\" IsCloaked=\"true\" Locked=\"true\">\n\t\t\t\t\t<Cat CatId=\"100\" CatName=\"string\"/>\n\t\t\t\t\t<LfCyc LfCycStateId=\"100\" LfCycDefId=\"100\" Consume=\"true\" Obsolete=\"true\"/>\n\t\t\t\t</Item>\n\t\t\t</GetItemHistoryByItemMasterIdResult>\n\t\t</GetItemHistoryByItemMasterIdResponse>\n\t</soap:Body>\n</soap:Envelope>\n"
 				}
 			]
 		},
 		{
 			"name": "CompareItemBOMs",
-			"id": "138df651-b85e-4bb3-a9e9-5097bbd863de",
+			"id": "89946d11-3b40-427c-bbd2-74aebb63f7bd",
 			"request": {
 				"method": "POST",
 				"header": [
@@ -1195,7 +1115,7 @@
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<soap:Envelope xmlns:soap=\"http://schemas.xmlsoap.org/soap/envelope/\">\n\t<soap:Body>\n\t\t<CompareItemBOMs xmlns=\"http://AutodeskDM/Services/Item/1/7/2020/\">\n\t\t\t<primaryItemID>100</primaryItemID>\n\t\t\t<secondaryItemID>100</secondaryItemID>\n\t\t\t<primaryDate>2022-01-20T20:35:36.749Z</primaryDate>\n\t\t\t<secondaryDate>2022-01-20T20:35:36.749Z</secondaryDate>\n\t\t\t<primaryType>Tip</primaryType>\n\t\t\t<secondaryType>Tip</secondaryType>\n\t\t\t<options>Defaults</options>\n\t\t\t<propertyDefIDs/>\n\t\t</CompareItemBOMs>\n\t</soap:Body>\n</soap:Envelope>\n",
+					"raw": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<soap:Envelope xmlns:soap=\"http://schemas.xmlsoap.org/soap/envelope/\">\n\t<soap:Body>\n\t\t<CompareItemBOMs xmlns=\"http://AutodeskDM/Services/Item/1/7/2020/\">\n\t\t\t<primaryItemID>100</primaryItemID>\n\t\t\t<secondaryItemID>100</secondaryItemID>\n\t\t\t<primaryDate>2023-02-09T19:11:46.880Z</primaryDate>\n\t\t\t<secondaryDate>2023-02-09T19:11:46.880Z</secondaryDate>\n\t\t\t<primaryType>Tip</primaryType>\n\t\t\t<secondaryType>Tip</secondaryType>\n\t\t\t<options>Defaults</options>\n\t\t\t<propertyDefIDs/>\n\t\t</CompareItemBOMs>\n\t</soap:Body>\n</soap:Envelope>\n",
 					"options": {
 						"raw": {
 							"language": "xml"
@@ -1217,7 +1137,7 @@
 			},
 			"response": [
 				{
-					"id": "2c326b00-ea35-4c78-acb3-68fe19ed028c",
+					"id": "d564a72d-d8b7-4635-a417-437317f0de36",
 					"name": "CompareItemBOMs response",
 					"originalRequest": {
 						"method": "POST",
@@ -1233,7 +1153,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<soap:Envelope xmlns:soap=\"http://schemas.xmlsoap.org/soap/envelope/\">\n\t<soap:Body>\n\t\t<CompareItemBOMs xmlns=\"http://AutodeskDM/Services/Item/1/7/2020/\">\n\t\t\t<primaryItemID>100</primaryItemID>\n\t\t\t<secondaryItemID>100</secondaryItemID>\n\t\t\t<primaryDate>2022-01-20T20:35:36.749Z</primaryDate>\n\t\t\t<secondaryDate>2022-01-20T20:35:36.749Z</secondaryDate>\n\t\t\t<primaryType>Tip</primaryType>\n\t\t\t<secondaryType>Tip</secondaryType>\n\t\t\t<options>Defaults</options>\n\t\t\t<propertyDefIDs/>\n\t\t</CompareItemBOMs>\n\t</soap:Body>\n</soap:Envelope>\n",
+							"raw": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<soap:Envelope xmlns:soap=\"http://schemas.xmlsoap.org/soap/envelope/\">\n\t<soap:Body>\n\t\t<CompareItemBOMs xmlns=\"http://AutodeskDM/Services/Item/1/7/2020/\">\n\t\t\t<primaryItemID>100</primaryItemID>\n\t\t\t<secondaryItemID>100</secondaryItemID>\n\t\t\t<primaryDate>2023-02-09T19:11:46.880Z</primaryDate>\n\t\t\t<secondaryDate>2023-02-09T19:11:46.880Z</secondaryDate>\n\t\t\t<primaryType>Tip</primaryType>\n\t\t\t<secondaryType>Tip</secondaryType>\n\t\t\t<options>Defaults</options>\n\t\t\t<propertyDefIDs/>\n\t\t</CompareItemBOMs>\n\t</soap:Body>\n</soap:Envelope>\n",
 							"options": {
 								"raw": {
 									"language": "xml"
@@ -1241,13 +1161,10 @@
 							}
 						},
 						"url": {
-							"raw": "http://172.25.20.61/AutodeskDM/Services/v26/ItemService.svc",
+							"raw": "http://{{ServerIP}}/AutodeskDM/Services/v26/ItemService.svc",
 							"protocol": "http",
 							"host": [
-								"172",
-								"25",
-								"20",
-								"61"
+								"{{ServerIP}}"
 							],
 							"path": [
 								"AutodeskDM",
@@ -1268,13 +1185,13 @@
 					],
 					"cookie": [],
 					"responseTime": null,
-					"body": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<soap:Envelope xmlns:soap=\"http://schemas.xmlsoap.org/soap/envelope/\">\n\t<soap:Body>\n\t\t<CompareItemBOMsResponse xmlns=\"http://AutodeskDM/Services/Item/1/7/2020/\">\n\t\t\t<CompareItemBOMsResult>\n\t\t\t\t<ItemBOM>\n\t\t\t\t\t<ItemRevArray RevId=\"100\" RevNum=\"string\" LastModUserName=\"string\" LastModUserId=\"100\" LastModDate=\"2022-01-20T20:35:36.749Z\" MasterId=\"100\" ItemNum=\"string\" Title=\"string\" Detail=\"string\" Id=\"100\" VerNum=\"100\" Comm=\"string\" Units=\"string\" LfCycStateId=\"100\" UnitId=\"100\" NumSchmId=\"100\" CadBOMStruct=\"Normal\" ControlledByChangeOrder=\"true\" MaxCommittedId=\"100\" IsCloaked=\"true\" Locked=\"true\">\n\t\t\t\t\t\t<Cat CatId=\"100\" CatName=\"string\"/>\n\t\t\t\t\t\t<LfCyc LfCycStateId=\"100\" LfCycDefId=\"100\" Consume=\"true\" Obsolete=\"true\"/>\n\t\t\t\t\t</ItemRevArray>\n\t\t\t\t\t<ItemAssocArray Id=\"100\" ParItemID=\"100\" ParItemMasterID=\"100\" CldItemID=\"100\" CldItemMasterID=\"100\" Quant=\"48\" Units=\"string\" UnitID=\"100\" IsStatic=\"true\" BOMOrder=\"100\" CldHasCldren=\"true\" RefDesId=\"100\" IsIncluded=\"true\" IsCad=\"true\" IsGroup=\"true\" GroupId=\"100\" BOMCompId=\"100\" AssocMasterId=\"100\" PositionNum=\"string\" InstCount=\"100\" UnitSize=\"87\"/>\n\t\t\t\t\t<RefDesAvailable>true</RefDesAvailable>\n\t\t\t\t\t<OccurArray RootItemId=\"100\" Id=\"100\" ParOccId=\"100\" AssocMasterId=\"100\" Pos=\"100\" Val=\"string\" Path=\"string\"/>\n\t\t\t\t\t<BOMCompArray Id=\"100\" UniqueId=\"string\" XRefTyp=\"Internal\" XRefId=\"100\" Name=\"string\" CompTyp=\"Part\" BaseUOM=\"string\" BaseQty=\"40\" BOMStruct=\"Normal\" Cloaked=\"true\"/>\n\t\t\t\t</ItemBOM>\n\t\t\t\t<DiffArray>\n\t\t\t\t\t<ItemAssocMasterID>100</ItemAssocMasterID>\n\t\t\t\t\t<ItemAssocID>100</ItemAssocID>\n\t\t\t\t\t<PropDefId>100</PropDefId>\n\t\t\t\t</DiffArray>\n\t\t\t\t<BOMOccDiffArray RootItemIterId=\"100\" OccId=\"100\" DiffType=\"100\"/>\n\t\t\t</CompareItemBOMsResult>\n\t\t</CompareItemBOMsResponse>\n\t</soap:Body>\n</soap:Envelope>\n"
+					"body": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<soap:Envelope xmlns:soap=\"http://schemas.xmlsoap.org/soap/envelope/\">\n\t<soap:Body>\n\t\t<CompareItemBOMsResponse xmlns=\"http://AutodeskDM/Services/Item/1/7/2020/\">\n\t\t\t<CompareItemBOMsResult>\n\t\t\t\t<ItemBOM>\n\t\t\t\t\t<ItemRevArray RevId=\"100\" RevNum=\"string\" LastModUserName=\"string\" LastModUserId=\"100\" LastModDate=\"2023-02-09T19:11:46.880Z\" MasterId=\"100\" ItemNum=\"string\" Title=\"string\" Detail=\"string\" Id=\"100\" VerNum=\"100\" Comm=\"string\" Units=\"string\" LfCycStateId=\"100\" UnitId=\"100\" NumSchmId=\"100\" CadBOMStruct=\"Normal\" ControlledByChangeOrder=\"true\" MaxCommittedId=\"100\" IsCloaked=\"true\" Locked=\"true\">\n\t\t\t\t\t\t<Cat CatId=\"100\" CatName=\"string\"/>\n\t\t\t\t\t\t<LfCyc LfCycStateId=\"100\" LfCycDefId=\"100\" Consume=\"true\" Obsolete=\"true\"/>\n\t\t\t\t\t</ItemRevArray>\n\t\t\t\t\t<ItemAssocArray Id=\"100\" ParItemID=\"100\" ParItemMasterID=\"100\" CldItemID=\"100\" CldItemMasterID=\"100\" Quant=\"53\" Units=\"string\" UnitID=\"100\" IsStatic=\"true\" BOMOrder=\"100\" CldHasCldren=\"true\" RefDesId=\"100\" IsIncluded=\"true\" IsCad=\"true\" IsGroup=\"true\" GroupId=\"100\" BOMCompId=\"100\" AssocMasterId=\"100\" PositionNum=\"string\" InstCount=\"100\" UnitSize=\"64\"/>\n\t\t\t\t\t<RefDesAvailable>true</RefDesAvailable>\n\t\t\t\t\t<OccurArray RootItemId=\"100\" Id=\"100\" ParOccId=\"100\" AssocMasterId=\"100\" Pos=\"100\" Val=\"string\" Path=\"string\"/>\n\t\t\t\t\t<BOMCompArray Id=\"100\" UniqueId=\"string\" XRefTyp=\"Internal\" XRefId=\"100\" Name=\"string\" CompTyp=\"Part\" BaseUOM=\"string\" BaseQty=\"38\" BOMStruct=\"Normal\" Cloaked=\"true\"/>\n\t\t\t\t</ItemBOM>\n\t\t\t\t<DiffArray>\n\t\t\t\t\t<ItemAssocMasterID>100</ItemAssocMasterID>\n\t\t\t\t\t<ItemAssocID>100</ItemAssocID>\n\t\t\t\t\t<PropDefId>100</PropDefId>\n\t\t\t\t</DiffArray>\n\t\t\t\t<BOMOccDiffArray RootItemIterId=\"100\" OccId=\"100\" DiffType=\"100\"/>\n\t\t\t</CompareItemBOMsResult>\n\t\t</CompareItemBOMsResponse>\n\t</soap:Body>\n</soap:Envelope>\n"
 				}
 			]
 		},
 		{
 			"name": "GetItemBOMByItemIdAndDate",
-			"id": "b388d283-42ba-4289-9743-2308f3826d64",
+			"id": "8b647618-c79f-43a7-a8cc-b69fe1001b60",
 			"request": {
 				"method": "POST",
 				"header": [
@@ -1289,7 +1206,7 @@
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<soap:Envelope xmlns:soap=\"http://schemas.xmlsoap.org/soap/envelope/\">\n\t<soap:Body>\n\t\t<GetItemBOMByItemIdAndDate xmlns=\"http://AutodeskDM/Services/Item/1/7/2020/\">\n\t\t\t<itemIterationId>100</itemIterationId>\n\t\t\t<dateOfInterest>2022-01-20T20:35:36.750Z</dateOfInterest>\n\t\t\t<type>Tip</type>\n\t\t\t<options>Defaults</options>\n\t\t</GetItemBOMByItemIdAndDate>\n\t</soap:Body>\n</soap:Envelope>\n",
+					"raw": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<soap:Envelope xmlns:soap=\"http://schemas.xmlsoap.org/soap/envelope/\">\n\t<soap:Body>\n\t\t<GetItemBOMByItemIdAndDate xmlns=\"http://AutodeskDM/Services/Item/1/7/2020/\">\n\t\t\t<itemIterationId>100</itemIterationId>\n\t\t\t<dateOfInterest>2023-02-09T19:11:46.880Z</dateOfInterest>\n\t\t\t<type>Tip</type>\n\t\t\t<options>Defaults</options>\n\t\t</GetItemBOMByItemIdAndDate>\n\t</soap:Body>\n</soap:Envelope>\n",
 					"options": {
 						"raw": {
 							"language": "xml"
@@ -1311,7 +1228,7 @@
 			},
 			"response": [
 				{
-					"id": "c58869ac-e6ef-4a5b-92af-1caed2503ccc",
+					"id": "82865bab-7c85-49b7-ba0a-66054e30f5e1",
 					"name": "GetItemBOMByItemIdAndDate response",
 					"originalRequest": {
 						"method": "POST",
@@ -1327,7 +1244,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<soap:Envelope xmlns:soap=\"http://schemas.xmlsoap.org/soap/envelope/\">\n\t<soap:Body>\n\t\t<GetItemBOMByItemIdAndDate xmlns=\"http://AutodeskDM/Services/Item/1/7/2020/\">\n\t\t\t<itemIterationId>100</itemIterationId>\n\t\t\t<dateOfInterest>2022-01-20T20:35:36.750Z</dateOfInterest>\n\t\t\t<type>Tip</type>\n\t\t\t<options>Defaults</options>\n\t\t</GetItemBOMByItemIdAndDate>\n\t</soap:Body>\n</soap:Envelope>\n",
+							"raw": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<soap:Envelope xmlns:soap=\"http://schemas.xmlsoap.org/soap/envelope/\">\n\t<soap:Body>\n\t\t<GetItemBOMByItemIdAndDate xmlns=\"http://AutodeskDM/Services/Item/1/7/2020/\">\n\t\t\t<itemIterationId>100</itemIterationId>\n\t\t\t<dateOfInterest>2023-02-09T19:11:46.880Z</dateOfInterest>\n\t\t\t<type>Tip</type>\n\t\t\t<options>Defaults</options>\n\t\t</GetItemBOMByItemIdAndDate>\n\t</soap:Body>\n</soap:Envelope>\n",
 							"options": {
 								"raw": {
 									"language": "xml"
@@ -1335,13 +1252,10 @@
 							}
 						},
 						"url": {
-							"raw": "http://172.25.20.61/AutodeskDM/Services/v26/ItemService.svc",
+							"raw": "http://{{ServerIP}}/AutodeskDM/Services/v26/ItemService.svc",
 							"protocol": "http",
 							"host": [
-								"172",
-								"25",
-								"20",
-								"61"
+								"{{ServerIP}}"
 							],
 							"path": [
 								"AutodeskDM",
@@ -1362,13 +1276,13 @@
 					],
 					"cookie": [],
 					"responseTime": null,
-					"body": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<soap:Envelope xmlns:soap=\"http://schemas.xmlsoap.org/soap/envelope/\">\n\t<soap:Body>\n\t\t<GetItemBOMByItemIdAndDateResponse xmlns=\"http://AutodeskDM/Services/Item/1/7/2020/\">\n\t\t\t<GetItemBOMByItemIdAndDateResult>\n\t\t\t\t<ItemRevArray RevId=\"100\" RevNum=\"string\" LastModUserName=\"string\" LastModUserId=\"100\" LastModDate=\"2022-01-20T20:35:36.750Z\" MasterId=\"100\" ItemNum=\"string\" Title=\"string\" Detail=\"string\" Id=\"100\" VerNum=\"100\" Comm=\"string\" Units=\"string\" LfCycStateId=\"100\" UnitId=\"100\" NumSchmId=\"100\" CadBOMStruct=\"Normal\" ControlledByChangeOrder=\"true\" MaxCommittedId=\"100\" IsCloaked=\"true\" Locked=\"true\">\n\t\t\t\t\t<Cat CatId=\"100\" CatName=\"string\"/>\n\t\t\t\t\t<LfCyc LfCycStateId=\"100\" LfCycDefId=\"100\" Consume=\"true\" Obsolete=\"true\"/>\n\t\t\t\t</ItemRevArray>\n\t\t\t\t<ItemAssocArray Id=\"100\" ParItemID=\"100\" ParItemMasterID=\"100\" CldItemID=\"100\" CldItemMasterID=\"100\" Quant=\"99\" Units=\"string\" UnitID=\"100\" IsStatic=\"true\" BOMOrder=\"100\" CldHasCldren=\"true\" RefDesId=\"100\" IsIncluded=\"true\" IsCad=\"true\" IsGroup=\"true\" GroupId=\"100\" BOMCompId=\"100\" AssocMasterId=\"100\" PositionNum=\"string\" InstCount=\"100\" UnitSize=\"97\"/>\n\t\t\t\t<RefDesAvailable>true</RefDesAvailable>\n\t\t\t\t<OccurArray RootItemId=\"100\" Id=\"100\" ParOccId=\"100\" AssocMasterId=\"100\" Pos=\"100\" Val=\"string\" Path=\"string\"/>\n\t\t\t\t<BOMCompArray Id=\"100\" UniqueId=\"string\" XRefTyp=\"Internal\" XRefId=\"100\" Name=\"string\" CompTyp=\"Part\" BaseUOM=\"string\" BaseQty=\"30\" BOMStruct=\"Normal\" Cloaked=\"true\"/>\n\t\t\t</GetItemBOMByItemIdAndDateResult>\n\t\t</GetItemBOMByItemIdAndDateResponse>\n\t</soap:Body>\n</soap:Envelope>\n"
+					"body": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<soap:Envelope xmlns:soap=\"http://schemas.xmlsoap.org/soap/envelope/\">\n\t<soap:Body>\n\t\t<GetItemBOMByItemIdAndDateResponse xmlns=\"http://AutodeskDM/Services/Item/1/7/2020/\">\n\t\t\t<GetItemBOMByItemIdAndDateResult>\n\t\t\t\t<ItemRevArray RevId=\"100\" RevNum=\"string\" LastModUserName=\"string\" LastModUserId=\"100\" LastModDate=\"2023-02-09T19:11:46.881Z\" MasterId=\"100\" ItemNum=\"string\" Title=\"string\" Detail=\"string\" Id=\"100\" VerNum=\"100\" Comm=\"string\" Units=\"string\" LfCycStateId=\"100\" UnitId=\"100\" NumSchmId=\"100\" CadBOMStruct=\"Normal\" ControlledByChangeOrder=\"true\" MaxCommittedId=\"100\" IsCloaked=\"true\" Locked=\"true\">\n\t\t\t\t\t<Cat CatId=\"100\" CatName=\"string\"/>\n\t\t\t\t\t<LfCyc LfCycStateId=\"100\" LfCycDefId=\"100\" Consume=\"true\" Obsolete=\"true\"/>\n\t\t\t\t</ItemRevArray>\n\t\t\t\t<ItemAssocArray Id=\"100\" ParItemID=\"100\" ParItemMasterID=\"100\" CldItemID=\"100\" CldItemMasterID=\"100\" Quant=\"32\" Units=\"string\" UnitID=\"100\" IsStatic=\"true\" BOMOrder=\"100\" CldHasCldren=\"true\" RefDesId=\"100\" IsIncluded=\"true\" IsCad=\"true\" IsGroup=\"true\" GroupId=\"100\" BOMCompId=\"100\" AssocMasterId=\"100\" PositionNum=\"string\" InstCount=\"100\" UnitSize=\"55\"/>\n\t\t\t\t<RefDesAvailable>true</RefDesAvailable>\n\t\t\t\t<OccurArray RootItemId=\"100\" Id=\"100\" ParOccId=\"100\" AssocMasterId=\"100\" Pos=\"100\" Val=\"string\" Path=\"string\"/>\n\t\t\t\t<BOMCompArray Id=\"100\" UniqueId=\"string\" XRefTyp=\"Internal\" XRefId=\"100\" Name=\"string\" CompTyp=\"Part\" BaseUOM=\"string\" BaseQty=\"59\" BOMStruct=\"Normal\" Cloaked=\"true\"/>\n\t\t\t</GetItemBOMByItemIdAndDateResult>\n\t\t</GetItemBOMByItemIdAndDateResponse>\n\t</soap:Body>\n</soap:Envelope>\n"
 				}
 			]
 		},
 		{
 			"name": "GetItemBOMAssociationsByItemIds",
-			"id": "df658e3c-7bee-4191-b663-66743e62eed4",
+			"id": "3270767f-3fc3-4fc6-9757-869db1c8d516",
 			"request": {
 				"method": "POST",
 				"header": [
@@ -1405,7 +1319,7 @@
 			},
 			"response": [
 				{
-					"id": "3483f28a-c2f4-4a23-9f70-e37874f64b3c",
+					"id": "204fdb18-d996-4ec1-8f79-818c996f175b",
 					"name": "GetItemBOMAssociationsByItemIds response",
 					"originalRequest": {
 						"method": "POST",
@@ -1429,13 +1343,10 @@
 							}
 						},
 						"url": {
-							"raw": "http://172.25.20.61/AutodeskDM/Services/v26/ItemService.svc",
+							"raw": "http://{{ServerIP}}/AutodeskDM/Services/v26/ItemService.svc",
 							"protocol": "http",
 							"host": [
-								"172",
-								"25",
-								"20",
-								"61"
+								"{{ServerIP}}"
 							],
 							"path": [
 								"AutodeskDM",
@@ -1456,13 +1367,13 @@
 					],
 					"cookie": [],
 					"responseTime": null,
-					"body": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<soap:Envelope xmlns:soap=\"http://schemas.xmlsoap.org/soap/envelope/\">\n\t<soap:Body>\n\t\t<GetItemBOMAssociationsByItemIdsResponse xmlns=\"http://AutodeskDM/Services/Item/1/7/2020/\">\n\t\t\t<GetItemBOMAssociationsByItemIdsResult>\n\t\t\t\t<ItemAssoc Id=\"100\" ParItemID=\"100\" ParItemMasterID=\"100\" CldItemID=\"100\" CldItemMasterID=\"100\" Quant=\"70\" Units=\"string\" UnitID=\"100\" IsStatic=\"true\" BOMOrder=\"100\" CldHasCldren=\"true\" RefDesId=\"100\" IsIncluded=\"true\" IsCad=\"true\" IsGroup=\"true\" GroupId=\"100\" BOMCompId=\"100\" AssocMasterId=\"100\" PositionNum=\"string\" InstCount=\"100\" UnitSize=\"69\"/>\n\t\t\t</GetItemBOMAssociationsByItemIdsResult>\n\t\t</GetItemBOMAssociationsByItemIdsResponse>\n\t</soap:Body>\n</soap:Envelope>\n"
+					"body": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<soap:Envelope xmlns:soap=\"http://schemas.xmlsoap.org/soap/envelope/\">\n\t<soap:Body>\n\t\t<GetItemBOMAssociationsByItemIdsResponse xmlns=\"http://AutodeskDM/Services/Item/1/7/2020/\">\n\t\t\t<GetItemBOMAssociationsByItemIdsResult>\n\t\t\t\t<ItemAssoc Id=\"100\" ParItemID=\"100\" ParItemMasterID=\"100\" CldItemID=\"100\" CldItemMasterID=\"100\" Quant=\"71\" Units=\"string\" UnitID=\"100\" IsStatic=\"true\" BOMOrder=\"100\" CldHasCldren=\"true\" RefDesId=\"100\" IsIncluded=\"true\" IsCad=\"true\" IsGroup=\"true\" GroupId=\"100\" BOMCompId=\"100\" AssocMasterId=\"100\" PositionNum=\"string\" InstCount=\"100\" UnitSize=\"4\"/>\n\t\t\t</GetItemBOMAssociationsByItemIdsResult>\n\t\t</GetItemBOMAssociationsByItemIdsResponse>\n\t</soap:Body>\n</soap:Envelope>\n"
 				}
 			]
 		},
 		{
 			"name": "GetItemBOMAssociationProperties",
-			"id": "eb33ba09-b89c-4e00-ada6-4d06a7e3eb0a",
+			"id": "0f8b28d3-ba90-4e66-82b9-cf7076a87fda",
 			"request": {
 				"method": "POST",
 				"header": [
@@ -1499,7 +1410,7 @@
 			},
 			"response": [
 				{
-					"id": "adeab7e9-997c-427c-8518-78b2a451b4ec",
+					"id": "2f6c8297-1f96-466b-b200-30c8c63eba13",
 					"name": "GetItemBOMAssociationProperties response",
 					"originalRequest": {
 						"method": "POST",
@@ -1523,13 +1434,10 @@
 							}
 						},
 						"url": {
-							"raw": "http://172.25.20.61/AutodeskDM/Services/v26/ItemService.svc",
+							"raw": "http://{{ServerIP}}/AutodeskDM/Services/v26/ItemService.svc",
 							"protocol": "http",
 							"host": [
-								"172",
-								"25",
-								"20",
-								"61"
+								"{{ServerIP}}"
 							],
 							"path": [
 								"AutodeskDM",
@@ -1556,7 +1464,7 @@
 		},
 		{
 			"name": "UpdateItemBOMAssociations",
-			"id": "fc13d5bc-6010-4d64-b044-12ffd94cc75f",
+			"id": "5fd4dc3f-9beb-4cb7-9829-34bf988a23ca",
 			"request": {
 				"method": "POST",
 				"header": [
@@ -1571,7 +1479,7 @@
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<soap:Envelope xmlns:soap=\"http://schemas.xmlsoap.org/soap/envelope/\">\n\t<soap:Body>\n\t\t<UpdateItemBOMAssociations xmlns=\"http://AutodeskDM/Services/Item/1/7/2020/\">\n\t\t\t<parentItemId>100</parentItemId>\n\t\t\t<assocParams>\n\t\t\t\t<ItemAssocParam EditAct=\"Add\">\n\t\t\t\t\t<Id>100</Id>\n\t\t\t\t\t<CldItemID>100</CldItemID>\n\t\t\t\t\t<Quant>57</Quant>\n\t\t\t\t\t<IsStatic>true</IsStatic>\n\t\t\t\t\t<IsIncluded>true</IsIncluded>\n\t\t\t\t\t<BOMOrder>100</BOMOrder>\n\t\t\t\t\t<PositionNum>string</PositionNum>\n\t\t\t\t\t<InstCount>100</InstCount>\n\t\t\t\t\t<UnitSize>80</UnitSize>\n\t\t\t\t\t<UnitID>100</UnitID>\n\t\t\t\t</ItemAssocParam>\n\t\t\t</assocParams>\n\t\t\t<options>Defaults</options>\n\t\t</UpdateItemBOMAssociations>\n\t</soap:Body>\n</soap:Envelope>\n",
+					"raw": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<soap:Envelope xmlns:soap=\"http://schemas.xmlsoap.org/soap/envelope/\">\n\t<soap:Body>\n\t\t<UpdateItemBOMAssociations xmlns=\"http://AutodeskDM/Services/Item/1/7/2020/\">\n\t\t\t<parentItemId>100</parentItemId>\n\t\t\t<assocParams>\n\t\t\t\t<ItemAssocParam EditAct=\"Add\">\n\t\t\t\t\t<Id>100</Id>\n\t\t\t\t\t<CldItemID>100</CldItemID>\n\t\t\t\t\t<Quant>43</Quant>\n\t\t\t\t\t<IsStatic>true</IsStatic>\n\t\t\t\t\t<IsIncluded>true</IsIncluded>\n\t\t\t\t\t<BOMOrder>100</BOMOrder>\n\t\t\t\t\t<PositionNum>string</PositionNum>\n\t\t\t\t\t<InstCount>100</InstCount>\n\t\t\t\t\t<UnitSize>68</UnitSize>\n\t\t\t\t\t<UnitID>100</UnitID>\n\t\t\t\t</ItemAssocParam>\n\t\t\t</assocParams>\n\t\t\t<options>Defaults</options>\n\t\t</UpdateItemBOMAssociations>\n\t</soap:Body>\n</soap:Envelope>\n",
 					"options": {
 						"raw": {
 							"language": "xml"
@@ -1593,7 +1501,7 @@
 			},
 			"response": [
 				{
-					"id": "a74ba1b7-fb35-4864-9ea8-21e8bfabeea2",
+					"id": "8f199e18-579a-45f6-b94c-ae8df50969f4",
 					"name": "UpdateItemBOMAssociations response",
 					"originalRequest": {
 						"method": "POST",
@@ -1609,7 +1517,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<soap:Envelope xmlns:soap=\"http://schemas.xmlsoap.org/soap/envelope/\">\n\t<soap:Body>\n\t\t<UpdateItemBOMAssociations xmlns=\"http://AutodeskDM/Services/Item/1/7/2020/\">\n\t\t\t<parentItemId>100</parentItemId>\n\t\t\t<assocParams>\n\t\t\t\t<ItemAssocParam EditAct=\"Add\">\n\t\t\t\t\t<Id>100</Id>\n\t\t\t\t\t<CldItemID>100</CldItemID>\n\t\t\t\t\t<Quant>57</Quant>\n\t\t\t\t\t<IsStatic>true</IsStatic>\n\t\t\t\t\t<IsIncluded>true</IsIncluded>\n\t\t\t\t\t<BOMOrder>100</BOMOrder>\n\t\t\t\t\t<PositionNum>string</PositionNum>\n\t\t\t\t\t<InstCount>100</InstCount>\n\t\t\t\t\t<UnitSize>80</UnitSize>\n\t\t\t\t\t<UnitID>100</UnitID>\n\t\t\t\t</ItemAssocParam>\n\t\t\t</assocParams>\n\t\t\t<options>Defaults</options>\n\t\t</UpdateItemBOMAssociations>\n\t</soap:Body>\n</soap:Envelope>\n",
+							"raw": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<soap:Envelope xmlns:soap=\"http://schemas.xmlsoap.org/soap/envelope/\">\n\t<soap:Body>\n\t\t<UpdateItemBOMAssociations xmlns=\"http://AutodeskDM/Services/Item/1/7/2020/\">\n\t\t\t<parentItemId>100</parentItemId>\n\t\t\t<assocParams>\n\t\t\t\t<ItemAssocParam EditAct=\"Add\">\n\t\t\t\t\t<Id>100</Id>\n\t\t\t\t\t<CldItemID>100</CldItemID>\n\t\t\t\t\t<Quant>43</Quant>\n\t\t\t\t\t<IsStatic>true</IsStatic>\n\t\t\t\t\t<IsIncluded>true</IsIncluded>\n\t\t\t\t\t<BOMOrder>100</BOMOrder>\n\t\t\t\t\t<PositionNum>string</PositionNum>\n\t\t\t\t\t<InstCount>100</InstCount>\n\t\t\t\t\t<UnitSize>68</UnitSize>\n\t\t\t\t\t<UnitID>100</UnitID>\n\t\t\t\t</ItemAssocParam>\n\t\t\t</assocParams>\n\t\t\t<options>Defaults</options>\n\t\t</UpdateItemBOMAssociations>\n\t</soap:Body>\n</soap:Envelope>\n",
 							"options": {
 								"raw": {
 									"language": "xml"
@@ -1617,13 +1525,10 @@
 							}
 						},
 						"url": {
-							"raw": "http://172.25.20.61/AutodeskDM/Services/v26/ItemService.svc",
+							"raw": "http://{{ServerIP}}/AutodeskDM/Services/v26/ItemService.svc",
 							"protocol": "http",
 							"host": [
-								"172",
-								"25",
-								"20",
-								"61"
+								"{{ServerIP}}"
 							],
 							"path": [
 								"AutodeskDM",
@@ -1644,13 +1549,13 @@
 					],
 					"cookie": [],
 					"responseTime": null,
-					"body": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<soap:Envelope xmlns:soap=\"http://schemas.xmlsoap.org/soap/envelope/\">\n\t<soap:Body>\n\t\t<UpdateItemBOMAssociationsResponse xmlns=\"http://AutodeskDM/Services/Item/1/7/2020/\">\n\t\t\t<UpdateItemBOMAssociationsResult>\n\t\t\t\t<ItemRevArray RevId=\"100\" RevNum=\"string\" LastModUserName=\"string\" LastModUserId=\"100\" LastModDate=\"2022-01-20T20:35:36.752Z\" MasterId=\"100\" ItemNum=\"string\" Title=\"string\" Detail=\"string\" Id=\"100\" VerNum=\"100\" Comm=\"string\" Units=\"string\" LfCycStateId=\"100\" UnitId=\"100\" NumSchmId=\"100\" CadBOMStruct=\"Normal\" ControlledByChangeOrder=\"true\" MaxCommittedId=\"100\" IsCloaked=\"true\" Locked=\"true\">\n\t\t\t\t\t<Cat CatId=\"100\" CatName=\"string\"/>\n\t\t\t\t\t<LfCyc LfCycStateId=\"100\" LfCycDefId=\"100\" Consume=\"true\" Obsolete=\"true\"/>\n\t\t\t\t</ItemRevArray>\n\t\t\t\t<ItemAssocArray Id=\"100\" ParItemID=\"100\" ParItemMasterID=\"100\" CldItemID=\"100\" CldItemMasterID=\"100\" Quant=\"68\" Units=\"string\" UnitID=\"100\" IsStatic=\"true\" BOMOrder=\"100\" CldHasCldren=\"true\" RefDesId=\"100\" IsIncluded=\"true\" IsCad=\"true\" IsGroup=\"true\" GroupId=\"100\" BOMCompId=\"100\" AssocMasterId=\"100\" PositionNum=\"string\" InstCount=\"100\" UnitSize=\"81\"/>\n\t\t\t\t<RefDesAvailable>true</RefDesAvailable>\n\t\t\t\t<OccurArray RootItemId=\"100\" Id=\"100\" ParOccId=\"100\" AssocMasterId=\"100\" Pos=\"100\" Val=\"string\" Path=\"string\"/>\n\t\t\t\t<BOMCompArray Id=\"100\" UniqueId=\"string\" XRefTyp=\"Internal\" XRefId=\"100\" Name=\"string\" CompTyp=\"Part\" BaseUOM=\"string\" BaseQty=\"50\" BOMStruct=\"Normal\" Cloaked=\"true\"/>\n\t\t\t</UpdateItemBOMAssociationsResult>\n\t\t</UpdateItemBOMAssociationsResponse>\n\t</soap:Body>\n</soap:Envelope>\n"
+					"body": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<soap:Envelope xmlns:soap=\"http://schemas.xmlsoap.org/soap/envelope/\">\n\t<soap:Body>\n\t\t<UpdateItemBOMAssociationsResponse xmlns=\"http://AutodeskDM/Services/Item/1/7/2020/\">\n\t\t\t<UpdateItemBOMAssociationsResult>\n\t\t\t\t<ItemRevArray RevId=\"100\" RevNum=\"string\" LastModUserName=\"string\" LastModUserId=\"100\" LastModDate=\"2023-02-09T19:11:46.882Z\" MasterId=\"100\" ItemNum=\"string\" Title=\"string\" Detail=\"string\" Id=\"100\" VerNum=\"100\" Comm=\"string\" Units=\"string\" LfCycStateId=\"100\" UnitId=\"100\" NumSchmId=\"100\" CadBOMStruct=\"Normal\" ControlledByChangeOrder=\"true\" MaxCommittedId=\"100\" IsCloaked=\"true\" Locked=\"true\">\n\t\t\t\t\t<Cat CatId=\"100\" CatName=\"string\"/>\n\t\t\t\t\t<LfCyc LfCycStateId=\"100\" LfCycDefId=\"100\" Consume=\"true\" Obsolete=\"true\"/>\n\t\t\t\t</ItemRevArray>\n\t\t\t\t<ItemAssocArray Id=\"100\" ParItemID=\"100\" ParItemMasterID=\"100\" CldItemID=\"100\" CldItemMasterID=\"100\" Quant=\"47\" Units=\"string\" UnitID=\"100\" IsStatic=\"true\" BOMOrder=\"100\" CldHasCldren=\"true\" RefDesId=\"100\" IsIncluded=\"true\" IsCad=\"true\" IsGroup=\"true\" GroupId=\"100\" BOMCompId=\"100\" AssocMasterId=\"100\" PositionNum=\"string\" InstCount=\"100\" UnitSize=\"51\"/>\n\t\t\t\t<RefDesAvailable>true</RefDesAvailable>\n\t\t\t\t<OccurArray RootItemId=\"100\" Id=\"100\" ParOccId=\"100\" AssocMasterId=\"100\" Pos=\"100\" Val=\"string\" Path=\"string\"/>\n\t\t\t\t<BOMCompArray Id=\"100\" UniqueId=\"string\" XRefTyp=\"Internal\" XRefId=\"100\" Name=\"string\" CompTyp=\"Part\" BaseUOM=\"string\" BaseQty=\"25\" BOMStruct=\"Normal\" Cloaked=\"true\"/>\n\t\t\t</UpdateItemBOMAssociationsResult>\n\t\t</UpdateItemBOMAssociationsResponse>\n\t</soap:Body>\n</soap:Envelope>\n"
 				}
 			]
 		},
 		{
 			"name": "UpdateItemBOMAssociationProperties",
-			"id": "77e7556a-1ccd-4376-815c-087897da7287",
+			"id": "8ce00c0c-6a1e-4943-a60d-26d3d93a9b47",
 			"request": {
 				"method": "POST",
 				"header": [
@@ -1687,7 +1592,7 @@
 			},
 			"response": [
 				{
-					"id": "55125e7e-9548-451f-82e0-df6e525463ed",
+					"id": "eb73e189-e371-4fe4-9a2a-6fc0347e45cf",
 					"name": "UpdateItemBOMAssociationProperties response",
 					"originalRequest": {
 						"method": "POST",
@@ -1711,13 +1616,10 @@
 							}
 						},
 						"url": {
-							"raw": "http://172.25.20.61/AutodeskDM/Services/v26/ItemService.svc",
+							"raw": "http://{{ServerIP}}/AutodeskDM/Services/v26/ItemService.svc",
 							"protocol": "http",
 							"host": [
-								"172",
-								"25",
-								"20",
-								"61"
+								"{{ServerIP}}"
 							],
 							"path": [
 								"AutodeskDM",
@@ -1744,7 +1646,7 @@
 		},
 		{
 			"name": "GetPrimaryComponentsByItemIds",
-			"id": "15095f57-af17-4c20-af87-7632fa778816",
+			"id": "5c6255fb-f657-45f5-b3a8-f0613aac77dc",
 			"request": {
 				"method": "POST",
 				"header": [
@@ -1781,7 +1683,7 @@
 			},
 			"response": [
 				{
-					"id": "522c492f-ed38-42cc-872f-d9159547f8b5",
+					"id": "b3a3dc5f-d950-4590-92e6-448678478a5c",
 					"name": "GetPrimaryComponentsByItemIds response",
 					"originalRequest": {
 						"method": "POST",
@@ -1805,13 +1707,10 @@
 							}
 						},
 						"url": {
-							"raw": "http://172.25.20.61/AutodeskDM/Services/v26/ItemService.svc",
+							"raw": "http://{{ServerIP}}/AutodeskDM/Services/v26/ItemService.svc",
 							"protocol": "http",
 							"host": [
-								"172",
-								"25",
-								"20",
-								"61"
+								"{{ServerIP}}"
 							],
 							"path": [
 								"AutodeskDM",
@@ -1832,13 +1731,13 @@
 					],
 					"cookie": [],
 					"responseTime": null,
-					"body": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<soap:Envelope xmlns:soap=\"http://schemas.xmlsoap.org/soap/envelope/\">\n\t<soap:Body>\n\t\t<GetPrimaryComponentsByItemIdsResponse xmlns=\"http://AutodeskDM/Services/Item/1/7/2020/\">\n\t\t\t<GetPrimaryComponentsByItemIdsResult>\n\t\t\t\t<BOMComp Id=\"100\" UniqueId=\"string\" XRefTyp=\"Internal\" XRefId=\"100\" Name=\"string\" CompTyp=\"Part\" BaseUOM=\"string\" BaseQty=\"79\" BOMStruct=\"Normal\" Cloaked=\"true\"/>\n\t\t\t</GetPrimaryComponentsByItemIdsResult>\n\t\t</GetPrimaryComponentsByItemIdsResponse>\n\t</soap:Body>\n</soap:Envelope>\n"
+					"body": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<soap:Envelope xmlns:soap=\"http://schemas.xmlsoap.org/soap/envelope/\">\n\t<soap:Body>\n\t\t<GetPrimaryComponentsByItemIdsResponse xmlns=\"http://AutodeskDM/Services/Item/1/7/2020/\">\n\t\t\t<GetPrimaryComponentsByItemIdsResult>\n\t\t\t\t<BOMComp Id=\"100\" UniqueId=\"string\" XRefTyp=\"Internal\" XRefId=\"100\" Name=\"string\" CompTyp=\"Part\" BaseUOM=\"string\" BaseQty=\"93\" BOMStruct=\"Normal\" Cloaked=\"true\"/>\n\t\t\t</GetPrimaryComponentsByItemIdsResult>\n\t\t</GetPrimaryComponentsByItemIdsResponse>\n\t</soap:Body>\n</soap:Envelope>\n"
 				}
 			]
 		},
 		{
 			"name": "FindLatestItemRevisionIdsByComponentIds",
-			"id": "431c79ee-d124-453e-b902-420816352380",
+			"id": "3575a5dc-be2f-47cc-a6d1-c4ada54bf126",
 			"request": {
 				"method": "POST",
 				"header": [
@@ -1875,7 +1774,7 @@
 			},
 			"response": [
 				{
-					"id": "41f29e6d-0202-4a84-80af-f5091c0dffa7",
+					"id": "d4042269-872f-4ead-9e00-9a6873438554",
 					"name": "FindLatestItemRevisionIdsByComponentIds response",
 					"originalRequest": {
 						"method": "POST",
@@ -1899,13 +1798,10 @@
 							}
 						},
 						"url": {
-							"raw": "http://172.25.20.61/AutodeskDM/Services/v26/ItemService.svc",
+							"raw": "http://{{ServerIP}}/AutodeskDM/Services/v26/ItemService.svc",
 							"protocol": "http",
 							"host": [
-								"172",
-								"25",
-								"20",
-								"61"
+								"{{ServerIP}}"
 							],
 							"path": [
 								"AutodeskDM",
@@ -1932,7 +1828,7 @@
 		},
 		{
 			"name": "FindItemRevisionsBySearchConditions",
-			"id": "8dba6fb3-f61f-4186-af1b-df6f187c1e04",
+			"id": "17e12f59-22c7-4c8b-a23d-43d26c928cd2",
 			"request": {
 				"method": "POST",
 				"header": [
@@ -1969,7 +1865,7 @@
 			},
 			"response": [
 				{
-					"id": "b2d9a52a-3f54-422e-ad1b-e76fef00a101",
+					"id": "6b0d4ac2-496c-413f-a5a8-2d5169c5a9c9",
 					"name": "FindItemRevisionsBySearchConditions response",
 					"originalRequest": {
 						"method": "POST",
@@ -1993,13 +1889,10 @@
 							}
 						},
 						"url": {
-							"raw": "http://172.25.20.61/AutodeskDM/Services/v26/ItemService.svc",
+							"raw": "http://{{ServerIP}}/AutodeskDM/Services/v26/ItemService.svc",
 							"protocol": "http",
 							"host": [
-								"172",
-								"25",
-								"20",
-								"61"
+								"{{ServerIP}}"
 							],
 							"path": [
 								"AutodeskDM",
@@ -2020,13 +1913,13 @@
 					],
 					"cookie": [],
 					"responseTime": null,
-					"body": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<soap:Envelope xmlns:soap=\"http://schemas.xmlsoap.org/soap/envelope/\">\n\t<soap:Body>\n\t\t<FindItemRevisionsBySearchConditionsResponse xmlns=\"http://AutodeskDM/Services/Item/1/7/2020/\">\n\t\t\t<FindItemRevisionsBySearchConditionsResult>\n\t\t\t\t<Item RevId=\"100\" RevNum=\"string\" LastModUserName=\"string\" LastModUserId=\"100\" LastModDate=\"2022-01-20T20:35:36.756Z\" MasterId=\"100\" ItemNum=\"string\" Title=\"string\" Detail=\"string\" Id=\"100\" VerNum=\"100\" Comm=\"string\" Units=\"string\" LfCycStateId=\"100\" UnitId=\"100\" NumSchmId=\"100\" CadBOMStruct=\"Normal\" ControlledByChangeOrder=\"true\" MaxCommittedId=\"100\" IsCloaked=\"true\" Locked=\"true\">\n\t\t\t\t\t<Cat CatId=\"100\" CatName=\"string\"/>\n\t\t\t\t\t<LfCyc LfCycStateId=\"100\" LfCycDefId=\"100\" Consume=\"true\" Obsolete=\"true\"/>\n\t\t\t\t</Item>\n\t\t\t</FindItemRevisionsBySearchConditionsResult>\n\t\t\t<bookmark>string</bookmark>\n\t\t\t<searchstatus TotalHits=\"100\" IndxStatus=\"IndexingComplete\"/>\n\t\t</FindItemRevisionsBySearchConditionsResponse>\n\t</soap:Body>\n</soap:Envelope>\n"
+					"body": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<soap:Envelope xmlns:soap=\"http://schemas.xmlsoap.org/soap/envelope/\">\n\t<soap:Body>\n\t\t<FindItemRevisionsBySearchConditionsResponse xmlns=\"http://AutodeskDM/Services/Item/1/7/2020/\">\n\t\t\t<FindItemRevisionsBySearchConditionsResult>\n\t\t\t\t<Item RevId=\"100\" RevNum=\"string\" LastModUserName=\"string\" LastModUserId=\"100\" LastModDate=\"2023-02-09T19:11:46.883Z\" MasterId=\"100\" ItemNum=\"string\" Title=\"string\" Detail=\"string\" Id=\"100\" VerNum=\"100\" Comm=\"string\" Units=\"string\" LfCycStateId=\"100\" UnitId=\"100\" NumSchmId=\"100\" CadBOMStruct=\"Normal\" ControlledByChangeOrder=\"true\" MaxCommittedId=\"100\" IsCloaked=\"true\" Locked=\"true\">\n\t\t\t\t\t<Cat CatId=\"100\" CatName=\"string\"/>\n\t\t\t\t\t<LfCyc LfCycStateId=\"100\" LfCycDefId=\"100\" Consume=\"true\" Obsolete=\"true\"/>\n\t\t\t\t</Item>\n\t\t\t</FindItemRevisionsBySearchConditionsResult>\n\t\t\t<bookmark>string</bookmark>\n\t\t\t<searchstatus TotalHits=\"100\" IndxStatus=\"IndexingComplete\"/>\n\t\t</FindItemRevisionsBySearchConditionsResponse>\n\t</soap:Body>\n</soap:Envelope>\n"
 				}
 			]
 		},
 		{
 			"name": "GetReferenceDesignatorProperties",
-			"id": "625f65dc-417f-478e-aa0f-3dab5d4c14c1",
+			"id": "d5d2a148-227d-4db1-a474-2f272f4c6258",
 			"request": {
 				"method": "POST",
 				"header": [
@@ -2063,7 +1956,7 @@
 			},
 			"response": [
 				{
-					"id": "cd55f25e-4bc9-42e6-9fe1-42091a2c4ad3",
+					"id": "69a01cf9-34ba-4b4b-88c5-625c4a6264a9",
 					"name": "GetReferenceDesignatorProperties response",
 					"originalRequest": {
 						"method": "POST",
@@ -2087,13 +1980,10 @@
 							}
 						},
 						"url": {
-							"raw": "http://172.25.20.61/AutodeskDM/Services/v26/ItemService.svc",
+							"raw": "http://{{ServerIP}}/AutodeskDM/Services/v26/ItemService.svc",
 							"protocol": "http",
 							"host": [
-								"172",
-								"25",
-								"20",
-								"61"
+								"{{ServerIP}}"
 							],
 							"path": [
 								"AutodeskDM",
@@ -2120,7 +2010,7 @@
 		},
 		{
 			"name": "AddFilesToPromote",
-			"id": "880b8117-7b3e-4caf-87be-59490af299fd",
+			"id": "6eb7a4f0-f5b9-4a16-9e28-f3e9ac18f30a",
 			"request": {
 				"method": "POST",
 				"header": [
@@ -2157,7 +2047,7 @@
 			},
 			"response": [
 				{
-					"id": "ec61522d-38e9-48ea-962c-e8f6a706ad2d",
+					"id": "460a720e-7f87-4bcd-9c5e-748eabc99c80",
 					"name": "AddFilesToPromote response",
 					"originalRequest": {
 						"method": "POST",
@@ -2181,13 +2071,10 @@
 							}
 						},
 						"url": {
-							"raw": "http://172.25.20.61/AutodeskDM/Services/v26/ItemService.svc",
+							"raw": "http://{{ServerIP}}/AutodeskDM/Services/v26/ItemService.svc",
 							"protocol": "http",
 							"host": [
-								"172",
-								"25",
-								"20",
-								"61"
+								"{{ServerIP}}"
 							],
 							"path": [
 								"AutodeskDM",
@@ -2214,7 +2101,7 @@
 		},
 		{
 			"name": "AddComponentsToPromote",
-			"id": "489fafce-6459-46bc-9469-35af8882c9a4",
+			"id": "ca448a8c-4015-436e-bc9d-8f7757ef025b",
 			"request": {
 				"method": "POST",
 				"header": [
@@ -2251,7 +2138,7 @@
 			},
 			"response": [
 				{
-					"id": "b8739c11-17e6-4a0e-b869-c81ad07103b2",
+					"id": "0ce32fe4-fae2-4d89-90ff-0b510b4d6296",
 					"name": "AddComponentsToPromote response",
 					"originalRequest": {
 						"method": "POST",
@@ -2275,13 +2162,10 @@
 							}
 						},
 						"url": {
-							"raw": "http://172.25.20.61/AutodeskDM/Services/v26/ItemService.svc",
+							"raw": "http://{{ServerIP}}/AutodeskDM/Services/v26/ItemService.svc",
 							"protocol": "http",
 							"host": [
-								"172",
-								"25",
-								"20",
-								"61"
+								"{{ServerIP}}"
 							],
 							"path": [
 								"AutodeskDM",
@@ -2308,7 +2192,7 @@
 		},
 		{
 			"name": "UpdatePromoteComponents",
-			"id": "3d417d5e-ca81-4d59-903d-415164ecb97d",
+			"id": "4350e22c-6d3e-4094-8916-634c081fc23b",
 			"request": {
 				"method": "POST",
 				"header": [
@@ -2345,7 +2229,7 @@
 			},
 			"response": [
 				{
-					"id": "f42473bc-f878-4951-bd29-7750b3cbde1c",
+					"id": "bdd023f4-2775-4912-bcea-8e08e91a4ae8",
 					"name": "UpdatePromoteComponents response",
 					"originalRequest": {
 						"method": "POST",
@@ -2369,13 +2253,10 @@
 							}
 						},
 						"url": {
-							"raw": "http://172.25.20.61/AutodeskDM/Services/v26/ItemService.svc",
+							"raw": "http://{{ServerIP}}/AutodeskDM/Services/v26/ItemService.svc",
 							"protocol": "http",
 							"host": [
-								"172",
-								"25",
-								"20",
-								"61"
+								"{{ServerIP}}"
 							],
 							"path": [
 								"AutodeskDM",
@@ -2402,7 +2283,7 @@
 		},
 		{
 			"name": "GetPromoteComponentOrder",
-			"id": "51a1af8d-5db7-4354-9fb4-7bd9dce0f600",
+			"id": "4d6d1b2a-0f93-44d6-9f60-c7e0304116a8",
 			"request": {
 				"method": "POST",
 				"header": [
@@ -2439,7 +2320,7 @@
 			},
 			"response": [
 				{
-					"id": "c273fab0-cea4-485d-b61b-1446a1f11c71",
+					"id": "d3f7c6d3-c118-473f-8deb-7028def34e3c",
 					"name": "GetPromoteComponentOrder response",
 					"originalRequest": {
 						"method": "POST",
@@ -2463,13 +2344,10 @@
 							}
 						},
 						"url": {
-							"raw": "http://172.25.20.61/AutodeskDM/Services/v26/ItemService.svc",
+							"raw": "http://{{ServerIP}}/AutodeskDM/Services/v26/ItemService.svc",
 							"protocol": "http",
 							"host": [
-								"172",
-								"25",
-								"20",
-								"61"
+								"{{ServerIP}}"
 							],
 							"path": [
 								"AutodeskDM",
@@ -2490,13 +2368,13 @@
 					],
 					"cookie": [],
 					"responseTime": null,
-					"body": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<soap:Envelope xmlns:soap=\"http://schemas.xmlsoap.org/soap/envelope/\">\n\t<soap:Body>\n\t\t<GetPromoteComponentOrderResponse xmlns=\"http://AutodeskDM/Services/Item/1/7/2020/\">\n\t\t\t<GetPromoteComponentOrderResult/>\n\t\t\t<timestamp>2022-01-20T20:35:36.759Z</timestamp>\n\t\t</GetPromoteComponentOrderResponse>\n\t</soap:Body>\n</soap:Envelope>\n"
+					"body": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<soap:Envelope xmlns:soap=\"http://schemas.xmlsoap.org/soap/envelope/\">\n\t<soap:Body>\n\t\t<GetPromoteComponentOrderResponse xmlns=\"http://AutodeskDM/Services/Item/1/7/2020/\">\n\t\t\t<GetPromoteComponentOrderResult/>\n\t\t\t<timestamp>2023-02-09T19:11:46.885Z</timestamp>\n\t\t</GetPromoteComponentOrderResponse>\n\t</soap:Body>\n</soap:Envelope>\n"
 				}
 			]
 		},
 		{
 			"name": "PromoteComponents",
-			"id": "62ef69ba-be17-4e56-b624-da61c7733a3b",
+			"id": "2a5617ed-48d4-4a29-afcb-eeb53f0414dd",
 			"request": {
 				"method": "POST",
 				"header": [
@@ -2511,7 +2389,7 @@
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<soap:Envelope xmlns:soap=\"http://schemas.xmlsoap.org/soap/envelope/\">\n\t<soap:Body>\n\t\t<PromoteComponents xmlns=\"http://AutodeskDM/Services/Item/1/7/2020/\">\n\t\t\t<timestamp>2022-01-20T20:35:36.759Z</timestamp>\n\t\t\t<compIds/>\n\t\t</PromoteComponents>\n\t</soap:Body>\n</soap:Envelope>\n",
+					"raw": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<soap:Envelope xmlns:soap=\"http://schemas.xmlsoap.org/soap/envelope/\">\n\t<soap:Body>\n\t\t<PromoteComponents xmlns=\"http://AutodeskDM/Services/Item/1/7/2020/\">\n\t\t\t<timestamp>2023-02-09T19:11:46.885Z</timestamp>\n\t\t\t<compIds/>\n\t\t</PromoteComponents>\n\t</soap:Body>\n</soap:Envelope>\n",
 					"options": {
 						"raw": {
 							"language": "xml"
@@ -2533,7 +2411,7 @@
 			},
 			"response": [
 				{
-					"id": "f07aa77e-327e-477d-a1d2-93a335a84175",
+					"id": "e172c039-863e-44cb-80ce-21385b595a20",
 					"name": "PromoteComponents response",
 					"originalRequest": {
 						"method": "POST",
@@ -2549,7 +2427,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<soap:Envelope xmlns:soap=\"http://schemas.xmlsoap.org/soap/envelope/\">\n\t<soap:Body>\n\t\t<PromoteComponents xmlns=\"http://AutodeskDM/Services/Item/1/7/2020/\">\n\t\t\t<timestamp>2022-01-20T20:35:36.759Z</timestamp>\n\t\t\t<compIds/>\n\t\t</PromoteComponents>\n\t</soap:Body>\n</soap:Envelope>\n",
+							"raw": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<soap:Envelope xmlns:soap=\"http://schemas.xmlsoap.org/soap/envelope/\">\n\t<soap:Body>\n\t\t<PromoteComponents xmlns=\"http://AutodeskDM/Services/Item/1/7/2020/\">\n\t\t\t<timestamp>2023-02-09T19:11:46.885Z</timestamp>\n\t\t\t<compIds/>\n\t\t</PromoteComponents>\n\t</soap:Body>\n</soap:Envelope>\n",
 							"options": {
 								"raw": {
 									"language": "xml"
@@ -2557,13 +2435,10 @@
 							}
 						},
 						"url": {
-							"raw": "http://172.25.20.61/AutodeskDM/Services/v26/ItemService.svc",
+							"raw": "http://{{ServerIP}}/AutodeskDM/Services/v26/ItemService.svc",
 							"protocol": "http",
 							"host": [
-								"172",
-								"25",
-								"20",
-								"61"
+								"{{ServerIP}}"
 							],
 							"path": [
 								"AutodeskDM",
@@ -2590,7 +2465,7 @@
 		},
 		{
 			"name": "PromoteComponentLinks",
-			"id": "4b86015b-887b-44b4-bb49-c736962c067c",
+			"id": "b4e033d7-39b6-4324-8c38-df1a47319723",
 			"request": {
 				"method": "POST",
 				"header": [
@@ -2627,7 +2502,7 @@
 			},
 			"response": [
 				{
-					"id": "a7606cf1-d246-4b15-adca-e23ae343d1fa",
+					"id": "2d6066c5-66b2-4f64-b46d-b5029a2d23a2",
 					"name": "PromoteComponentLinks response",
 					"originalRequest": {
 						"method": "POST",
@@ -2651,13 +2526,10 @@
 							}
 						},
 						"url": {
-							"raw": "http://172.25.20.61/AutodeskDM/Services/v26/ItemService.svc",
+							"raw": "http://{{ServerIP}}/AutodeskDM/Services/v26/ItemService.svc",
 							"protocol": "http",
 							"host": [
-								"172",
-								"25",
-								"20",
-								"61"
+								"{{ServerIP}}"
 							],
 							"path": [
 								"AutodeskDM",
@@ -2684,7 +2556,7 @@
 		},
 		{
 			"name": "GetPromoteComponentsResults",
-			"id": "6ec9312f-d20d-4c53-96ab-eb9c4e52e587",
+			"id": "c1518339-e623-490e-98ab-37874ed3c97f",
 			"request": {
 				"method": "POST",
 				"header": [
@@ -2699,7 +2571,7 @@
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<soap:Envelope xmlns:soap=\"http://schemas.xmlsoap.org/soap/envelope/\">\n\t<soap:Body>\n\t\t<GetPromoteComponentsResults xmlns=\"http://AutodeskDM/Services/Item/1/7/2020/\">\n\t\t\t<timestamp>2022-01-20T20:35:36.760Z</timestamp>\n\t\t</GetPromoteComponentsResults>\n\t</soap:Body>\n</soap:Envelope>\n",
+					"raw": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<soap:Envelope xmlns:soap=\"http://schemas.xmlsoap.org/soap/envelope/\">\n\t<soap:Body>\n\t\t<GetPromoteComponentsResults xmlns=\"http://AutodeskDM/Services/Item/1/7/2020/\">\n\t\t\t<timestamp>2023-02-09T19:11:46.885Z</timestamp>\n\t\t</GetPromoteComponentsResults>\n\t</soap:Body>\n</soap:Envelope>\n",
 					"options": {
 						"raw": {
 							"language": "xml"
@@ -2721,7 +2593,7 @@
 			},
 			"response": [
 				{
-					"id": "b12765a7-b645-487b-8056-3ac20cfe3835",
+					"id": "86de2f8c-8a7b-4e54-bf9c-d889818da06d",
 					"name": "GetPromoteComponentsResults response",
 					"originalRequest": {
 						"method": "POST",
@@ -2737,7 +2609,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<soap:Envelope xmlns:soap=\"http://schemas.xmlsoap.org/soap/envelope/\">\n\t<soap:Body>\n\t\t<GetPromoteComponentsResults xmlns=\"http://AutodeskDM/Services/Item/1/7/2020/\">\n\t\t\t<timestamp>2022-01-20T20:35:36.760Z</timestamp>\n\t\t</GetPromoteComponentsResults>\n\t</soap:Body>\n</soap:Envelope>\n",
+							"raw": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<soap:Envelope xmlns:soap=\"http://schemas.xmlsoap.org/soap/envelope/\">\n\t<soap:Body>\n\t\t<GetPromoteComponentsResults xmlns=\"http://AutodeskDM/Services/Item/1/7/2020/\">\n\t\t\t<timestamp>2023-02-09T19:11:46.885Z</timestamp>\n\t\t</GetPromoteComponentsResults>\n\t</soap:Body>\n</soap:Envelope>\n",
 							"options": {
 								"raw": {
 									"language": "xml"
@@ -2745,13 +2617,10 @@
 							}
 						},
 						"url": {
-							"raw": "http://172.25.20.61/AutodeskDM/Services/v26/ItemService.svc",
+							"raw": "http://{{ServerIP}}/AutodeskDM/Services/v26/ItemService.svc",
 							"protocol": "http",
 							"host": [
-								"172",
-								"25",
-								"20",
-								"61"
+								"{{ServerIP}}"
 							],
 							"path": [
 								"AutodeskDM",
@@ -2772,13 +2641,13 @@
 					],
 					"cookie": [],
 					"responseTime": null,
-					"body": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<soap:Envelope xmlns:soap=\"http://schemas.xmlsoap.org/soap/envelope/\">\n\t<soap:Body>\n\t\t<GetPromoteComponentsResultsResponse xmlns=\"http://AutodeskDM/Services/Item/1/7/2020/\">\n\t\t\t<GetPromoteComponentsResultsResult>\n\t\t\t\t<ItemRevArray RevId=\"100\" RevNum=\"string\" LastModUserName=\"string\" LastModUserId=\"100\" LastModDate=\"2022-01-20T20:35:36.761Z\" MasterId=\"100\" ItemNum=\"string\" Title=\"string\" Detail=\"string\" Id=\"100\" VerNum=\"100\" Comm=\"string\" Units=\"string\" LfCycStateId=\"100\" UnitId=\"100\" NumSchmId=\"100\" CadBOMStruct=\"Normal\" ControlledByChangeOrder=\"true\" MaxCommittedId=\"100\" IsCloaked=\"true\" Locked=\"true\">\n\t\t\t\t\t<Cat CatId=\"100\" CatName=\"string\"/>\n\t\t\t\t\t<LfCyc LfCycStateId=\"100\" LfCycDefId=\"100\" Consume=\"true\" Obsolete=\"true\"/>\n\t\t\t\t</ItemRevArray>\n\t\t\t\t<ItemAssocArray Id=\"100\" ParItemID=\"100\" ParItemMasterID=\"100\" CldItemID=\"100\" CldItemMasterID=\"100\" Quant=\"30\" Units=\"string\" UnitID=\"100\" IsStatic=\"true\" BOMOrder=\"100\" CldHasCldren=\"true\" RefDesId=\"100\" IsIncluded=\"true\" IsCad=\"true\" IsGroup=\"true\" GroupId=\"100\" BOMCompId=\"100\" AssocMasterId=\"100\" PositionNum=\"string\" InstCount=\"100\" UnitSize=\"36\"/>\n\t\t\t\t<FileAssocArray ParItemId=\"100\" CldFileId=\"100\" FileName=\"string\" CldFileVerNum=\"100\" Typ=\"Primary\" Cloaked=\"true\"/>\n\t\t\t</GetPromoteComponentsResultsResult>\n\t\t</GetPromoteComponentsResultsResponse>\n\t</soap:Body>\n</soap:Envelope>\n"
+					"body": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<soap:Envelope xmlns:soap=\"http://schemas.xmlsoap.org/soap/envelope/\">\n\t<soap:Body>\n\t\t<GetPromoteComponentsResultsResponse xmlns=\"http://AutodeskDM/Services/Item/1/7/2020/\">\n\t\t\t<GetPromoteComponentsResultsResult>\n\t\t\t\t<ItemRevArray RevId=\"100\" RevNum=\"string\" LastModUserName=\"string\" LastModUserId=\"100\" LastModDate=\"2023-02-09T19:11:46.885Z\" MasterId=\"100\" ItemNum=\"string\" Title=\"string\" Detail=\"string\" Id=\"100\" VerNum=\"100\" Comm=\"string\" Units=\"string\" LfCycStateId=\"100\" UnitId=\"100\" NumSchmId=\"100\" CadBOMStruct=\"Normal\" ControlledByChangeOrder=\"true\" MaxCommittedId=\"100\" IsCloaked=\"true\" Locked=\"true\">\n\t\t\t\t\t<Cat CatId=\"100\" CatName=\"string\"/>\n\t\t\t\t\t<LfCyc LfCycStateId=\"100\" LfCycDefId=\"100\" Consume=\"true\" Obsolete=\"true\"/>\n\t\t\t\t</ItemRevArray>\n\t\t\t\t<ItemAssocArray Id=\"100\" ParItemID=\"100\" ParItemMasterID=\"100\" CldItemID=\"100\" CldItemMasterID=\"100\" Quant=\"15\" Units=\"string\" UnitID=\"100\" IsStatic=\"true\" BOMOrder=\"100\" CldHasCldren=\"true\" RefDesId=\"100\" IsIncluded=\"true\" IsCad=\"true\" IsGroup=\"true\" GroupId=\"100\" BOMCompId=\"100\" AssocMasterId=\"100\" PositionNum=\"string\" InstCount=\"100\" UnitSize=\"89\"/>\n\t\t\t\t<FileAssocArray ParItemId=\"100\" CldFileId=\"100\" FileName=\"string\" CldFileVerNum=\"100\" Typ=\"Primary\" Cloaked=\"true\"/>\n\t\t\t</GetPromoteComponentsResultsResult>\n\t\t</GetPromoteComponentsResultsResponse>\n\t</soap:Body>\n</soap:Envelope>\n"
 				}
 			]
 		},
 		{
 			"name": "DeleteUncommittedItems",
-			"id": "dd67ae95-2812-49f7-8553-fa0203498115",
+			"id": "6f2b3aa6-07bc-4a81-ad7c-12f1421be1e5",
 			"request": {
 				"method": "POST",
 				"header": [
@@ -2815,7 +2684,7 @@
 			},
 			"response": [
 				{
-					"id": "6884cbc0-2376-4e8d-bba7-d4c32bdc767e",
+					"id": "b18dbbf5-be4f-430f-b92a-a2aa0e7503ae",
 					"name": "DeleteUncommittedItems response",
 					"originalRequest": {
 						"method": "POST",
@@ -2839,13 +2708,10 @@
 							}
 						},
 						"url": {
-							"raw": "http://172.25.20.61/AutodeskDM/Services/v26/ItemService.svc",
+							"raw": "http://{{ServerIP}}/AutodeskDM/Services/v26/ItemService.svc",
 							"protocol": "http",
 							"host": [
-								"172",
-								"25",
-								"20",
-								"61"
+								"{{ServerIP}}"
 							],
 							"path": [
 								"AutodeskDM",
@@ -2872,7 +2738,7 @@
 		},
 		{
 			"name": "UndoEditItems",
-			"id": "b5b84051-cf2e-4ee8-9755-63bd2ca5369b",
+			"id": "857c0267-9fa2-4001-8985-6dd094894b96",
 			"request": {
 				"method": "POST",
 				"header": [
@@ -2909,7 +2775,7 @@
 			},
 			"response": [
 				{
-					"id": "c859721c-cc8c-46ad-87ac-caba0c726afc",
+					"id": "09430485-7ab2-4d81-b5ab-6e120618d28f",
 					"name": "UndoEditItems response",
 					"originalRequest": {
 						"method": "POST",
@@ -2933,13 +2799,10 @@
 							}
 						},
 						"url": {
-							"raw": "http://172.25.20.61/AutodeskDM/Services/v26/ItemService.svc",
+							"raw": "http://{{ServerIP}}/AutodeskDM/Services/v26/ItemService.svc",
 							"protocol": "http",
 							"host": [
-								"172",
-								"25",
-								"20",
-								"61"
+								"{{ServerIP}}"
 							],
 							"path": [
 								"AutodeskDM",
@@ -2966,7 +2829,7 @@
 		},
 		{
 			"name": "AddItemRevision",
-			"id": "fd5d3a7e-24bc-4476-aa63-aa97e47f0f2b",
+			"id": "edd3e1a9-f128-484b-91ed-8c3cf6efa971",
 			"request": {
 				"method": "POST",
 				"header": [
@@ -3003,7 +2866,7 @@
 			},
 			"response": [
 				{
-					"id": "472b81ae-ff19-4cb6-a3b9-0a7c2dc0c18f",
+					"id": "96989c6e-7475-4c95-a00d-407e00b5a030",
 					"name": "AddItemRevision response",
 					"originalRequest": {
 						"method": "POST",
@@ -3027,13 +2890,10 @@
 							}
 						},
 						"url": {
-							"raw": "http://172.25.20.61/AutodeskDM/Services/v26/ItemService.svc",
+							"raw": "http://{{ServerIP}}/AutodeskDM/Services/v26/ItemService.svc",
 							"protocol": "http",
 							"host": [
-								"172",
-								"25",
-								"20",
-								"61"
+								"{{ServerIP}}"
 							],
 							"path": [
 								"AutodeskDM",
@@ -3054,13 +2914,13 @@
 					],
 					"cookie": [],
 					"responseTime": null,
-					"body": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<soap:Envelope xmlns:soap=\"http://schemas.xmlsoap.org/soap/envelope/\">\n\t<soap:Body>\n\t\t<AddItemRevisionResponse xmlns=\"http://AutodeskDM/Services/Item/1/7/2020/\">\n\t\t\t<AddItemRevisionResult RevId=\"100\" RevNum=\"string\" LastModUserName=\"string\" LastModUserId=\"100\" LastModDate=\"2022-01-20T20:35:36.763Z\" MasterId=\"100\" ItemNum=\"string\" Title=\"string\" Detail=\"string\" Id=\"100\" VerNum=\"100\" Comm=\"string\" Units=\"string\" LfCycStateId=\"100\" UnitId=\"100\" NumSchmId=\"100\" CadBOMStruct=\"Normal\" ControlledByChangeOrder=\"true\" MaxCommittedId=\"100\" IsCloaked=\"true\" Locked=\"true\">\n\t\t\t\t<Cat CatId=\"100\" CatName=\"string\"/>\n\t\t\t\t<LfCyc LfCycStateId=\"100\" LfCycDefId=\"100\" Consume=\"true\" Obsolete=\"true\"/>\n\t\t\t</AddItemRevisionResult>\n\t\t</AddItemRevisionResponse>\n\t</soap:Body>\n</soap:Envelope>\n"
+					"body": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<soap:Envelope xmlns:soap=\"http://schemas.xmlsoap.org/soap/envelope/\">\n\t<soap:Body>\n\t\t<AddItemRevisionResponse xmlns=\"http://AutodeskDM/Services/Item/1/7/2020/\">\n\t\t\t<AddItemRevisionResult RevId=\"100\" RevNum=\"string\" LastModUserName=\"string\" LastModUserId=\"100\" LastModDate=\"2023-02-09T19:11:46.886Z\" MasterId=\"100\" ItemNum=\"string\" Title=\"string\" Detail=\"string\" Id=\"100\" VerNum=\"100\" Comm=\"string\" Units=\"string\" LfCycStateId=\"100\" UnitId=\"100\" NumSchmId=\"100\" CadBOMStruct=\"Normal\" ControlledByChangeOrder=\"true\" MaxCommittedId=\"100\" IsCloaked=\"true\" Locked=\"true\">\n\t\t\t\t<Cat CatId=\"100\" CatName=\"string\"/>\n\t\t\t\t<LfCyc LfCycStateId=\"100\" LfCycDefId=\"100\" Consume=\"true\" Obsolete=\"true\"/>\n\t\t\t</AddItemRevisionResult>\n\t\t</AddItemRevisionResponse>\n\t</soap:Body>\n</soap:Envelope>\n"
 				}
 			]
 		},
 		{
 			"name": "AddItemRevisionWithScheme",
-			"id": "9c2a8eeb-75cb-4862-b707-12ff257f5441",
+			"id": "8b0fce05-b165-4c20-b84f-367cc2d318b1",
 			"request": {
 				"method": "POST",
 				"header": [
@@ -3097,7 +2957,7 @@
 			},
 			"response": [
 				{
-					"id": "0ee3f2c3-4cff-4bbd-bfc7-1114bb1a098a",
+					"id": "f81a715c-3b14-42f6-900b-7c2add96db6b",
 					"name": "AddItemRevisionWithScheme response",
 					"originalRequest": {
 						"method": "POST",
@@ -3121,13 +2981,10 @@
 							}
 						},
 						"url": {
-							"raw": "http://172.25.20.61/AutodeskDM/Services/v26/ItemService.svc",
+							"raw": "http://{{ServerIP}}/AutodeskDM/Services/v26/ItemService.svc",
 							"protocol": "http",
 							"host": [
-								"172",
-								"25",
-								"20",
-								"61"
+								"{{ServerIP}}"
 							],
 							"path": [
 								"AutodeskDM",
@@ -3148,13 +3005,13 @@
 					],
 					"cookie": [],
 					"responseTime": null,
-					"body": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<soap:Envelope xmlns:soap=\"http://schemas.xmlsoap.org/soap/envelope/\">\n\t<soap:Body>\n\t\t<AddItemRevisionWithSchemeResponse xmlns=\"http://AutodeskDM/Services/Item/1/7/2020/\">\n\t\t\t<AddItemRevisionWithSchemeResult RevId=\"100\" RevNum=\"string\" LastModUserName=\"string\" LastModUserId=\"100\" LastModDate=\"2022-01-20T20:35:36.765Z\" MasterId=\"100\" ItemNum=\"string\" Title=\"string\" Detail=\"string\" Id=\"100\" VerNum=\"100\" Comm=\"string\" Units=\"string\" LfCycStateId=\"100\" UnitId=\"100\" NumSchmId=\"100\" CadBOMStruct=\"Normal\" ControlledByChangeOrder=\"true\" MaxCommittedId=\"100\" IsCloaked=\"true\" Locked=\"true\">\n\t\t\t\t<Cat CatId=\"100\" CatName=\"string\"/>\n\t\t\t\t<LfCyc LfCycStateId=\"100\" LfCycDefId=\"100\" Consume=\"true\" Obsolete=\"true\"/>\n\t\t\t</AddItemRevisionWithSchemeResult>\n\t\t</AddItemRevisionWithSchemeResponse>\n\t</soap:Body>\n</soap:Envelope>\n"
+					"body": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<soap:Envelope xmlns:soap=\"http://schemas.xmlsoap.org/soap/envelope/\">\n\t<soap:Body>\n\t\t<AddItemRevisionWithSchemeResponse xmlns=\"http://AutodeskDM/Services/Item/1/7/2020/\">\n\t\t\t<AddItemRevisionWithSchemeResult RevId=\"100\" RevNum=\"string\" LastModUserName=\"string\" LastModUserId=\"100\" LastModDate=\"2023-02-09T19:11:46.887Z\" MasterId=\"100\" ItemNum=\"string\" Title=\"string\" Detail=\"string\" Id=\"100\" VerNum=\"100\" Comm=\"string\" Units=\"string\" LfCycStateId=\"100\" UnitId=\"100\" NumSchmId=\"100\" CadBOMStruct=\"Normal\" ControlledByChangeOrder=\"true\" MaxCommittedId=\"100\" IsCloaked=\"true\" Locked=\"true\">\n\t\t\t\t<Cat CatId=\"100\" CatName=\"string\"/>\n\t\t\t\t<LfCyc LfCycStateId=\"100\" LfCycDefId=\"100\" Consume=\"true\" Obsolete=\"true\"/>\n\t\t\t</AddItemRevisionWithSchemeResult>\n\t\t</AddItemRevisionWithSchemeResponse>\n\t</soap:Body>\n</soap:Envelope>\n"
 				}
 			]
 		},
 		{
 			"name": "EditItems",
-			"id": "28563ed0-64ad-49fe-8ec9-09270cdd3f6c",
+			"id": "bfe2881c-7289-49f0-9b41-2252a74f443c",
 			"request": {
 				"method": "POST",
 				"header": [
@@ -3191,7 +3048,7 @@
 			},
 			"response": [
 				{
-					"id": "314039bd-546d-4806-9d50-89093697bbcd",
+					"id": "b0f5bc32-0eed-46a8-bb59-7adc0fc0e4cd",
 					"name": "EditItems response",
 					"originalRequest": {
 						"method": "POST",
@@ -3215,13 +3072,10 @@
 							}
 						},
 						"url": {
-							"raw": "http://172.25.20.61/AutodeskDM/Services/v26/ItemService.svc",
+							"raw": "http://{{ServerIP}}/AutodeskDM/Services/v26/ItemService.svc",
 							"protocol": "http",
 							"host": [
-								"172",
-								"25",
-								"20",
-								"61"
+								"{{ServerIP}}"
 							],
 							"path": [
 								"AutodeskDM",
@@ -3242,13 +3096,13 @@
 					],
 					"cookie": [],
 					"responseTime": null,
-					"body": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<soap:Envelope xmlns:soap=\"http://schemas.xmlsoap.org/soap/envelope/\">\n\t<soap:Body>\n\t\t<EditItemsResponse xmlns=\"http://AutodeskDM/Services/Item/1/7/2020/\">\n\t\t\t<EditItemsResult>\n\t\t\t\t<Item RevId=\"100\" RevNum=\"string\" LastModUserName=\"string\" LastModUserId=\"100\" LastModDate=\"2022-01-20T20:35:36.765Z\" MasterId=\"100\" ItemNum=\"string\" Title=\"string\" Detail=\"string\" Id=\"100\" VerNum=\"100\" Comm=\"string\" Units=\"string\" LfCycStateId=\"100\" UnitId=\"100\" NumSchmId=\"100\" CadBOMStruct=\"Normal\" ControlledByChangeOrder=\"true\" MaxCommittedId=\"100\" IsCloaked=\"true\" Locked=\"true\">\n\t\t\t\t\t<Cat CatId=\"100\" CatName=\"string\"/>\n\t\t\t\t\t<LfCyc LfCycStateId=\"100\" LfCycDefId=\"100\" Consume=\"true\" Obsolete=\"true\"/>\n\t\t\t\t</Item>\n\t\t\t</EditItemsResult>\n\t\t</EditItemsResponse>\n\t</soap:Body>\n</soap:Envelope>\n"
+					"body": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<soap:Envelope xmlns:soap=\"http://schemas.xmlsoap.org/soap/envelope/\">\n\t<soap:Body>\n\t\t<EditItemsResponse xmlns=\"http://AutodeskDM/Services/Item/1/7/2020/\">\n\t\t\t<EditItemsResult>\n\t\t\t\t<Item RevId=\"100\" RevNum=\"string\" LastModUserName=\"string\" LastModUserId=\"100\" LastModDate=\"2023-02-09T19:11:46.887Z\" MasterId=\"100\" ItemNum=\"string\" Title=\"string\" Detail=\"string\" Id=\"100\" VerNum=\"100\" Comm=\"string\" Units=\"string\" LfCycStateId=\"100\" UnitId=\"100\" NumSchmId=\"100\" CadBOMStruct=\"Normal\" ControlledByChangeOrder=\"true\" MaxCommittedId=\"100\" IsCloaked=\"true\" Locked=\"true\">\n\t\t\t\t\t<Cat CatId=\"100\" CatName=\"string\"/>\n\t\t\t\t\t<LfCyc LfCycStateId=\"100\" LfCycDefId=\"100\" Consume=\"true\" Obsolete=\"true\"/>\n\t\t\t\t</Item>\n\t\t\t</EditItemsResult>\n\t\t</EditItemsResponse>\n\t</soap:Body>\n</soap:Envelope>\n"
 				}
 			]
 		},
 		{
 			"name": "AssignComponentToItem",
-			"id": "e4d644ec-9463-40ea-99e3-d30df83ee6f7",
+			"id": "042a6ca0-6c33-4a9b-a346-bf7b5a799758",
 			"request": {
 				"method": "POST",
 				"header": [
@@ -3285,7 +3139,7 @@
 			},
 			"response": [
 				{
-					"id": "8f55d465-6f52-4152-8708-471af918a6af",
+					"id": "b2bf3b21-6de9-4f7f-a046-d745da90c53d",
 					"name": "AssignComponentToItem response",
 					"originalRequest": {
 						"method": "POST",
@@ -3309,13 +3163,10 @@
 							}
 						},
 						"url": {
-							"raw": "http://172.25.20.61/AutodeskDM/Services/v26/ItemService.svc",
+							"raw": "http://{{ServerIP}}/AutodeskDM/Services/v26/ItemService.svc",
 							"protocol": "http",
 							"host": [
-								"172",
-								"25",
-								"20",
-								"61"
+								"{{ServerIP}}"
 							],
 							"path": [
 								"AutodeskDM",
@@ -3336,13 +3187,13 @@
 					],
 					"cookie": [],
 					"responseTime": null,
-					"body": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<soap:Envelope xmlns:soap=\"http://schemas.xmlsoap.org/soap/envelope/\">\n\t<soap:Body>\n\t\t<AssignComponentToItemResponse xmlns=\"http://AutodeskDM/Services/Item/1/7/2020/\">\n\t\t\t<AssignComponentToItemResult RevId=\"100\" RevNum=\"string\" LastModUserName=\"string\" LastModUserId=\"100\" LastModDate=\"2022-01-20T20:35:36.766Z\" MasterId=\"100\" ItemNum=\"string\" Title=\"string\" Detail=\"string\" Id=\"100\" VerNum=\"100\" Comm=\"string\" Units=\"string\" LfCycStateId=\"100\" UnitId=\"100\" NumSchmId=\"100\" CadBOMStruct=\"Normal\" ControlledByChangeOrder=\"true\" MaxCommittedId=\"100\" IsCloaked=\"true\" Locked=\"true\">\n\t\t\t\t<Cat CatId=\"100\" CatName=\"string\"/>\n\t\t\t\t<LfCyc LfCycStateId=\"100\" LfCycDefId=\"100\" Consume=\"true\" Obsolete=\"true\"/>\n\t\t\t</AssignComponentToItemResult>\n\t\t</AssignComponentToItemResponse>\n\t</soap:Body>\n</soap:Envelope>\n"
+					"body": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<soap:Envelope xmlns:soap=\"http://schemas.xmlsoap.org/soap/envelope/\">\n\t<soap:Body>\n\t\t<AssignComponentToItemResponse xmlns=\"http://AutodeskDM/Services/Item/1/7/2020/\">\n\t\t\t<AssignComponentToItemResult RevId=\"100\" RevNum=\"string\" LastModUserName=\"string\" LastModUserId=\"100\" LastModDate=\"2023-02-09T19:11:46.887Z\" MasterId=\"100\" ItemNum=\"string\" Title=\"string\" Detail=\"string\" Id=\"100\" VerNum=\"100\" Comm=\"string\" Units=\"string\" LfCycStateId=\"100\" UnitId=\"100\" NumSchmId=\"100\" CadBOMStruct=\"Normal\" ControlledByChangeOrder=\"true\" MaxCommittedId=\"100\" IsCloaked=\"true\" Locked=\"true\">\n\t\t\t\t<Cat CatId=\"100\" CatName=\"string\"/>\n\t\t\t\t<LfCyc LfCycStateId=\"100\" LfCycDefId=\"100\" Consume=\"true\" Obsolete=\"true\"/>\n\t\t\t</AssignComponentToItemResult>\n\t\t</AssignComponentToItemResponse>\n\t</soap:Body>\n</soap:Envelope>\n"
 				}
 			]
 		},
 		{
 			"name": "AssignFileToItem",
-			"id": "946bec48-a543-41c0-bf78-64e285b0f641",
+			"id": "8e13d514-82eb-44ad-80dc-8293a5fbd20b",
 			"request": {
 				"method": "POST",
 				"header": [
@@ -3379,7 +3230,7 @@
 			},
 			"response": [
 				{
-					"id": "e994d6f1-dc46-496a-baa1-253fcf46aafd",
+					"id": "8a97fd85-5814-461e-ae87-452497efd444",
 					"name": "AssignFileToItem response",
 					"originalRequest": {
 						"method": "POST",
@@ -3403,13 +3254,10 @@
 							}
 						},
 						"url": {
-							"raw": "http://172.25.20.61/AutodeskDM/Services/v26/ItemService.svc",
+							"raw": "http://{{ServerIP}}/AutodeskDM/Services/v26/ItemService.svc",
 							"protocol": "http",
 							"host": [
-								"172",
-								"25",
-								"20",
-								"61"
+								"{{ServerIP}}"
 							],
 							"path": [
 								"AutodeskDM",
@@ -3430,13 +3278,13 @@
 					],
 					"cookie": [],
 					"responseTime": null,
-					"body": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<soap:Envelope xmlns:soap=\"http://schemas.xmlsoap.org/soap/envelope/\">\n\t<soap:Body>\n\t\t<AssignFileToItemResponse xmlns=\"http://AutodeskDM/Services/Item/1/7/2020/\">\n\t\t\t<AssignFileToItemResult RevId=\"100\" RevNum=\"string\" LastModUserName=\"string\" LastModUserId=\"100\" LastModDate=\"2022-01-20T20:35:36.767Z\" MasterId=\"100\" ItemNum=\"string\" Title=\"string\" Detail=\"string\" Id=\"100\" VerNum=\"100\" Comm=\"string\" Units=\"string\" LfCycStateId=\"100\" UnitId=\"100\" NumSchmId=\"100\" CadBOMStruct=\"Normal\" ControlledByChangeOrder=\"true\" MaxCommittedId=\"100\" IsCloaked=\"true\" Locked=\"true\">\n\t\t\t\t<Cat CatId=\"100\" CatName=\"string\"/>\n\t\t\t\t<LfCyc LfCycStateId=\"100\" LfCycDefId=\"100\" Consume=\"true\" Obsolete=\"true\"/>\n\t\t\t</AssignFileToItemResult>\n\t\t</AssignFileToItemResponse>\n\t</soap:Body>\n</soap:Envelope>\n"
+					"body": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<soap:Envelope xmlns:soap=\"http://schemas.xmlsoap.org/soap/envelope/\">\n\t<soap:Body>\n\t\t<AssignFileToItemResponse xmlns=\"http://AutodeskDM/Services/Item/1/7/2020/\">\n\t\t\t<AssignFileToItemResult RevId=\"100\" RevNum=\"string\" LastModUserName=\"string\" LastModUserId=\"100\" LastModDate=\"2023-02-09T19:11:46.888Z\" MasterId=\"100\" ItemNum=\"string\" Title=\"string\" Detail=\"string\" Id=\"100\" VerNum=\"100\" Comm=\"string\" Units=\"string\" LfCycStateId=\"100\" UnitId=\"100\" NumSchmId=\"100\" CadBOMStruct=\"Normal\" ControlledByChangeOrder=\"true\" MaxCommittedId=\"100\" IsCloaked=\"true\" Locked=\"true\">\n\t\t\t\t<Cat CatId=\"100\" CatName=\"string\"/>\n\t\t\t\t<LfCyc LfCycStateId=\"100\" LfCycDefId=\"100\" Consume=\"true\" Obsolete=\"true\"/>\n\t\t\t</AssignFileToItemResult>\n\t\t</AssignFileToItemResponse>\n\t</soap:Body>\n</soap:Envelope>\n"
 				}
 			]
 		},
 		{
 			"name": "GetAttachmentsByItemIds",
-			"id": "072760df-c5f1-41ac-9b86-904d29ee508b",
+			"id": "c3205e98-d76f-422b-b00c-718c741836b1",
 			"request": {
 				"method": "POST",
 				"header": [
@@ -3473,7 +3321,7 @@
 			},
 			"response": [
 				{
-					"id": "8d3bc4db-a5f5-485b-93c8-dff811480ce0",
+					"id": "2c71e962-412a-4a8c-aea7-fe6c0a6e79fe",
 					"name": "GetAttachmentsByItemIds response",
 					"originalRequest": {
 						"method": "POST",
@@ -3497,13 +3345,10 @@
 							}
 						},
 						"url": {
-							"raw": "http://172.25.20.61/AutodeskDM/Services/v26/ItemService.svc",
+							"raw": "http://{{ServerIP}}/AutodeskDM/Services/v26/ItemService.svc",
 							"protocol": "http",
 							"host": [
-								"172",
-								"25",
-								"20",
-								"61"
+								"{{ServerIP}}"
 							],
 							"path": [
 								"AutodeskDM",
@@ -3530,7 +3375,7 @@
 		},
 		{
 			"name": "GetItemFileAssociationsByItemIds",
-			"id": "3d9c63cf-74bc-478f-9f6c-af5391f4350b",
+			"id": "b8b37e1e-cddc-4120-a635-6fb901500241",
 			"request": {
 				"method": "POST",
 				"header": [
@@ -3567,7 +3412,7 @@
 			},
 			"response": [
 				{
-					"id": "a6c7c97e-4ffa-4b82-b9bb-9ee16f8f7121",
+					"id": "879a39b2-be5e-4698-89d5-d6d10c5179c9",
 					"name": "GetItemFileAssociationsByItemIds response",
 					"originalRequest": {
 						"method": "POST",
@@ -3591,13 +3436,10 @@
 							}
 						},
 						"url": {
-							"raw": "http://172.25.20.61/AutodeskDM/Services/v26/ItemService.svc",
+							"raw": "http://{{ServerIP}}/AutodeskDM/Services/v26/ItemService.svc",
 							"protocol": "http",
 							"host": [
-								"172",
-								"25",
-								"20",
-								"61"
+								"{{ServerIP}}"
 							],
 							"path": [
 								"AutodeskDM",
@@ -3624,7 +3466,7 @@
 		},
 		{
 			"name": "GetItemsByIds",
-			"id": "7ba258c7-bf72-46a9-9395-92985d69fe4f",
+			"id": "338121fe-073d-48fe-8bc4-be7473e9440a",
 			"request": {
 				"method": "POST",
 				"header": [
@@ -3661,7 +3503,7 @@
 			},
 			"response": [
 				{
-					"id": "988e8888-7b9d-461b-bacc-c96ec46db40d",
+					"id": "e6e8a489-523b-4dcc-a16c-3a167564022d",
 					"name": "GetItemsByIds response",
 					"originalRequest": {
 						"method": "POST",
@@ -3685,13 +3527,10 @@
 							}
 						},
 						"url": {
-							"raw": "http://172.25.20.61/AutodeskDM/Services/v26/ItemService.svc",
+							"raw": "http://{{ServerIP}}/AutodeskDM/Services/v26/ItemService.svc",
 							"protocol": "http",
 							"host": [
-								"172",
-								"25",
-								"20",
-								"61"
+								"{{ServerIP}}"
 							],
 							"path": [
 								"AutodeskDM",
@@ -3712,13 +3551,13 @@
 					],
 					"cookie": [],
 					"responseTime": null,
-					"body": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<soap:Envelope xmlns:soap=\"http://schemas.xmlsoap.org/soap/envelope/\">\n\t<soap:Body>\n\t\t<GetItemsByIdsResponse xmlns=\"http://AutodeskDM/Services/Item/1/7/2020/\">\n\t\t\t<GetItemsByIdsResult>\n\t\t\t\t<Item RevId=\"100\" RevNum=\"string\" LastModUserName=\"string\" LastModUserId=\"100\" LastModDate=\"2022-01-20T20:35:36.771Z\" MasterId=\"100\" ItemNum=\"string\" Title=\"string\" Detail=\"string\" Id=\"100\" VerNum=\"100\" Comm=\"string\" Units=\"string\" LfCycStateId=\"100\" UnitId=\"100\" NumSchmId=\"100\" CadBOMStruct=\"Normal\" ControlledByChangeOrder=\"true\" MaxCommittedId=\"100\" IsCloaked=\"true\" Locked=\"true\">\n\t\t\t\t\t<Cat CatId=\"100\" CatName=\"string\"/>\n\t\t\t\t\t<LfCyc LfCycStateId=\"100\" LfCycDefId=\"100\" Consume=\"true\" Obsolete=\"true\"/>\n\t\t\t\t</Item>\n\t\t\t</GetItemsByIdsResult>\n\t\t</GetItemsByIdsResponse>\n\t</soap:Body>\n</soap:Envelope>\n"
+					"body": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<soap:Envelope xmlns:soap=\"http://schemas.xmlsoap.org/soap/envelope/\">\n\t<soap:Body>\n\t\t<GetItemsByIdsResponse xmlns=\"http://AutodeskDM/Services/Item/1/7/2020/\">\n\t\t\t<GetItemsByIdsResult>\n\t\t\t\t<Item RevId=\"100\" RevNum=\"string\" LastModUserName=\"string\" LastModUserId=\"100\" LastModDate=\"2023-02-09T19:11:46.890Z\" MasterId=\"100\" ItemNum=\"string\" Title=\"string\" Detail=\"string\" Id=\"100\" VerNum=\"100\" Comm=\"string\" Units=\"string\" LfCycStateId=\"100\" UnitId=\"100\" NumSchmId=\"100\" CadBOMStruct=\"Normal\" ControlledByChangeOrder=\"true\" MaxCommittedId=\"100\" IsCloaked=\"true\" Locked=\"true\">\n\t\t\t\t\t<Cat CatId=\"100\" CatName=\"string\"/>\n\t\t\t\t\t<LfCyc LfCycStateId=\"100\" LfCycDefId=\"100\" Consume=\"true\" Obsolete=\"true\"/>\n\t\t\t\t</Item>\n\t\t\t</GetItemsByIdsResult>\n\t\t</GetItemsByIdsResponse>\n\t</soap:Body>\n</soap:Envelope>\n"
 				}
 			]
 		},
 		{
 			"name": "DeleteUnitOfMeasure",
-			"id": "98e38752-852b-4083-b04a-df69618c819a",
+			"id": "b798a1d2-75ed-4bd5-81de-b463130db621",
 			"request": {
 				"method": "POST",
 				"header": [
@@ -3755,7 +3594,7 @@
 			},
 			"response": [
 				{
-					"id": "e892ca1f-25eb-478f-98d2-b2418f3ffcc3",
+					"id": "f766367c-5dfe-42b5-863f-9bd4d9d1c91f",
 					"name": "DeleteUnitOfMeasure response",
 					"originalRequest": {
 						"method": "POST",
@@ -3779,13 +3618,10 @@
 							}
 						},
 						"url": {
-							"raw": "http://172.25.20.61/AutodeskDM/Services/v26/ItemService.svc",
+							"raw": "http://{{ServerIP}}/AutodeskDM/Services/v26/ItemService.svc",
 							"protocol": "http",
 							"host": [
-								"172",
-								"25",
-								"20",
-								"61"
+								"{{ServerIP}}"
 							],
 							"path": [
 								"AutodeskDM",
@@ -3812,7 +3648,7 @@
 		},
 		{
 			"name": "AddUnitOfMeasure",
-			"id": "5b1ff9e6-5243-4bfe-90f6-57a392abca3e",
+			"id": "a0a12492-fce1-4b27-b201-2ca15edab587",
 			"request": {
 				"method": "POST",
 				"header": [
@@ -3827,7 +3663,7 @@
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<soap:Envelope xmlns:soap=\"http://schemas.xmlsoap.org/soap/envelope/\">\n\t<soap:Body>\n\t\t<AddUnitOfMeasure xmlns=\"http://AutodeskDM/Services/Item/1/7/2020/\">\n\t\t\t<unitName>string</unitName>\n\t\t\t<abbreviation>string</abbreviation>\n\t\t\t<conversion>77</conversion>\n\t\t\t<baseUofMID>100</baseUofMID>\n\t\t</AddUnitOfMeasure>\n\t</soap:Body>\n</soap:Envelope>\n",
+					"raw": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<soap:Envelope xmlns:soap=\"http://schemas.xmlsoap.org/soap/envelope/\">\n\t<soap:Body>\n\t\t<AddUnitOfMeasure xmlns=\"http://AutodeskDM/Services/Item/1/7/2020/\">\n\t\t\t<unitName>string</unitName>\n\t\t\t<abbreviation>string</abbreviation>\n\t\t\t<conversion>59</conversion>\n\t\t\t<baseUofMID>100</baseUofMID>\n\t\t</AddUnitOfMeasure>\n\t</soap:Body>\n</soap:Envelope>\n",
 					"options": {
 						"raw": {
 							"language": "xml"
@@ -3849,7 +3685,7 @@
 			},
 			"response": [
 				{
-					"id": "ea69819d-1772-4afe-8a50-4be0ac5f189d",
+					"id": "56be5419-e268-4a3d-a6b5-f39a7e408e54",
 					"name": "AddUnitOfMeasure response",
 					"originalRequest": {
 						"method": "POST",
@@ -3865,7 +3701,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<soap:Envelope xmlns:soap=\"http://schemas.xmlsoap.org/soap/envelope/\">\n\t<soap:Body>\n\t\t<AddUnitOfMeasure xmlns=\"http://AutodeskDM/Services/Item/1/7/2020/\">\n\t\t\t<unitName>string</unitName>\n\t\t\t<abbreviation>string</abbreviation>\n\t\t\t<conversion>77</conversion>\n\t\t\t<baseUofMID>100</baseUofMID>\n\t\t</AddUnitOfMeasure>\n\t</soap:Body>\n</soap:Envelope>\n",
+							"raw": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<soap:Envelope xmlns:soap=\"http://schemas.xmlsoap.org/soap/envelope/\">\n\t<soap:Body>\n\t\t<AddUnitOfMeasure xmlns=\"http://AutodeskDM/Services/Item/1/7/2020/\">\n\t\t\t<unitName>string</unitName>\n\t\t\t<abbreviation>string</abbreviation>\n\t\t\t<conversion>59</conversion>\n\t\t\t<baseUofMID>100</baseUofMID>\n\t\t</AddUnitOfMeasure>\n\t</soap:Body>\n</soap:Envelope>\n",
 							"options": {
 								"raw": {
 									"language": "xml"
@@ -3873,13 +3709,10 @@
 							}
 						},
 						"url": {
-							"raw": "http://172.25.20.61/AutodeskDM/Services/v26/ItemService.svc",
+							"raw": "http://{{ServerIP}}/AutodeskDM/Services/v26/ItemService.svc",
 							"protocol": "http",
 							"host": [
-								"172",
-								"25",
-								"20",
-								"61"
+								"{{ServerIP}}"
 							],
 							"path": [
 								"AutodeskDM",
@@ -3900,13 +3733,13 @@
 					],
 					"cookie": [],
 					"responseTime": null,
-					"body": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<soap:Envelope xmlns:soap=\"http://schemas.xmlsoap.org/soap/envelope/\">\n\t<soap:Body>\n\t\t<AddUnitOfMeasureResponse xmlns=\"http://AutodeskDM/Services/Item/1/7/2020/\">\n\t\t\t<AddUnitOfMeasureResult Id=\"100\" SysName=\"string\" UnitName=\"string\" Abbr=\"string\" Conversion=\"54\" BaseUofMID=\"100\" SysUofM=\"true\"/>\n\t\t</AddUnitOfMeasureResponse>\n\t</soap:Body>\n</soap:Envelope>\n"
+					"body": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<soap:Envelope xmlns:soap=\"http://schemas.xmlsoap.org/soap/envelope/\">\n\t<soap:Body>\n\t\t<AddUnitOfMeasureResponse xmlns=\"http://AutodeskDM/Services/Item/1/7/2020/\">\n\t\t\t<AddUnitOfMeasureResult Id=\"100\" SysName=\"string\" UnitName=\"string\" Abbr=\"string\" Conversion=\"38\" BaseUofMID=\"100\" SysUofM=\"true\"/>\n\t\t</AddUnitOfMeasureResponse>\n\t</soap:Body>\n</soap:Envelope>\n"
 				}
 			]
 		},
 		{
 			"name": "UpdateUnitOfMeasure",
-			"id": "ef25488d-85cb-404a-ac10-3129819c7658",
+			"id": "118ec653-4042-4b09-8f65-b97d7a49d80e",
 			"request": {
 				"method": "POST",
 				"header": [
@@ -3921,7 +3754,7 @@
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<soap:Envelope xmlns:soap=\"http://schemas.xmlsoap.org/soap/envelope/\">\n\t<soap:Body>\n\t\t<UpdateUnitOfMeasure xmlns=\"http://AutodeskDM/Services/Item/1/7/2020/\">\n\t\t\t<UofM Id=\"100\" SysName=\"string\" UnitName=\"string\" Abbr=\"string\" Conversion=\"65\" BaseUofMID=\"100\" SysUofM=\"true\"/>\n\t\t</UpdateUnitOfMeasure>\n\t</soap:Body>\n</soap:Envelope>\n",
+					"raw": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<soap:Envelope xmlns:soap=\"http://schemas.xmlsoap.org/soap/envelope/\">\n\t<soap:Body>\n\t\t<UpdateUnitOfMeasure xmlns=\"http://AutodeskDM/Services/Item/1/7/2020/\">\n\t\t\t<UofM Id=\"100\" SysName=\"string\" UnitName=\"string\" Abbr=\"string\" Conversion=\"81\" BaseUofMID=\"100\" SysUofM=\"true\"/>\n\t\t</UpdateUnitOfMeasure>\n\t</soap:Body>\n</soap:Envelope>\n",
 					"options": {
 						"raw": {
 							"language": "xml"
@@ -3943,7 +3776,7 @@
 			},
 			"response": [
 				{
-					"id": "6e254e7c-8534-4b49-abc9-257d171f7713",
+					"id": "372d8841-ed55-4881-8a2b-bd7fade7f0ad",
 					"name": "UpdateUnitOfMeasure response",
 					"originalRequest": {
 						"method": "POST",
@@ -3959,7 +3792,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<soap:Envelope xmlns:soap=\"http://schemas.xmlsoap.org/soap/envelope/\">\n\t<soap:Body>\n\t\t<UpdateUnitOfMeasure xmlns=\"http://AutodeskDM/Services/Item/1/7/2020/\">\n\t\t\t<UofM Id=\"100\" SysName=\"string\" UnitName=\"string\" Abbr=\"string\" Conversion=\"65\" BaseUofMID=\"100\" SysUofM=\"true\"/>\n\t\t</UpdateUnitOfMeasure>\n\t</soap:Body>\n</soap:Envelope>\n",
+							"raw": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<soap:Envelope xmlns:soap=\"http://schemas.xmlsoap.org/soap/envelope/\">\n\t<soap:Body>\n\t\t<UpdateUnitOfMeasure xmlns=\"http://AutodeskDM/Services/Item/1/7/2020/\">\n\t\t\t<UofM Id=\"100\" SysName=\"string\" UnitName=\"string\" Abbr=\"string\" Conversion=\"81\" BaseUofMID=\"100\" SysUofM=\"true\"/>\n\t\t</UpdateUnitOfMeasure>\n\t</soap:Body>\n</soap:Envelope>\n",
 							"options": {
 								"raw": {
 									"language": "xml"
@@ -3967,13 +3800,10 @@
 							}
 						},
 						"url": {
-							"raw": "http://172.25.20.61/AutodeskDM/Services/v26/ItemService.svc",
+							"raw": "http://{{ServerIP}}/AutodeskDM/Services/v26/ItemService.svc",
 							"protocol": "http",
 							"host": [
-								"172",
-								"25",
-								"20",
-								"61"
+								"{{ServerIP}}"
 							],
 							"path": [
 								"AutodeskDM",
@@ -4000,7 +3830,7 @@
 		},
 		{
 			"name": "GetUnitOfMeasureById",
-			"id": "753306ba-e4f6-4cb3-9568-dd3fa72f76cc",
+			"id": "f0c845f9-9328-4c71-a710-612866a1e917",
 			"request": {
 				"method": "POST",
 				"header": [
@@ -4037,7 +3867,7 @@
 			},
 			"response": [
 				{
-					"id": "d438e000-da00-4627-8990-54a46e5fc536",
+					"id": "62dee71a-fcb3-4b68-b449-6eafe34825d7",
 					"name": "GetUnitOfMeasureById response",
 					"originalRequest": {
 						"method": "POST",
@@ -4061,13 +3891,10 @@
 							}
 						},
 						"url": {
-							"raw": "http://172.25.20.61/AutodeskDM/Services/v26/ItemService.svc",
+							"raw": "http://{{ServerIP}}/AutodeskDM/Services/v26/ItemService.svc",
 							"protocol": "http",
 							"host": [
-								"172",
-								"25",
-								"20",
-								"61"
+								"{{ServerIP}}"
 							],
 							"path": [
 								"AutodeskDM",
@@ -4088,13 +3915,13 @@
 					],
 					"cookie": [],
 					"responseTime": null,
-					"body": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<soap:Envelope xmlns:soap=\"http://schemas.xmlsoap.org/soap/envelope/\">\n\t<soap:Body>\n\t\t<GetUnitOfMeasureByIdResponse xmlns=\"http://AutodeskDM/Services/Item/1/7/2020/\">\n\t\t\t<GetUnitOfMeasureByIdResult Id=\"100\" SysName=\"string\" UnitName=\"string\" Abbr=\"string\" Conversion=\"74\" BaseUofMID=\"100\" SysUofM=\"true\"/>\n\t\t</GetUnitOfMeasureByIdResponse>\n\t</soap:Body>\n</soap:Envelope>\n"
+					"body": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<soap:Envelope xmlns:soap=\"http://schemas.xmlsoap.org/soap/envelope/\">\n\t<soap:Body>\n\t\t<GetUnitOfMeasureByIdResponse xmlns=\"http://AutodeskDM/Services/Item/1/7/2020/\">\n\t\t\t<GetUnitOfMeasureByIdResult Id=\"100\" SysName=\"string\" UnitName=\"string\" Abbr=\"string\" Conversion=\"14\" BaseUofMID=\"100\" SysUofM=\"true\"/>\n\t\t</GetUnitOfMeasureByIdResponse>\n\t</soap:Body>\n</soap:Envelope>\n"
 				}
 			]
 		},
 		{
 			"name": "GetUnitOfMeasureFamilyByUnitOfMeasureId",
-			"id": "44ece758-a988-491d-8b40-d6b58ec54a03",
+			"id": "f38f39e5-e834-4429-a92c-05c96934b11e",
 			"request": {
 				"method": "POST",
 				"header": [
@@ -4131,7 +3958,7 @@
 			},
 			"response": [
 				{
-					"id": "2481b918-34c8-4ec4-aba1-91802d4469bb",
+					"id": "b615a8a2-cc99-4d28-9799-d4e4acc1e435",
 					"name": "GetUnitOfMeasureFamilyByUnitOfMeasureId response",
 					"originalRequest": {
 						"method": "POST",
@@ -4155,13 +3982,10 @@
 							}
 						},
 						"url": {
-							"raw": "http://172.25.20.61/AutodeskDM/Services/v26/ItemService.svc",
+							"raw": "http://{{ServerIP}}/AutodeskDM/Services/v26/ItemService.svc",
 							"protocol": "http",
 							"host": [
-								"172",
-								"25",
-								"20",
-								"61"
+								"{{ServerIP}}"
 							],
 							"path": [
 								"AutodeskDM",
@@ -4182,13 +4006,13 @@
 					],
 					"cookie": [],
 					"responseTime": null,
-					"body": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<soap:Envelope xmlns:soap=\"http://schemas.xmlsoap.org/soap/envelope/\">\n\t<soap:Body>\n\t\t<GetUnitOfMeasureFamilyByUnitOfMeasureIdResponse xmlns=\"http://AutodeskDM/Services/Item/1/7/2020/\">\n\t\t\t<GetUnitOfMeasureFamilyByUnitOfMeasureIdResult>\n\t\t\t\t<UnitOfMeasure Id=\"100\" SysName=\"string\" UnitName=\"string\" Abbr=\"string\" Conversion=\"99\" BaseUofMID=\"100\" SysUofM=\"true\"/>\n\t\t\t</GetUnitOfMeasureFamilyByUnitOfMeasureIdResult>\n\t\t</GetUnitOfMeasureFamilyByUnitOfMeasureIdResponse>\n\t</soap:Body>\n</soap:Envelope>\n"
+					"body": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<soap:Envelope xmlns:soap=\"http://schemas.xmlsoap.org/soap/envelope/\">\n\t<soap:Body>\n\t\t<GetUnitOfMeasureFamilyByUnitOfMeasureIdResponse xmlns=\"http://AutodeskDM/Services/Item/1/7/2020/\">\n\t\t\t<GetUnitOfMeasureFamilyByUnitOfMeasureIdResult>\n\t\t\t\t<UnitOfMeasure Id=\"100\" SysName=\"string\" UnitName=\"string\" Abbr=\"string\" Conversion=\"45\" BaseUofMID=\"100\" SysUofM=\"true\"/>\n\t\t\t</GetUnitOfMeasureFamilyByUnitOfMeasureIdResult>\n\t\t</GetUnitOfMeasureFamilyByUnitOfMeasureIdResponse>\n\t</soap:Body>\n</soap:Envelope>\n"
 				}
 			]
 		},
 		{
 			"name": "GetAllBaseUnitsOfMeasure",
-			"id": "eb9844f2-e6c1-480e-8751-7c68e0c3f627",
+			"id": "8234e22d-8582-43aa-9b0e-bd41b55c878f",
 			"request": {
 				"method": "POST",
 				"header": [
@@ -4225,7 +4049,7 @@
 			},
 			"response": [
 				{
-					"id": "91725d89-bed8-4d29-8b7f-15a42fab17b8",
+					"id": "0537a96c-99c3-4ffc-85a6-6dedeeeb5ab5",
 					"name": "GetAllBaseUnitsOfMeasure response",
 					"originalRequest": {
 						"method": "POST",
@@ -4249,13 +4073,10 @@
 							}
 						},
 						"url": {
-							"raw": "http://172.25.20.61/AutodeskDM/Services/v26/ItemService.svc",
+							"raw": "http://{{ServerIP}}/AutodeskDM/Services/v26/ItemService.svc",
 							"protocol": "http",
 							"host": [
-								"172",
-								"25",
-								"20",
-								"61"
+								"{{ServerIP}}"
 							],
 							"path": [
 								"AutodeskDM",
@@ -4276,13 +4097,13 @@
 					],
 					"cookie": [],
 					"responseTime": null,
-					"body": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<soap:Envelope xmlns:soap=\"http://schemas.xmlsoap.org/soap/envelope/\">\n\t<soap:Body>\n\t\t<GetAllBaseUnitsOfMeasureResponse xmlns=\"http://AutodeskDM/Services/Item/1/7/2020/\">\n\t\t\t<GetAllBaseUnitsOfMeasureResult>\n\t\t\t\t<UnitOfMeasure Id=\"100\" SysName=\"string\" UnitName=\"string\" Abbr=\"string\" Conversion=\"83\" BaseUofMID=\"100\" SysUofM=\"true\"/>\n\t\t\t</GetAllBaseUnitsOfMeasureResult>\n\t\t</GetAllBaseUnitsOfMeasureResponse>\n\t</soap:Body>\n</soap:Envelope>\n"
+					"body": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<soap:Envelope xmlns:soap=\"http://schemas.xmlsoap.org/soap/envelope/\">\n\t<soap:Body>\n\t\t<GetAllBaseUnitsOfMeasureResponse xmlns=\"http://AutodeskDM/Services/Item/1/7/2020/\">\n\t\t\t<GetAllBaseUnitsOfMeasureResult>\n\t\t\t\t<UnitOfMeasure Id=\"100\" SysName=\"string\" UnitName=\"string\" Abbr=\"string\" Conversion=\"39\" BaseUofMID=\"100\" SysUofM=\"true\"/>\n\t\t\t</GetAllBaseUnitsOfMeasureResult>\n\t\t</GetAllBaseUnitsOfMeasureResponse>\n\t</soap:Body>\n</soap:Envelope>\n"
 				}
 			]
 		},
 		{
 			"name": "GetAllUnitsOfMeasure",
-			"id": "87061e9c-770c-4bb0-9dc0-33a23ccd0538",
+			"id": "6094adcc-6d70-4939-99c3-3406728d7d4f",
 			"request": {
 				"method": "POST",
 				"header": [
@@ -4319,7 +4140,7 @@
 			},
 			"response": [
 				{
-					"id": "a35db064-23ef-4767-89d6-f9cc61be9ef5",
+					"id": "6e684417-0d14-46c9-9ede-8640ace977f1",
 					"name": "GetAllUnitsOfMeasure response",
 					"originalRequest": {
 						"method": "POST",
@@ -4343,13 +4164,10 @@
 							}
 						},
 						"url": {
-							"raw": "http://172.25.20.61/AutodeskDM/Services/v26/ItemService.svc",
+							"raw": "http://{{ServerIP}}/AutodeskDM/Services/v26/ItemService.svc",
 							"protocol": "http",
 							"host": [
-								"172",
-								"25",
-								"20",
-								"61"
+								"{{ServerIP}}"
 							],
 							"path": [
 								"AutodeskDM",
@@ -4370,13 +4188,13 @@
 					],
 					"cookie": [],
 					"responseTime": null,
-					"body": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<soap:Envelope xmlns:soap=\"http://schemas.xmlsoap.org/soap/envelope/\">\n\t<soap:Body>\n\t\t<GetAllUnitsOfMeasureResponse xmlns=\"http://AutodeskDM/Services/Item/1/7/2020/\">\n\t\t\t<GetAllUnitsOfMeasureResult>\n\t\t\t\t<UnitOfMeasure Id=\"100\" SysName=\"string\" UnitName=\"string\" Abbr=\"string\" Conversion=\"51\" BaseUofMID=\"100\" SysUofM=\"true\"/>\n\t\t\t</GetAllUnitsOfMeasureResult>\n\t\t</GetAllUnitsOfMeasureResponse>\n\t</soap:Body>\n</soap:Envelope>\n"
+					"body": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<soap:Envelope xmlns:soap=\"http://schemas.xmlsoap.org/soap/envelope/\">\n\t<soap:Body>\n\t\t<GetAllUnitsOfMeasureResponse xmlns=\"http://AutodeskDM/Services/Item/1/7/2020/\">\n\t\t\t<GetAllUnitsOfMeasureResult>\n\t\t\t\t<UnitOfMeasure Id=\"100\" SysName=\"string\" UnitName=\"string\" Abbr=\"string\" Conversion=\"17\" BaseUofMID=\"100\" SysUofM=\"true\"/>\n\t\t\t</GetAllUnitsOfMeasureResult>\n\t\t</GetAllUnitsOfMeasureResponse>\n\t</soap:Body>\n</soap:Envelope>\n"
 				}
 			]
 		},
 		{
 			"name": "AddItemNumbers",
-			"id": "4f336086-c7b9-4259-b894-9e7790735d21",
+			"id": "39ef4dc9-4c2e-4d61-9e02-30ea6811c242",
 			"request": {
 				"method": "POST",
 				"header": [
@@ -4413,7 +4231,7 @@
 			},
 			"response": [
 				{
-					"id": "0a03ba1d-5af0-4616-a33e-4c84419a7fa2",
+					"id": "8900ce3e-1a3e-481b-8af0-8fcc8b89748a",
 					"name": "AddItemNumbers response",
 					"originalRequest": {
 						"method": "POST",
@@ -4437,13 +4255,10 @@
 							}
 						},
 						"url": {
-							"raw": "http://172.25.20.61/AutodeskDM/Services/v26/ItemService.svc",
+							"raw": "http://{{ServerIP}}/AutodeskDM/Services/v26/ItemService.svc",
 							"protocol": "http",
 							"host": [
-								"172",
-								"25",
-								"20",
-								"61"
+								"{{ServerIP}}"
 							],
 							"path": [
 								"AutodeskDM",
@@ -4470,7 +4285,7 @@
 		},
 		{
 			"name": "CommitItemNumbers",
-			"id": "0f3d06ac-8a02-4082-b50f-34849944f087",
+			"id": "d430910d-a41b-43e9-a70f-99e7e5214d1e",
 			"request": {
 				"method": "POST",
 				"header": [
@@ -4507,7 +4322,7 @@
 			},
 			"response": [
 				{
-					"id": "ad7f100c-af1d-4f09-ac00-a203fb8a7417",
+					"id": "18ec3eab-c261-4913-bb0f-a309f9ffdca2",
 					"name": "CommitItemNumbers response",
 					"originalRequest": {
 						"method": "POST",
@@ -4531,13 +4346,10 @@
 							}
 						},
 						"url": {
-							"raw": "http://172.25.20.61/AutodeskDM/Services/v26/ItemService.svc",
+							"raw": "http://{{ServerIP}}/AutodeskDM/Services/v26/ItemService.svc",
 							"protocol": "http",
 							"host": [
-								"172",
-								"25",
-								"20",
-								"61"
+								"{{ServerIP}}"
 							],
 							"path": [
 								"AutodeskDM",
@@ -4564,7 +4376,7 @@
 		},
 		{
 			"name": "DeleteUnusedItemNumbers",
-			"id": "8d20865b-8332-4691-bf43-3fb3e4f22f58",
+			"id": "b29292fc-2ad0-4d18-8cb8-dc6688ec5b99",
 			"request": {
 				"method": "POST",
 				"header": [
@@ -4601,7 +4413,7 @@
 			},
 			"response": [
 				{
-					"id": "14e5e747-aa03-4460-8df3-64024e776135",
+					"id": "9c877f54-552c-4471-8f2f-65d7fb748d35",
 					"name": "DeleteUnusedItemNumbers response",
 					"originalRequest": {
 						"method": "POST",
@@ -4625,13 +4437,10 @@
 							}
 						},
 						"url": {
-							"raw": "http://172.25.20.61/AutodeskDM/Services/v26/ItemService.svc",
+							"raw": "http://{{ServerIP}}/AutodeskDM/Services/v26/ItemService.svc",
 							"protocol": "http",
 							"host": [
-								"172",
-								"25",
-								"20",
-								"61"
+								"{{ServerIP}}"
 							],
 							"path": [
 								"AutodeskDM",
@@ -4658,7 +4467,7 @@
 		},
 		{
 			"name": "GetLatestItemByItemNumber",
-			"id": "5ebb8b4a-591b-4fe3-a10a-0eeb7f3107c3",
+			"id": "8eb399e4-2612-4820-9ecb-0d8e0aa1eb5d",
 			"request": {
 				"method": "POST",
 				"header": [
@@ -4695,7 +4504,7 @@
 			},
 			"response": [
 				{
-					"id": "d8eaa6e2-0f4e-4965-bcb2-25399f39d665",
+					"id": "ad165310-8c0f-4859-9cef-9032b28fe89e",
 					"name": "GetLatestItemByItemNumber response",
 					"originalRequest": {
 						"method": "POST",
@@ -4719,13 +4528,10 @@
 							}
 						},
 						"url": {
-							"raw": "http://172.25.20.61/AutodeskDM/Services/v26/ItemService.svc",
+							"raw": "http://{{ServerIP}}/AutodeskDM/Services/v26/ItemService.svc",
 							"protocol": "http",
 							"host": [
-								"172",
-								"25",
-								"20",
-								"61"
+								"{{ServerIP}}"
 							],
 							"path": [
 								"AutodeskDM",
@@ -4746,13 +4552,13 @@
 					],
 					"cookie": [],
 					"responseTime": null,
-					"body": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<soap:Envelope xmlns:soap=\"http://schemas.xmlsoap.org/soap/envelope/\">\n\t<soap:Body>\n\t\t<GetLatestItemByItemNumberResponse xmlns=\"http://AutodeskDM/Services/Item/1/7/2020/\">\n\t\t\t<GetLatestItemByItemNumberResult RevId=\"100\" RevNum=\"string\" LastModUserName=\"string\" LastModUserId=\"100\" LastModDate=\"2022-01-20T20:35:36.777Z\" MasterId=\"100\" ItemNum=\"string\" Title=\"string\" Detail=\"string\" Id=\"100\" VerNum=\"100\" Comm=\"string\" Units=\"string\" LfCycStateId=\"100\" UnitId=\"100\" NumSchmId=\"100\" CadBOMStruct=\"Normal\" ControlledByChangeOrder=\"true\" MaxCommittedId=\"100\" IsCloaked=\"true\" Locked=\"true\">\n\t\t\t\t<Cat CatId=\"100\" CatName=\"string\"/>\n\t\t\t\t<LfCyc LfCycStateId=\"100\" LfCycDefId=\"100\" Consume=\"true\" Obsolete=\"true\"/>\n\t\t\t</GetLatestItemByItemNumberResult>\n\t\t</GetLatestItemByItemNumberResponse>\n\t</soap:Body>\n</soap:Envelope>\n"
+					"body": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<soap:Envelope xmlns:soap=\"http://schemas.xmlsoap.org/soap/envelope/\">\n\t<soap:Body>\n\t\t<GetLatestItemByItemNumberResponse xmlns=\"http://AutodeskDM/Services/Item/1/7/2020/\">\n\t\t\t<GetLatestItemByItemNumberResult RevId=\"100\" RevNum=\"string\" LastModUserName=\"string\" LastModUserId=\"100\" LastModDate=\"2023-02-09T19:11:46.893Z\" MasterId=\"100\" ItemNum=\"string\" Title=\"string\" Detail=\"string\" Id=\"100\" VerNum=\"100\" Comm=\"string\" Units=\"string\" LfCycStateId=\"100\" UnitId=\"100\" NumSchmId=\"100\" CadBOMStruct=\"Normal\" ControlledByChangeOrder=\"true\" MaxCommittedId=\"100\" IsCloaked=\"true\" Locked=\"true\">\n\t\t\t\t<Cat CatId=\"100\" CatName=\"string\"/>\n\t\t\t\t<LfCyc LfCycStateId=\"100\" LfCycDefId=\"100\" Consume=\"true\" Obsolete=\"true\"/>\n\t\t\t</GetLatestItemByItemNumberResult>\n\t\t</GetLatestItemByItemNumberResponse>\n\t</soap:Body>\n</soap:Envelope>\n"
 				}
 			]
 		},
 		{
 			"name": "GetItemsByFileId",
-			"id": "12383cb7-bec1-4753-a93f-954dbc78fb3f",
+			"id": "85f6f0f8-b926-4c84-accd-79f9e04b9ec4",
 			"request": {
 				"method": "POST",
 				"header": [
@@ -4789,7 +4595,7 @@
 			},
 			"response": [
 				{
-					"id": "eeae1bb5-8231-4857-9b98-cbf9b22399ab",
+					"id": "1472c3d4-81f6-4a67-8db6-7e12c59eff57",
 					"name": "GetItemsByFileId response",
 					"originalRequest": {
 						"method": "POST",
@@ -4813,13 +4619,10 @@
 							}
 						},
 						"url": {
-							"raw": "http://172.25.20.61/AutodeskDM/Services/v26/ItemService.svc",
+							"raw": "http://{{ServerIP}}/AutodeskDM/Services/v26/ItemService.svc",
 							"protocol": "http",
 							"host": [
-								"172",
-								"25",
-								"20",
-								"61"
+								"{{ServerIP}}"
 							],
 							"path": [
 								"AutodeskDM",
@@ -4840,13 +4643,13 @@
 					],
 					"cookie": [],
 					"responseTime": null,
-					"body": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<soap:Envelope xmlns:soap=\"http://schemas.xmlsoap.org/soap/envelope/\">\n\t<soap:Body>\n\t\t<GetItemsByFileIdResponse xmlns=\"http://AutodeskDM/Services/Item/1/7/2020/\">\n\t\t\t<GetItemsByFileIdResult>\n\t\t\t\t<Item RevId=\"100\" RevNum=\"string\" LastModUserName=\"string\" LastModUserId=\"100\" LastModDate=\"2022-01-20T20:35:36.777Z\" MasterId=\"100\" ItemNum=\"string\" Title=\"string\" Detail=\"string\" Id=\"100\" VerNum=\"100\" Comm=\"string\" Units=\"string\" LfCycStateId=\"100\" UnitId=\"100\" NumSchmId=\"100\" CadBOMStruct=\"Normal\" ControlledByChangeOrder=\"true\" MaxCommittedId=\"100\" IsCloaked=\"true\" Locked=\"true\">\n\t\t\t\t\t<Cat CatId=\"100\" CatName=\"string\"/>\n\t\t\t\t\t<LfCyc LfCycStateId=\"100\" LfCycDefId=\"100\" Consume=\"true\" Obsolete=\"true\"/>\n\t\t\t\t</Item>\n\t\t\t</GetItemsByFileIdResult>\n\t\t</GetItemsByFileIdResponse>\n\t</soap:Body>\n</soap:Envelope>\n"
+					"body": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<soap:Envelope xmlns:soap=\"http://schemas.xmlsoap.org/soap/envelope/\">\n\t<soap:Body>\n\t\t<GetItemsByFileIdResponse xmlns=\"http://AutodeskDM/Services/Item/1/7/2020/\">\n\t\t\t<GetItemsByFileIdResult>\n\t\t\t\t<Item RevId=\"100\" RevNum=\"string\" LastModUserName=\"string\" LastModUserId=\"100\" LastModDate=\"2023-02-09T19:11:46.893Z\" MasterId=\"100\" ItemNum=\"string\" Title=\"string\" Detail=\"string\" Id=\"100\" VerNum=\"100\" Comm=\"string\" Units=\"string\" LfCycStateId=\"100\" UnitId=\"100\" NumSchmId=\"100\" CadBOMStruct=\"Normal\" ControlledByChangeOrder=\"true\" MaxCommittedId=\"100\" IsCloaked=\"true\" Locked=\"true\">\n\t\t\t\t\t<Cat CatId=\"100\" CatName=\"string\"/>\n\t\t\t\t\t<LfCyc LfCycStateId=\"100\" LfCycDefId=\"100\" Consume=\"true\" Obsolete=\"true\"/>\n\t\t\t\t</Item>\n\t\t\t</GetItemsByFileIdResult>\n\t\t</GetItemsByFileIdResponse>\n\t</soap:Body>\n</soap:Envelope>\n"
 				}
 			]
 		},
 		{
 			"name": "GetItemsByFileIdAndLinkTypeOptions",
-			"id": "baaec526-5099-443f-8011-c62bf235b429",
+			"id": "3b781fd0-fd83-456a-bec4-11d5282d81b4",
 			"request": {
 				"method": "POST",
 				"header": [
@@ -4883,7 +4686,7 @@
 			},
 			"response": [
 				{
-					"id": "9d92f968-a284-4938-8f27-992fedaf48fe",
+					"id": "4985f257-38d6-4848-aae2-a9d52cda1835",
 					"name": "GetItemsByFileIdAndLinkTypeOptions response",
 					"originalRequest": {
 						"method": "POST",
@@ -4907,13 +4710,10 @@
 							}
 						},
 						"url": {
-							"raw": "http://172.25.20.61/AutodeskDM/Services/v26/ItemService.svc",
+							"raw": "http://{{ServerIP}}/AutodeskDM/Services/v26/ItemService.svc",
 							"protocol": "http",
 							"host": [
-								"172",
-								"25",
-								"20",
-								"61"
+								"{{ServerIP}}"
 							],
 							"path": [
 								"AutodeskDM",
@@ -4934,13 +4734,13 @@
 					],
 					"cookie": [],
 					"responseTime": null,
-					"body": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<soap:Envelope xmlns:soap=\"http://schemas.xmlsoap.org/soap/envelope/\">\n\t<soap:Body>\n\t\t<GetItemsByFileIdAndLinkTypeOptionsResponse xmlns=\"http://AutodeskDM/Services/Item/1/7/2020/\">\n\t\t\t<GetItemsByFileIdAndLinkTypeOptionsResult>\n\t\t\t\t<Item RevId=\"100\" RevNum=\"string\" LastModUserName=\"string\" LastModUserId=\"100\" LastModDate=\"2022-01-20T20:35:36.779Z\" MasterId=\"100\" ItemNum=\"string\" Title=\"string\" Detail=\"string\" Id=\"100\" VerNum=\"100\" Comm=\"string\" Units=\"string\" LfCycStateId=\"100\" UnitId=\"100\" NumSchmId=\"100\" CadBOMStruct=\"Normal\" ControlledByChangeOrder=\"true\" MaxCommittedId=\"100\" IsCloaked=\"true\" Locked=\"true\">\n\t\t\t\t\t<Cat CatId=\"100\" CatName=\"string\"/>\n\t\t\t\t\t<LfCyc LfCycStateId=\"100\" LfCycDefId=\"100\" Consume=\"true\" Obsolete=\"true\"/>\n\t\t\t\t</Item>\n\t\t\t</GetItemsByFileIdAndLinkTypeOptionsResult>\n\t\t</GetItemsByFileIdAndLinkTypeOptionsResponse>\n\t</soap:Body>\n</soap:Envelope>\n"
+					"body": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<soap:Envelope xmlns:soap=\"http://schemas.xmlsoap.org/soap/envelope/\">\n\t<soap:Body>\n\t\t<GetItemsByFileIdAndLinkTypeOptionsResponse xmlns=\"http://AutodeskDM/Services/Item/1/7/2020/\">\n\t\t\t<GetItemsByFileIdAndLinkTypeOptionsResult>\n\t\t\t\t<Item RevId=\"100\" RevNum=\"string\" LastModUserName=\"string\" LastModUserId=\"100\" LastModDate=\"2023-02-09T19:11:46.894Z\" MasterId=\"100\" ItemNum=\"string\" Title=\"string\" Detail=\"string\" Id=\"100\" VerNum=\"100\" Comm=\"string\" Units=\"string\" LfCycStateId=\"100\" UnitId=\"100\" NumSchmId=\"100\" CadBOMStruct=\"Normal\" ControlledByChangeOrder=\"true\" MaxCommittedId=\"100\" IsCloaked=\"true\" Locked=\"true\">\n\t\t\t\t\t<Cat CatId=\"100\" CatName=\"string\"/>\n\t\t\t\t\t<LfCyc LfCycStateId=\"100\" LfCycDefId=\"100\" Consume=\"true\" Obsolete=\"true\"/>\n\t\t\t\t</Item>\n\t\t\t</GetItemsByFileIdAndLinkTypeOptionsResult>\n\t\t</GetItemsByFileIdAndLinkTypeOptionsResponse>\n\t</soap:Body>\n</soap:Envelope>\n"
 				}
 			]
 		},
 		{
 			"name": "GetItemsByAttachmentFileId",
-			"id": "2c75b203-dc8f-4d96-a220-11061aa24cc6",
+			"id": "9d1b16cd-418e-489e-a739-a26532412c53",
 			"request": {
 				"method": "POST",
 				"header": [
@@ -4977,7 +4777,7 @@
 			},
 			"response": [
 				{
-					"id": "c48c915f-48d4-4bf6-98f4-3bc7f4ef9b1a",
+					"id": "391a20bf-b22e-4b99-979c-493762b4f98c",
 					"name": "GetItemsByAttachmentFileId response",
 					"originalRequest": {
 						"method": "POST",
@@ -5001,13 +4801,10 @@
 							}
 						},
 						"url": {
-							"raw": "http://172.25.20.61/AutodeskDM/Services/v26/ItemService.svc",
+							"raw": "http://{{ServerIP}}/AutodeskDM/Services/v26/ItemService.svc",
 							"protocol": "http",
 							"host": [
-								"172",
-								"25",
-								"20",
-								"61"
+								"{{ServerIP}}"
 							],
 							"path": [
 								"AutodeskDM",
@@ -5028,13 +4825,13 @@
 					],
 					"cookie": [],
 					"responseTime": null,
-					"body": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<soap:Envelope xmlns:soap=\"http://schemas.xmlsoap.org/soap/envelope/\">\n\t<soap:Body>\n\t\t<GetItemsByAttachmentFileIdResponse xmlns=\"http://AutodeskDM/Services/Item/1/7/2020/\">\n\t\t\t<GetItemsByAttachmentFileIdResult>\n\t\t\t\t<Item RevId=\"100\" RevNum=\"string\" LastModUserName=\"string\" LastModUserId=\"100\" LastModDate=\"2022-01-20T20:35:36.780Z\" MasterId=\"100\" ItemNum=\"string\" Title=\"string\" Detail=\"string\" Id=\"100\" VerNum=\"100\" Comm=\"string\" Units=\"string\" LfCycStateId=\"100\" UnitId=\"100\" NumSchmId=\"100\" CadBOMStruct=\"Normal\" ControlledByChangeOrder=\"true\" MaxCommittedId=\"100\" IsCloaked=\"true\" Locked=\"true\">\n\t\t\t\t\t<Cat CatId=\"100\" CatName=\"string\"/>\n\t\t\t\t\t<LfCyc LfCycStateId=\"100\" LfCycDefId=\"100\" Consume=\"true\" Obsolete=\"true\"/>\n\t\t\t\t</Item>\n\t\t\t</GetItemsByAttachmentFileIdResult>\n\t\t</GetItemsByAttachmentFileIdResponse>\n\t</soap:Body>\n</soap:Envelope>\n"
+					"body": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<soap:Envelope xmlns:soap=\"http://schemas.xmlsoap.org/soap/envelope/\">\n\t<soap:Body>\n\t\t<GetItemsByAttachmentFileIdResponse xmlns=\"http://AutodeskDM/Services/Item/1/7/2020/\">\n\t\t\t<GetItemsByAttachmentFileIdResult>\n\t\t\t\t<Item RevId=\"100\" RevNum=\"string\" LastModUserName=\"string\" LastModUserId=\"100\" LastModDate=\"2023-02-09T19:11:46.894Z\" MasterId=\"100\" ItemNum=\"string\" Title=\"string\" Detail=\"string\" Id=\"100\" VerNum=\"100\" Comm=\"string\" Units=\"string\" LfCycStateId=\"100\" UnitId=\"100\" NumSchmId=\"100\" CadBOMStruct=\"Normal\" ControlledByChangeOrder=\"true\" MaxCommittedId=\"100\" IsCloaked=\"true\" Locked=\"true\">\n\t\t\t\t\t<Cat CatId=\"100\" CatName=\"string\"/>\n\t\t\t\t\t<LfCyc LfCycStateId=\"100\" LfCycDefId=\"100\" Consume=\"true\" Obsolete=\"true\"/>\n\t\t\t\t</Item>\n\t\t\t</GetItemsByAttachmentFileIdResult>\n\t\t</GetItemsByAttachmentFileIdResponse>\n\t</soap:Body>\n</soap:Envelope>\n"
 				}
 			]
 		},
 		{
 			"name": "GetLifecycleRollbackTargetItem",
-			"id": "6a03ba49-5ed1-4a41-99b7-c1ded9d6058f",
+			"id": "9077f25c-c028-4440-b403-dc6e88bb5860",
 			"request": {
 				"method": "POST",
 				"header": [
@@ -5071,7 +4868,7 @@
 			},
 			"response": [
 				{
-					"id": "6d8fc169-a95c-40f4-b066-e15bbe025166",
+					"id": "633248d9-ca75-4304-a1b4-03f0d6fa6811",
 					"name": "GetLifecycleRollbackTargetItem response",
 					"originalRequest": {
 						"method": "POST",
@@ -5095,13 +4892,10 @@
 							}
 						},
 						"url": {
-							"raw": "http://172.25.20.61/AutodeskDM/Services/v26/ItemService.svc",
+							"raw": "http://{{ServerIP}}/AutodeskDM/Services/v26/ItemService.svc",
 							"protocol": "http",
 							"host": [
-								"172",
-								"25",
-								"20",
-								"61"
+								"{{ServerIP}}"
 							],
 							"path": [
 								"AutodeskDM",
@@ -5122,13 +4916,13 @@
 					],
 					"cookie": [],
 					"responseTime": null,
-					"body": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<soap:Envelope xmlns:soap=\"http://schemas.xmlsoap.org/soap/envelope/\">\n\t<soap:Body>\n\t\t<GetLifecycleRollbackTargetItemResponse xmlns=\"http://AutodeskDM/Services/Item/1/7/2020/\">\n\t\t\t<GetLifecycleRollbackTargetItemResult RevId=\"100\" RevNum=\"string\" LastModUserName=\"string\" LastModUserId=\"100\" LastModDate=\"2022-01-20T20:35:36.781Z\" MasterId=\"100\" ItemNum=\"string\" Title=\"string\" Detail=\"string\" Id=\"100\" VerNum=\"100\" Comm=\"string\" Units=\"string\" LfCycStateId=\"100\" UnitId=\"100\" NumSchmId=\"100\" CadBOMStruct=\"Normal\" ControlledByChangeOrder=\"true\" MaxCommittedId=\"100\" IsCloaked=\"true\" Locked=\"true\">\n\t\t\t\t<Cat CatId=\"100\" CatName=\"string\"/>\n\t\t\t\t<LfCyc LfCycStateId=\"100\" LfCycDefId=\"100\" Consume=\"true\" Obsolete=\"true\"/>\n\t\t\t</GetLifecycleRollbackTargetItemResult>\n\t\t</GetLifecycleRollbackTargetItemResponse>\n\t</soap:Body>\n</soap:Envelope>\n"
+					"body": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<soap:Envelope xmlns:soap=\"http://schemas.xmlsoap.org/soap/envelope/\">\n\t<soap:Body>\n\t\t<GetLifecycleRollbackTargetItemResponse xmlns=\"http://AutodeskDM/Services/Item/1/7/2020/\">\n\t\t\t<GetLifecycleRollbackTargetItemResult RevId=\"100\" RevNum=\"string\" LastModUserName=\"string\" LastModUserId=\"100\" LastModDate=\"2023-02-09T19:11:46.895Z\" MasterId=\"100\" ItemNum=\"string\" Title=\"string\" Detail=\"string\" Id=\"100\" VerNum=\"100\" Comm=\"string\" Units=\"string\" LfCycStateId=\"100\" UnitId=\"100\" NumSchmId=\"100\" CadBOMStruct=\"Normal\" ControlledByChangeOrder=\"true\" MaxCommittedId=\"100\" IsCloaked=\"true\" Locked=\"true\">\n\t\t\t\t<Cat CatId=\"100\" CatName=\"string\"/>\n\t\t\t\t<LfCyc LfCycStateId=\"100\" LfCycDefId=\"100\" Consume=\"true\" Obsolete=\"true\"/>\n\t\t\t</GetLifecycleRollbackTargetItemResult>\n\t\t</GetLifecycleRollbackTargetItemResponse>\n\t</soap:Body>\n</soap:Envelope>\n"
 				}
 			]
 		},
 		{
 			"name": "ItemRollbackLifeCycleState",
-			"id": "fff4b3f9-21c5-480c-a585-5b6806d9b83e",
+			"id": "e27f1c3e-4d70-48df-b6be-15a783284e08",
 			"request": {
 				"method": "POST",
 				"header": [
@@ -5165,7 +4959,7 @@
 			},
 			"response": [
 				{
-					"id": "7fc696b7-e9da-4fcb-978f-85668d3fcd3a",
+					"id": "c59d19fb-433c-4aca-bb0e-7b0bacaa3be0",
 					"name": "ItemRollbackLifeCycleState response",
 					"originalRequest": {
 						"method": "POST",
@@ -5189,13 +4983,10 @@
 							}
 						},
 						"url": {
-							"raw": "http://172.25.20.61/AutodeskDM/Services/v26/ItemService.svc",
+							"raw": "http://{{ServerIP}}/AutodeskDM/Services/v26/ItemService.svc",
 							"protocol": "http",
 							"host": [
-								"172",
-								"25",
-								"20",
-								"61"
+								"{{ServerIP}}"
 							],
 							"path": [
 								"AutodeskDM",
@@ -5216,13 +5007,13 @@
 					],
 					"cookie": [],
 					"responseTime": null,
-					"body": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<soap:Envelope xmlns:soap=\"http://schemas.xmlsoap.org/soap/envelope/\">\n\t<soap:Body>\n\t\t<ItemRollbackLifeCycleStateResponse xmlns=\"http://AutodeskDM/Services/Item/1/7/2020/\">\n\t\t\t<ItemRollbackLifeCycleStateResult RevId=\"100\" RevNum=\"string\" LastModUserName=\"string\" LastModUserId=\"100\" LastModDate=\"2022-01-20T20:35:36.782Z\" MasterId=\"100\" ItemNum=\"string\" Title=\"string\" Detail=\"string\" Id=\"100\" VerNum=\"100\" Comm=\"string\" Units=\"string\" LfCycStateId=\"100\" UnitId=\"100\" NumSchmId=\"100\" CadBOMStruct=\"Normal\" ControlledByChangeOrder=\"true\" MaxCommittedId=\"100\" IsCloaked=\"true\" Locked=\"true\">\n\t\t\t\t<Cat CatId=\"100\" CatName=\"string\"/>\n\t\t\t\t<LfCyc LfCycStateId=\"100\" LfCycDefId=\"100\" Consume=\"true\" Obsolete=\"true\"/>\n\t\t\t</ItemRollbackLifeCycleStateResult>\n\t\t</ItemRollbackLifeCycleStateResponse>\n\t</soap:Body>\n</soap:Envelope>\n"
+					"body": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<soap:Envelope xmlns:soap=\"http://schemas.xmlsoap.org/soap/envelope/\">\n\t<soap:Body>\n\t\t<ItemRollbackLifeCycleStateResponse xmlns=\"http://AutodeskDM/Services/Item/1/7/2020/\">\n\t\t\t<ItemRollbackLifeCycleStateResult RevId=\"100\" RevNum=\"string\" LastModUserName=\"string\" LastModUserId=\"100\" LastModDate=\"2023-02-09T19:11:46.895Z\" MasterId=\"100\" ItemNum=\"string\" Title=\"string\" Detail=\"string\" Id=\"100\" VerNum=\"100\" Comm=\"string\" Units=\"string\" LfCycStateId=\"100\" UnitId=\"100\" NumSchmId=\"100\" CadBOMStruct=\"Normal\" ControlledByChangeOrder=\"true\" MaxCommittedId=\"100\" IsCloaked=\"true\" Locked=\"true\">\n\t\t\t\t<Cat CatId=\"100\" CatName=\"string\"/>\n\t\t\t\t<LfCyc LfCycStateId=\"100\" LfCycDefId=\"100\" Consume=\"true\" Obsolete=\"true\"/>\n\t\t\t</ItemRollbackLifeCycleStateResult>\n\t\t</ItemRollbackLifeCycleStateResponse>\n\t</soap:Body>\n</soap:Envelope>\n"
 				}
 			]
 		},
 		{
 			"name": "GetWatermarkByItemIdAndFileId",
-			"id": "07ca7b1f-c3b4-46a9-a85a-ea5b34031769",
+			"id": "681cf653-f6cc-416b-899f-04ebdcd426f6",
 			"request": {
 				"method": "POST",
 				"header": [
@@ -5259,7 +5050,7 @@
 			},
 			"response": [
 				{
-					"id": "63f708e0-39a0-48b5-9daa-43cd7c3ea9af",
+					"id": "43d13125-7ea4-495a-a614-2775195182cc",
 					"name": "GetWatermarkByItemIdAndFileId response",
 					"originalRequest": {
 						"method": "POST",
@@ -5283,13 +5074,10 @@
 							}
 						},
 						"url": {
-							"raw": "http://172.25.20.61/AutodeskDM/Services/v26/ItemService.svc",
+							"raw": "http://{{ServerIP}}/AutodeskDM/Services/v26/ItemService.svc",
 							"protocol": "http",
 							"host": [
-								"172",
-								"25",
-								"20",
-								"61"
+								"{{ServerIP}}"
 							],
 							"path": [
 								"AutodeskDM",
@@ -5316,7 +5104,7 @@
 		},
 		{
 			"name": "GetItemBOMFileAssociationsByDate",
-			"id": "464234d4-1ebd-494a-8e0e-07fa41393df7",
+			"id": "fd335c0c-b858-4208-9a08-ad1b69c454aa",
 			"request": {
 				"method": "POST",
 				"header": [
@@ -5331,7 +5119,7 @@
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<soap:Envelope xmlns:soap=\"http://schemas.xmlsoap.org/soap/envelope/\">\n\t<soap:Body>\n\t\t<GetItemBOMFileAssociationsByDate xmlns=\"http://AutodeskDM/Services/Item/1/7/2020/\">\n\t\t\t<parentItemIterationId>100</parentItemIterationId>\n\t\t\t<bomType>Tip</bomType>\n\t\t\t<dateOfInterest>2022-01-20T20:35:36.784Z</dateOfInterest>\n\t\t\t<includeAttachments>true</includeAttachments>\n\t\t</GetItemBOMFileAssociationsByDate>\n\t</soap:Body>\n</soap:Envelope>\n",
+					"raw": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<soap:Envelope xmlns:soap=\"http://schemas.xmlsoap.org/soap/envelope/\">\n\t<soap:Body>\n\t\t<GetItemBOMFileAssociationsByDate xmlns=\"http://AutodeskDM/Services/Item/1/7/2020/\">\n\t\t\t<parentItemIterationId>100</parentItemIterationId>\n\t\t\t<bomType>Tip</bomType>\n\t\t\t<dateOfInterest>2023-02-09T19:11:46.896Z</dateOfInterest>\n\t\t\t<includeAttachments>true</includeAttachments>\n\t\t</GetItemBOMFileAssociationsByDate>\n\t</soap:Body>\n</soap:Envelope>\n",
 					"options": {
 						"raw": {
 							"language": "xml"
@@ -5353,7 +5141,7 @@
 			},
 			"response": [
 				{
-					"id": "7a480c16-50e2-4acd-a669-cf78ca6bcde8",
+					"id": "714054d3-92e7-49cf-ad8f-226b95e4e45d",
 					"name": "GetItemBOMFileAssociationsByDate response",
 					"originalRequest": {
 						"method": "POST",
@@ -5369,7 +5157,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<soap:Envelope xmlns:soap=\"http://schemas.xmlsoap.org/soap/envelope/\">\n\t<soap:Body>\n\t\t<GetItemBOMFileAssociationsByDate xmlns=\"http://AutodeskDM/Services/Item/1/7/2020/\">\n\t\t\t<parentItemIterationId>100</parentItemIterationId>\n\t\t\t<bomType>Tip</bomType>\n\t\t\t<dateOfInterest>2022-01-20T20:35:36.784Z</dateOfInterest>\n\t\t\t<includeAttachments>true</includeAttachments>\n\t\t</GetItemBOMFileAssociationsByDate>\n\t</soap:Body>\n</soap:Envelope>\n",
+							"raw": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<soap:Envelope xmlns:soap=\"http://schemas.xmlsoap.org/soap/envelope/\">\n\t<soap:Body>\n\t\t<GetItemBOMFileAssociationsByDate xmlns=\"http://AutodeskDM/Services/Item/1/7/2020/\">\n\t\t\t<parentItemIterationId>100</parentItemIterationId>\n\t\t\t<bomType>Tip</bomType>\n\t\t\t<dateOfInterest>2023-02-09T19:11:46.896Z</dateOfInterest>\n\t\t\t<includeAttachments>true</includeAttachments>\n\t\t</GetItemBOMFileAssociationsByDate>\n\t</soap:Body>\n</soap:Envelope>\n",
 							"options": {
 								"raw": {
 									"language": "xml"
@@ -5377,13 +5165,10 @@
 							}
 						},
 						"url": {
-							"raw": "http://172.25.20.61/AutodeskDM/Services/v26/ItemService.svc",
+							"raw": "http://{{ServerIP}}/AutodeskDM/Services/v26/ItemService.svc",
 							"protocol": "http",
 							"host": [
-								"172",
-								"25",
-								"20",
-								"61"
+								"{{ServerIP}}"
 							],
 							"path": [
 								"AutodeskDM",
@@ -5410,7 +5195,7 @@
 		},
 		{
 			"name": "UpdateWatermarkDefinitions",
-			"id": "ede96f5e-9a59-4ad5-936c-6b3c106966fe",
+			"id": "eaa90535-f468-4874-816f-e8bb194541b7",
 			"request": {
 				"method": "POST",
 				"header": [
@@ -5447,7 +5232,7 @@
 			},
 			"response": [
 				{
-					"id": "f63b379b-f520-48e8-8f04-f4f478043d5d",
+					"id": "0534d95f-2d7a-42e5-92ea-3f6363fff369",
 					"name": "UpdateWatermarkDefinitions response",
 					"originalRequest": {
 						"method": "POST",
@@ -5471,13 +5256,10 @@
 							}
 						},
 						"url": {
-							"raw": "http://172.25.20.61/AutodeskDM/Services/v26/ItemService.svc",
+							"raw": "http://{{ServerIP}}/AutodeskDM/Services/v26/ItemService.svc",
 							"protocol": "http",
 							"host": [
-								"172",
-								"25",
-								"20",
-								"61"
+								"{{ServerIP}}"
 							],
 							"path": [
 								"AutodeskDM",
@@ -5504,7 +5286,7 @@
 		},
 		{
 			"name": "GetAllWatermarks",
-			"id": "423c3135-5569-4311-9f5e-46a8bcd931a9",
+			"id": "93ebb49b-1956-43c0-a87b-8730f46f8328",
 			"request": {
 				"method": "POST",
 				"header": [
@@ -5541,7 +5323,7 @@
 			},
 			"response": [
 				{
-					"id": "d174b111-2316-4579-ab32-a5829d10e37e",
+					"id": "a764ed33-9d0c-4801-a5f5-2c9ab53373c1",
 					"name": "GetAllWatermarks response",
 					"originalRequest": {
 						"method": "POST",
@@ -5565,13 +5347,10 @@
 							}
 						},
 						"url": {
-							"raw": "http://172.25.20.61/AutodeskDM/Services/v26/ItemService.svc",
+							"raw": "http://{{ServerIP}}/AutodeskDM/Services/v26/ItemService.svc",
 							"protocol": "http",
 							"host": [
-								"172",
-								"25",
-								"20",
-								"61"
+								"{{ServerIP}}"
 							],
 							"path": [
 								"AutodeskDM",
@@ -5598,7 +5377,7 @@
 		},
 		{
 			"name": "GetEnableWatermarking",
-			"id": "acefcf90-fe4d-47a5-8955-4fe288d5e5f7",
+			"id": "597deee4-6418-4fb7-a83f-a34501235304",
 			"request": {
 				"method": "POST",
 				"header": [
@@ -5635,7 +5414,7 @@
 			},
 			"response": [
 				{
-					"id": "5917a275-8521-4416-8a9e-6e4088b1259e",
+					"id": "fe3bd411-2143-4177-b3b0-43b3cc9bbd65",
 					"name": "GetEnableWatermarking response",
 					"originalRequest": {
 						"method": "POST",
@@ -5659,13 +5438,10 @@
 							}
 						},
 						"url": {
-							"raw": "http://172.25.20.61/AutodeskDM/Services/v26/ItemService.svc",
+							"raw": "http://{{ServerIP}}/AutodeskDM/Services/v26/ItemService.svc",
 							"protocol": "http",
 							"host": [
-								"172",
-								"25",
-								"20",
-								"61"
+								"{{ServerIP}}"
 							],
 							"path": [
 								"AutodeskDM",
@@ -5692,7 +5468,7 @@
 		},
 		{
 			"name": "SetEnableWatermarking",
-			"id": "032e88cd-cee4-47c4-b5c5-6d156fcefc91",
+			"id": "8020611f-ceef-46d4-9bff-ddf75f79a819",
 			"request": {
 				"method": "POST",
 				"header": [
@@ -5729,7 +5505,7 @@
 			},
 			"response": [
 				{
-					"id": "1cd47517-7f38-4f55-9ec1-172efb6c3c87",
+					"id": "82434366-4c89-432f-b295-a84a32d71c66",
 					"name": "SetEnableWatermarking response",
 					"originalRequest": {
 						"method": "POST",
@@ -5753,13 +5529,10 @@
 							}
 						},
 						"url": {
-							"raw": "http://172.25.20.61/AutodeskDM/Services/v26/ItemService.svc",
+							"raw": "http://{{ServerIP}}/AutodeskDM/Services/v26/ItemService.svc",
 							"protocol": "http",
 							"host": [
-								"172",
-								"25",
-								"20",
-								"61"
+								"{{ServerIP}}"
 							],
 							"path": [
 								"AutodeskDM",
@@ -5786,7 +5559,7 @@
 		},
 		{
 			"name": "GetPropertyConstraintFailuresByItemMasterIds",
-			"id": "93cd05d6-9483-44a7-8599-a84ea3edf041",
+			"id": "ddb2be36-ade4-4e28-8062-763e35e08ca2",
 			"request": {
 				"method": "POST",
 				"header": [
@@ -5823,7 +5596,7 @@
 			},
 			"response": [
 				{
-					"id": "aec7cf93-5ff2-4ebe-8558-e08fb0867911",
+					"id": "4c6671c4-595c-43dd-8d3e-ec26d74ca4d8",
 					"name": "GetPropertyConstraintFailuresByItemMasterIds response",
 					"originalRequest": {
 						"method": "POST",
@@ -5847,13 +5620,10 @@
 							}
 						},
 						"url": {
-							"raw": "http://172.25.20.61/AutodeskDM/Services/v26/ItemService.svc",
+							"raw": "http://{{ServerIP}}/AutodeskDM/Services/v26/ItemService.svc",
 							"protocol": "http",
 							"host": [
-								"172",
-								"25",
-								"20",
-								"61"
+								"{{ServerIP}}"
 							],
 							"path": [
 								"AutodeskDM",
@@ -5880,7 +5650,7 @@
 		},
 		{
 			"name": "GetRestrictLifeCycleStateChangeToChangeOrder",
-			"id": "c88d71f7-62e4-421a-9e72-82c57129b66f",
+			"id": "a40f28c6-7971-4635-9316-f9aa4b1bf904",
 			"request": {
 				"method": "POST",
 				"header": [
@@ -5917,7 +5687,7 @@
 			},
 			"response": [
 				{
-					"id": "0f73ed12-22ee-412b-847e-7b615cd60fe4",
+					"id": "94a14829-015f-4c55-a477-90d059654ebb",
 					"name": "GetRestrictLifeCycleStateChangeToChangeOrder response",
 					"originalRequest": {
 						"method": "POST",
@@ -5941,13 +5711,10 @@
 							}
 						},
 						"url": {
-							"raw": "http://172.25.20.61/AutodeskDM/Services/v26/ItemService.svc",
+							"raw": "http://{{ServerIP}}/AutodeskDM/Services/v26/ItemService.svc",
 							"protocol": "http",
 							"host": [
-								"172",
-								"25",
-								"20",
-								"61"
+								"{{ServerIP}}"
 							],
 							"path": [
 								"AutodeskDM",
@@ -5974,7 +5741,7 @@
 		},
 		{
 			"name": "SetRestrictLifeCycleStateChangeToChangeOrder",
-			"id": "910e1adf-b202-477c-a2d2-ac4956509bb9",
+			"id": "dc1c4805-d078-4d17-9e20-265b02fc4357",
 			"request": {
 				"method": "POST",
 				"header": [
@@ -6011,7 +5778,7 @@
 			},
 			"response": [
 				{
-					"id": "625d6845-2fe1-4c8d-8918-09526e32ade3",
+					"id": "65a54021-578b-4f68-addc-f671a04b0361",
 					"name": "SetRestrictLifeCycleStateChangeToChangeOrder response",
 					"originalRequest": {
 						"method": "POST",
@@ -6035,13 +5802,10 @@
 							}
 						},
 						"url": {
-							"raw": "http://172.25.20.61/AutodeskDM/Services/v26/ItemService.svc",
+							"raw": "http://{{ServerIP}}/AutodeskDM/Services/v26/ItemService.svc",
 							"protocol": "http",
 							"host": [
-								"172",
-								"25",
-								"20",
-								"61"
+								"{{ServerIP}}"
 							],
 							"path": [
 								"AutodeskDM",
@@ -6068,7 +5832,7 @@
 		},
 		{
 			"name": "DeleteItemVersionsByMasterItemId",
-			"id": "cab8347b-0a21-4ea0-baa0-f0a0f002d481",
+			"id": "651af7a4-3b43-4fdf-a960-44e75a3f77ab",
 			"request": {
 				"method": "POST",
 				"header": [
@@ -6105,7 +5869,7 @@
 			},
 			"response": [
 				{
-					"id": "d475ced8-6e71-46a1-8c98-905541e94365",
+					"id": "6704c15c-6339-462d-b77a-e928d219c8ed",
 					"name": "DeleteItemVersionsByMasterItemId response",
 					"originalRequest": {
 						"method": "POST",
@@ -6129,13 +5893,10 @@
 							}
 						},
 						"url": {
-							"raw": "http://172.25.20.61/AutodeskDM/Services/v26/ItemService.svc",
+							"raw": "http://{{ServerIP}}/AutodeskDM/Services/v26/ItemService.svc",
 							"protocol": "http",
 							"host": [
-								"172",
-								"25",
-								"20",
-								"61"
+								"{{ServerIP}}"
 							],
 							"path": [
 								"AutodeskDM",
@@ -6162,7 +5923,7 @@
 		},
 		{
 			"name": "DeleteItemVersionsByMasterItemIds",
-			"id": "871fb26c-fde4-47c8-b153-70d9a4d94ff7",
+			"id": "ac174c5a-7e97-4d26-88fe-0c6e9f2a48f6",
 			"request": {
 				"method": "POST",
 				"header": [
@@ -6199,7 +5960,7 @@
 			},
 			"response": [
 				{
-					"id": "e1d9dc8f-bf19-4335-8908-da605d3dcfa9",
+					"id": "fdd2aec2-b755-4a0d-baa4-72320c54ffc7",
 					"name": "DeleteItemVersionsByMasterItemIds response",
 					"originalRequest": {
 						"method": "POST",
@@ -6223,13 +5984,10 @@
 							}
 						},
 						"url": {
-							"raw": "http://172.25.20.61/AutodeskDM/Services/v26/ItemService.svc",
+							"raw": "http://{{ServerIP}}/AutodeskDM/Services/v26/ItemService.svc",
 							"protocol": "http",
 							"host": [
-								"172",
-								"25",
-								"20",
-								"61"
+								"{{ServerIP}}"
 							],
 							"path": [
 								"AutodeskDM",
@@ -6256,7 +6014,7 @@
 		},
 		{
 			"name": "GetContentSourcePropertyDefinitionsByFileMasterId",
-			"id": "5212d975-f7d0-441b-8091-9c356042efdb",
+			"id": "0976c6e9-447c-4b3d-9358-b27b801b27f8",
 			"request": {
 				"method": "POST",
 				"header": [
@@ -6293,7 +6051,7 @@
 			},
 			"response": [
 				{
-					"id": "b67e8bbf-0f99-4d24-a2d3-d778c305534f",
+					"id": "26b711c7-fcc5-4dac-823e-55cfd965da0d",
 					"name": "GetContentSourcePropertyDefinitionsByFileMasterId response",
 					"originalRequest": {
 						"method": "POST",
@@ -6317,13 +6075,10 @@
 							}
 						},
 						"url": {
-							"raw": "http://172.25.20.61/AutodeskDM/Services/v26/ItemService.svc",
+							"raw": "http://{{ServerIP}}/AutodeskDM/Services/v26/ItemService.svc",
 							"protocol": "http",
 							"host": [
-								"172",
-								"25",
-								"20",
-								"61"
+								"{{ServerIP}}"
 							],
 							"path": [
 								"AutodeskDM",
@@ -6350,7 +6105,7 @@
 		},
 		{
 			"name": "UpdateItemRevisionNumbers",
-			"id": "eb552a6f-64a1-4c45-8dd9-ecbf54dacaca",
+			"id": "ca5c738c-c322-4c76-b65e-330771b84f6a",
 			"request": {
 				"method": "POST",
 				"header": [
@@ -6387,7 +6142,7 @@
 			},
 			"response": [
 				{
-					"id": "cd0268c5-422c-4355-a331-900d82be8f6c",
+					"id": "ce0b8dd0-a58f-4eae-a134-369a9a13f934",
 					"name": "UpdateItemRevisionNumbers response",
 					"originalRequest": {
 						"method": "POST",
@@ -6411,13 +6166,10 @@
 							}
 						},
 						"url": {
-							"raw": "http://172.25.20.61/AutodeskDM/Services/v26/ItemService.svc",
+							"raw": "http://{{ServerIP}}/AutodeskDM/Services/v26/ItemService.svc",
 							"protocol": "http",
 							"host": [
-								"172",
-								"25",
-								"20",
-								"61"
+								"{{ServerIP}}"
 							],
 							"path": [
 								"AutodeskDM",
@@ -6438,13 +6190,13 @@
 					],
 					"cookie": [],
 					"responseTime": null,
-					"body": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<soap:Envelope xmlns:soap=\"http://schemas.xmlsoap.org/soap/envelope/\">\n\t<soap:Body>\n\t\t<UpdateItemRevisionNumbersResponse xmlns=\"http://AutodeskDM/Services/Item/1/7/2020/\">\n\t\t\t<UpdateItemRevisionNumbersResult>\n\t\t\t\t<Item RevId=\"100\" RevNum=\"string\" LastModUserName=\"string\" LastModUserId=\"100\" LastModDate=\"2022-01-20T20:35:36.790Z\" MasterId=\"100\" ItemNum=\"string\" Title=\"string\" Detail=\"string\" Id=\"100\" VerNum=\"100\" Comm=\"string\" Units=\"string\" LfCycStateId=\"100\" UnitId=\"100\" NumSchmId=\"100\" CadBOMStruct=\"Normal\" ControlledByChangeOrder=\"true\" MaxCommittedId=\"100\" IsCloaked=\"true\" Locked=\"true\">\n\t\t\t\t\t<Cat CatId=\"100\" CatName=\"string\"/>\n\t\t\t\t\t<LfCyc LfCycStateId=\"100\" LfCycDefId=\"100\" Consume=\"true\" Obsolete=\"true\"/>\n\t\t\t\t</Item>\n\t\t\t</UpdateItemRevisionNumbersResult>\n\t\t</UpdateItemRevisionNumbersResponse>\n\t</soap:Body>\n</soap:Envelope>\n"
+					"body": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<soap:Envelope xmlns:soap=\"http://schemas.xmlsoap.org/soap/envelope/\">\n\t<soap:Body>\n\t\t<UpdateItemRevisionNumbersResponse xmlns=\"http://AutodeskDM/Services/Item/1/7/2020/\">\n\t\t\t<UpdateItemRevisionNumbersResult>\n\t\t\t\t<Item RevId=\"100\" RevNum=\"string\" LastModUserName=\"string\" LastModUserId=\"100\" LastModDate=\"2023-02-09T19:11:46.899Z\" MasterId=\"100\" ItemNum=\"string\" Title=\"string\" Detail=\"string\" Id=\"100\" VerNum=\"100\" Comm=\"string\" Units=\"string\" LfCycStateId=\"100\" UnitId=\"100\" NumSchmId=\"100\" CadBOMStruct=\"Normal\" ControlledByChangeOrder=\"true\" MaxCommittedId=\"100\" IsCloaked=\"true\" Locked=\"true\">\n\t\t\t\t\t<Cat CatId=\"100\" CatName=\"string\"/>\n\t\t\t\t\t<LfCyc LfCycStateId=\"100\" LfCycDefId=\"100\" Consume=\"true\" Obsolete=\"true\"/>\n\t\t\t\t</Item>\n\t\t\t</UpdateItemRevisionNumbersResult>\n\t\t</UpdateItemRevisionNumbersResponse>\n\t</soap:Body>\n</soap:Envelope>\n"
 				}
 			]
 		},
 		{
 			"name": "GetEnablementConfiguration",
-			"id": "308beb70-7c5b-49cc-966a-060f63010975",
+			"id": "d419a79c-6fc0-46a4-a778-4f4549c05697",
 			"request": {
 				"method": "POST",
 				"header": [
@@ -6481,7 +6233,7 @@
 			},
 			"response": [
 				{
-					"id": "28fde278-a367-4e3a-bfbc-65fdb8ef9d82",
+					"id": "1c5ac5e8-86ee-4d68-8c04-910a83f73e94",
 					"name": "GetEnablementConfiguration response",
 					"originalRequest": {
 						"method": "POST",
@@ -6505,13 +6257,10 @@
 							}
 						},
 						"url": {
-							"raw": "http://172.25.20.61/AutodeskDM/Services/v26/ItemService.svc",
+							"raw": "http://{{ServerIP}}/AutodeskDM/Services/v26/ItemService.svc",
 							"protocol": "http",
 							"host": [
-								"172",
-								"25",
-								"20",
-								"61"
+								"{{ServerIP}}"
 							],
 							"path": [
 								"AutodeskDM",
@@ -6538,7 +6287,7 @@
 		},
 		{
 			"name": "SetEnablementConfiguration",
-			"id": "c7addae2-325a-452f-abf5-3685a81d3849",
+			"id": "b2109472-25b3-4001-9c33-2e50193f3983",
 			"request": {
 				"method": "POST",
 				"header": [
@@ -6575,7 +6324,7 @@
 			},
 			"response": [
 				{
-					"id": "40106538-394d-4212-80b6-af338f8c7b4f",
+					"id": "3fe61064-c241-4c08-a1aa-9b1ac40635e5",
 					"name": "SetEnablementConfiguration response",
 					"originalRequest": {
 						"method": "POST",
@@ -6599,13 +6348,10 @@
 							}
 						},
 						"url": {
-							"raw": "http://172.25.20.61/AutodeskDM/Services/v26/ItemService.svc",
+							"raw": "http://{{ServerIP}}/AutodeskDM/Services/v26/ItemService.svc",
 							"protocol": "http",
 							"host": [
-								"172",
-								"25",
-								"20",
-								"61"
+								"{{ServerIP}}"
 							],
 							"path": [
 								"AutodeskDM",
@@ -6632,7 +6378,7 @@
 		},
 		{
 			"name": "UpdateRevisionDefinitionAndNumbers",
-			"id": "88c31dd3-3293-4e28-8554-09145fce72ce",
+			"id": "cd676055-1cb8-48aa-b930-e23cba963638",
 			"request": {
 				"method": "POST",
 				"header": [
@@ -6669,7 +6415,7 @@
 			},
 			"response": [
 				{
-					"id": "7e60a67a-d891-49e5-abba-401d73282201",
+					"id": "7666dc77-15be-40a9-9f52-ddc88c10615e",
 					"name": "UpdateRevisionDefinitionAndNumbers response",
 					"originalRequest": {
 						"method": "POST",
@@ -6693,13 +6439,10 @@
 							}
 						},
 						"url": {
-							"raw": "http://172.25.20.61/AutodeskDM/Services/v26/ItemService.svc",
+							"raw": "http://{{ServerIP}}/AutodeskDM/Services/v26/ItemService.svc",
 							"protocol": "http",
 							"host": [
-								"172",
-								"25",
-								"20",
-								"61"
+								"{{ServerIP}}"
 							],
 							"path": [
 								"AutodeskDM",
@@ -6720,13 +6463,13 @@
 					],
 					"cookie": [],
 					"responseTime": null,
-					"body": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<soap:Envelope xmlns:soap=\"http://schemas.xmlsoap.org/soap/envelope/\">\n\t<soap:Body>\n\t\t<UpdateRevisionDefinitionAndNumbersResponse xmlns=\"http://AutodeskDM/Services/Item/1/7/2020/\">\n\t\t\t<UpdateRevisionDefinitionAndNumbersResult>\n\t\t\t\t<Item RevId=\"100\" RevNum=\"string\" LastModUserName=\"string\" LastModUserId=\"100\" LastModDate=\"2022-01-20T20:35:36.791Z\" MasterId=\"100\" ItemNum=\"string\" Title=\"string\" Detail=\"string\" Id=\"100\" VerNum=\"100\" Comm=\"string\" Units=\"string\" LfCycStateId=\"100\" UnitId=\"100\" NumSchmId=\"100\" CadBOMStruct=\"Normal\" ControlledByChangeOrder=\"true\" MaxCommittedId=\"100\" IsCloaked=\"true\" Locked=\"true\">\n\t\t\t\t\t<Cat CatId=\"100\" CatName=\"string\"/>\n\t\t\t\t\t<LfCyc LfCycStateId=\"100\" LfCycDefId=\"100\" Consume=\"true\" Obsolete=\"true\"/>\n\t\t\t\t</Item>\n\t\t\t</UpdateRevisionDefinitionAndNumbersResult>\n\t\t</UpdateRevisionDefinitionAndNumbersResponse>\n\t</soap:Body>\n</soap:Envelope>\n"
+					"body": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<soap:Envelope xmlns:soap=\"http://schemas.xmlsoap.org/soap/envelope/\">\n\t<soap:Body>\n\t\t<UpdateRevisionDefinitionAndNumbersResponse xmlns=\"http://AutodeskDM/Services/Item/1/7/2020/\">\n\t\t\t<UpdateRevisionDefinitionAndNumbersResult>\n\t\t\t\t<Item RevId=\"100\" RevNum=\"string\" LastModUserName=\"string\" LastModUserId=\"100\" LastModDate=\"2023-02-09T19:11:46.900Z\" MasterId=\"100\" ItemNum=\"string\" Title=\"string\" Detail=\"string\" Id=\"100\" VerNum=\"100\" Comm=\"string\" Units=\"string\" LfCycStateId=\"100\" UnitId=\"100\" NumSchmId=\"100\" CadBOMStruct=\"Normal\" ControlledByChangeOrder=\"true\" MaxCommittedId=\"100\" IsCloaked=\"true\" Locked=\"true\">\n\t\t\t\t\t<Cat CatId=\"100\" CatName=\"string\"/>\n\t\t\t\t\t<LfCyc LfCycStateId=\"100\" LfCycDefId=\"100\" Consume=\"true\" Obsolete=\"true\"/>\n\t\t\t\t</Item>\n\t\t\t</UpdateRevisionDefinitionAndNumbersResult>\n\t\t</UpdateRevisionDefinitionAndNumbersResponse>\n\t</soap:Body>\n</soap:Envelope>\n"
 				}
 			]
 		},
 		{
 			"name": "GetItemByItemNumberAndRevisionNumber",
-			"id": "9edecf78-b83f-48b3-bf44-f9b586b176a4",
+			"id": "8247d26f-dd6d-4183-83a5-9a48293315ca",
 			"request": {
 				"method": "POST",
 				"header": [
@@ -6763,7 +6506,7 @@
 			},
 			"response": [
 				{
-					"id": "69fce481-5ec8-40af-94ac-73530429c9b7",
+					"id": "ead101e0-af42-4a52-8182-bcb46955e24f",
 					"name": "GetItemByItemNumberAndRevisionNumber response",
 					"originalRequest": {
 						"method": "POST",
@@ -6787,13 +6530,10 @@
 							}
 						},
 						"url": {
-							"raw": "http://172.25.20.61/AutodeskDM/Services/v26/ItemService.svc",
+							"raw": "http://{{ServerIP}}/AutodeskDM/Services/v26/ItemService.svc",
 							"protocol": "http",
 							"host": [
-								"172",
-								"25",
-								"20",
-								"61"
+								"{{ServerIP}}"
 							],
 							"path": [
 								"AutodeskDM",
@@ -6814,13 +6554,13 @@
 					],
 					"cookie": [],
 					"responseTime": null,
-					"body": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<soap:Envelope xmlns:soap=\"http://schemas.xmlsoap.org/soap/envelope/\">\n\t<soap:Body>\n\t\t<GetItemByItemNumberAndRevisionNumberResponse xmlns=\"http://AutodeskDM/Services/Item/1/7/2020/\">\n\t\t\t<GetItemByItemNumberAndRevisionNumberResult RevId=\"100\" RevNum=\"string\" LastModUserName=\"string\" LastModUserId=\"100\" LastModDate=\"2022-01-20T20:35:36.792Z\" MasterId=\"100\" ItemNum=\"string\" Title=\"string\" Detail=\"string\" Id=\"100\" VerNum=\"100\" Comm=\"string\" Units=\"string\" LfCycStateId=\"100\" UnitId=\"100\" NumSchmId=\"100\" CadBOMStruct=\"Normal\" ControlledByChangeOrder=\"true\" MaxCommittedId=\"100\" IsCloaked=\"true\" Locked=\"true\">\n\t\t\t\t<Cat CatId=\"100\" CatName=\"string\"/>\n\t\t\t\t<LfCyc LfCycStateId=\"100\" LfCycDefId=\"100\" Consume=\"true\" Obsolete=\"true\"/>\n\t\t\t</GetItemByItemNumberAndRevisionNumberResult>\n\t\t</GetItemByItemNumberAndRevisionNumberResponse>\n\t</soap:Body>\n</soap:Envelope>\n"
+					"body": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<soap:Envelope xmlns:soap=\"http://schemas.xmlsoap.org/soap/envelope/\">\n\t<soap:Body>\n\t\t<GetItemByItemNumberAndRevisionNumberResponse xmlns=\"http://AutodeskDM/Services/Item/1/7/2020/\">\n\t\t\t<GetItemByItemNumberAndRevisionNumberResult RevId=\"100\" RevNum=\"string\" LastModUserName=\"string\" LastModUserId=\"100\" LastModDate=\"2023-02-09T19:11:46.900Z\" MasterId=\"100\" ItemNum=\"string\" Title=\"string\" Detail=\"string\" Id=\"100\" VerNum=\"100\" Comm=\"string\" Units=\"string\" LfCycStateId=\"100\" UnitId=\"100\" NumSchmId=\"100\" CadBOMStruct=\"Normal\" ControlledByChangeOrder=\"true\" MaxCommittedId=\"100\" IsCloaked=\"true\" Locked=\"true\">\n\t\t\t\t<Cat CatId=\"100\" CatName=\"string\"/>\n\t\t\t\t<LfCyc LfCycStateId=\"100\" LfCycDefId=\"100\" Consume=\"true\" Obsolete=\"true\"/>\n\t\t\t</GetItemByItemNumberAndRevisionNumberResult>\n\t\t</GetItemByItemNumberAndRevisionNumberResponse>\n\t</soap:Body>\n</soap:Envelope>\n"
 				}
 			]
 		},
 		{
 			"name": "UpdateItemPropertyDefinitions",
-			"id": "fd3995e4-d6a5-4aab-ab25-b047ed01a9c3",
+			"id": "e520c6b6-3392-43e2-96c4-fbc9041c74dd",
 			"request": {
 				"method": "POST",
 				"header": [
@@ -6857,7 +6597,7 @@
 			},
 			"response": [
 				{
-					"id": "b20caba1-3078-4d2e-b793-eaf93f71f975",
+					"id": "8f939a7a-e61b-49ed-a794-db5ec0bbfe3d",
 					"name": "UpdateItemPropertyDefinitions response",
 					"originalRequest": {
 						"method": "POST",
@@ -6881,13 +6621,10 @@
 							}
 						},
 						"url": {
-							"raw": "http://172.25.20.61/AutodeskDM/Services/v26/ItemService.svc",
+							"raw": "http://{{ServerIP}}/AutodeskDM/Services/v26/ItemService.svc",
 							"protocol": "http",
 							"host": [
-								"172",
-								"25",
-								"20",
-								"61"
+								"{{ServerIP}}"
 							],
 							"path": [
 								"AutodeskDM",
@@ -6908,13 +6645,13 @@
 					],
 					"cookie": [],
 					"responseTime": null,
-					"body": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<soap:Envelope xmlns:soap=\"http://schemas.xmlsoap.org/soap/envelope/\">\n\t<soap:Body>\n\t\t<UpdateItemPropertyDefinitionsResponse xmlns=\"http://AutodeskDM/Services/Item/1/7/2020/\">\n\t\t\t<UpdateItemPropertyDefinitionsResult>\n\t\t\t\t<Item RevId=\"100\" RevNum=\"string\" LastModUserName=\"string\" LastModUserId=\"100\" LastModDate=\"2022-01-20T20:35:36.793Z\" MasterId=\"100\" ItemNum=\"string\" Title=\"string\" Detail=\"string\" Id=\"100\" VerNum=\"100\" Comm=\"string\" Units=\"string\" LfCycStateId=\"100\" UnitId=\"100\" NumSchmId=\"100\" CadBOMStruct=\"Normal\" ControlledByChangeOrder=\"true\" MaxCommittedId=\"100\" IsCloaked=\"true\" Locked=\"true\">\n\t\t\t\t\t<Cat CatId=\"100\" CatName=\"string\"/>\n\t\t\t\t\t<LfCyc LfCycStateId=\"100\" LfCycDefId=\"100\" Consume=\"true\" Obsolete=\"true\"/>\n\t\t\t\t</Item>\n\t\t\t</UpdateItemPropertyDefinitionsResult>\n\t\t</UpdateItemPropertyDefinitionsResponse>\n\t</soap:Body>\n</soap:Envelope>\n"
+					"body": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<soap:Envelope xmlns:soap=\"http://schemas.xmlsoap.org/soap/envelope/\">\n\t<soap:Body>\n\t\t<UpdateItemPropertyDefinitionsResponse xmlns=\"http://AutodeskDM/Services/Item/1/7/2020/\">\n\t\t\t<UpdateItemPropertyDefinitionsResult>\n\t\t\t\t<Item RevId=\"100\" RevNum=\"string\" LastModUserName=\"string\" LastModUserId=\"100\" LastModDate=\"2023-02-09T19:11:46.900Z\" MasterId=\"100\" ItemNum=\"string\" Title=\"string\" Detail=\"string\" Id=\"100\" VerNum=\"100\" Comm=\"string\" Units=\"string\" LfCycStateId=\"100\" UnitId=\"100\" NumSchmId=\"100\" CadBOMStruct=\"Normal\" ControlledByChangeOrder=\"true\" MaxCommittedId=\"100\" IsCloaked=\"true\" Locked=\"true\">\n\t\t\t\t\t<Cat CatId=\"100\" CatName=\"string\"/>\n\t\t\t\t\t<LfCyc LfCycStateId=\"100\" LfCycDefId=\"100\" Consume=\"true\" Obsolete=\"true\"/>\n\t\t\t\t</Item>\n\t\t\t</UpdateItemPropertyDefinitionsResult>\n\t\t</UpdateItemPropertyDefinitionsResponse>\n\t</soap:Body>\n</soap:Envelope>\n"
 				}
 			]
 		},
 		{
 			"name": "UpdateItemProperties",
-			"id": "75ef6e78-efe3-4753-8c92-7e020d78e79b",
+			"id": "3cfca387-4f82-4fd0-8e22-ed7988315f6b",
 			"request": {
 				"method": "POST",
 				"header": [
@@ -6951,7 +6688,7 @@
 			},
 			"response": [
 				{
-					"id": "2137574a-f896-4b90-ad2e-b8c3c6e50670",
+					"id": "a0c218e3-41f6-4247-b3ca-26e9ef4cf0fe",
 					"name": "UpdateItemProperties response",
 					"originalRequest": {
 						"method": "POST",
@@ -6975,13 +6712,10 @@
 							}
 						},
 						"url": {
-							"raw": "http://172.25.20.61/AutodeskDM/Services/v26/ItemService.svc",
+							"raw": "http://{{ServerIP}}/AutodeskDM/Services/v26/ItemService.svc",
 							"protocol": "http",
 							"host": [
-								"172",
-								"25",
-								"20",
-								"61"
+								"{{ServerIP}}"
 							],
 							"path": [
 								"AutodeskDM",
@@ -7002,13 +6736,13 @@
 					],
 					"cookie": [],
 					"responseTime": null,
-					"body": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<soap:Envelope xmlns:soap=\"http://schemas.xmlsoap.org/soap/envelope/\">\n\t<soap:Body>\n\t\t<UpdateItemPropertiesResponse xmlns=\"http://AutodeskDM/Services/Item/1/7/2020/\">\n\t\t\t<UpdateItemPropertiesResult>\n\t\t\t\t<Item RevId=\"100\" RevNum=\"string\" LastModUserName=\"string\" LastModUserId=\"100\" LastModDate=\"2022-01-20T20:35:36.794Z\" MasterId=\"100\" ItemNum=\"string\" Title=\"string\" Detail=\"string\" Id=\"100\" VerNum=\"100\" Comm=\"string\" Units=\"string\" LfCycStateId=\"100\" UnitId=\"100\" NumSchmId=\"100\" CadBOMStruct=\"Normal\" ControlledByChangeOrder=\"true\" MaxCommittedId=\"100\" IsCloaked=\"true\" Locked=\"true\">\n\t\t\t\t\t<Cat CatId=\"100\" CatName=\"string\"/>\n\t\t\t\t\t<LfCyc LfCycStateId=\"100\" LfCycDefId=\"100\" Consume=\"true\" Obsolete=\"true\"/>\n\t\t\t\t</Item>\n\t\t\t</UpdateItemPropertiesResult>\n\t\t</UpdateItemPropertiesResponse>\n\t</soap:Body>\n</soap:Envelope>\n"
+					"body": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<soap:Envelope xmlns:soap=\"http://schemas.xmlsoap.org/soap/envelope/\">\n\t<soap:Body>\n\t\t<UpdateItemPropertiesResponse xmlns=\"http://AutodeskDM/Services/Item/1/7/2020/\">\n\t\t\t<UpdateItemPropertiesResult>\n\t\t\t\t<Item RevId=\"100\" RevNum=\"string\" LastModUserName=\"string\" LastModUserId=\"100\" LastModDate=\"2023-02-09T19:11:46.901Z\" MasterId=\"100\" ItemNum=\"string\" Title=\"string\" Detail=\"string\" Id=\"100\" VerNum=\"100\" Comm=\"string\" Units=\"string\" LfCycStateId=\"100\" UnitId=\"100\" NumSchmId=\"100\" CadBOMStruct=\"Normal\" ControlledByChangeOrder=\"true\" MaxCommittedId=\"100\" IsCloaked=\"true\" Locked=\"true\">\n\t\t\t\t\t<Cat CatId=\"100\" CatName=\"string\"/>\n\t\t\t\t\t<LfCyc LfCycStateId=\"100\" LfCycDefId=\"100\" Consume=\"true\" Obsolete=\"true\"/>\n\t\t\t\t</Item>\n\t\t\t</UpdateItemPropertiesResult>\n\t\t</UpdateItemPropertiesResponse>\n\t</soap:Body>\n</soap:Envelope>\n"
 				}
 			]
 		},
 		{
 			"name": "GetItemAssignmentBehavior",
-			"id": "d8f5a9a2-be69-4481-a681-fa2f170ff440",
+			"id": "4e8fa179-d025-4dc6-82bd-65f6ca9d9a2d",
 			"request": {
 				"method": "POST",
 				"header": [
@@ -7045,7 +6779,7 @@
 			},
 			"response": [
 				{
-					"id": "34d72892-efff-4f08-bb96-9d2669489fe2",
+					"id": "f2526ea5-833f-45c3-bf94-2e6c84932d9f",
 					"name": "GetItemAssignmentBehavior response",
 					"originalRequest": {
 						"method": "POST",
@@ -7069,13 +6803,10 @@
 							}
 						},
 						"url": {
-							"raw": "http://172.25.20.61/AutodeskDM/Services/v26/ItemService.svc",
+							"raw": "http://{{ServerIP}}/AutodeskDM/Services/v26/ItemService.svc",
 							"protocol": "http",
 							"host": [
-								"172",
-								"25",
-								"20",
-								"61"
+								"{{ServerIP}}"
 							],
 							"path": [
 								"AutodeskDM",
@@ -7102,7 +6833,7 @@
 		},
 		{
 			"name": "SetItemAssignmentBehavior",
-			"id": "ec57812c-1fbd-45d0-a050-3543adbafb3d",
+			"id": "0166ffd1-025d-4954-b874-dc091f338561",
 			"request": {
 				"method": "POST",
 				"header": [
@@ -7139,7 +6870,7 @@
 			},
 			"response": [
 				{
-					"id": "1cf4e348-d5b5-4b28-b039-2c8cda254408",
+					"id": "6b9cf5e2-2c69-4dee-be36-b389fb01c1e6",
 					"name": "SetItemAssignmentBehavior response",
 					"originalRequest": {
 						"method": "POST",
@@ -7163,13 +6894,10 @@
 							}
 						},
 						"url": {
-							"raw": "http://172.25.20.61/AutodeskDM/Services/v26/ItemService.svc",
+							"raw": "http://{{ServerIP}}/AutodeskDM/Services/v26/ItemService.svc",
 							"protocol": "http",
 							"host": [
-								"172",
-								"25",
-								"20",
-								"61"
+								"{{ServerIP}}"
 							],
 							"path": [
 								"AutodeskDM",
@@ -7196,7 +6924,7 @@
 		},
 		{
 			"name": "GetItemAssignmentRestrictions",
-			"id": "e38aea20-eef0-4955-96f6-6bd54916241a",
+			"id": "6b1f2559-bee0-478f-9fdb-3d796f25fd4b",
 			"request": {
 				"method": "POST",
 				"header": [
@@ -7233,7 +6961,7 @@
 			},
 			"response": [
 				{
-					"id": "e4c8fc09-0a63-4435-8569-741f5568d971",
+					"id": "99044126-02c7-4ea0-a3b2-05b09ac52eca",
 					"name": "GetItemAssignmentRestrictions response",
 					"originalRequest": {
 						"method": "POST",
@@ -7257,13 +6985,10 @@
 							}
 						},
 						"url": {
-							"raw": "http://172.25.20.61/AutodeskDM/Services/v26/ItemService.svc",
+							"raw": "http://{{ServerIP}}/AutodeskDM/Services/v26/ItemService.svc",
 							"protocol": "http",
 							"host": [
-								"172",
-								"25",
-								"20",
-								"61"
+								"{{ServerIP}}"
 							],
 							"path": [
 								"AutodeskDM",
@@ -7290,7 +7015,7 @@
 		},
 		{
 			"name": "SetItemAssignmentRestrictions",
-			"id": "c2ee7701-ba49-4fca-97f5-c3757f771e5c",
+			"id": "cc24cc14-4f80-4572-8d18-0bd0c8862d3d",
 			"request": {
 				"method": "POST",
 				"header": [
@@ -7327,7 +7052,7 @@
 			},
 			"response": [
 				{
-					"id": "d41d1463-a9a3-4a3d-aa1f-52b1cf18d1a0",
+					"id": "16e13761-ab66-477d-b31b-39f603630473",
 					"name": "SetItemAssignmentRestrictions response",
 					"originalRequest": {
 						"method": "POST",
@@ -7351,13 +7076,10 @@
 							}
 						},
 						"url": {
-							"raw": "http://172.25.20.61/AutodeskDM/Services/v26/ItemService.svc",
+							"raw": "http://{{ServerIP}}/AutodeskDM/Services/v26/ItemService.svc",
 							"protocol": "http",
 							"host": [
-								"172",
-								"25",
-								"20",
-								"61"
+								"{{ServerIP}}"
 							],
 							"path": [
 								"AutodeskDM",
@@ -7384,7 +7106,7 @@
 		},
 		{
 			"name": "GetItemAutounlinkEnabled",
-			"id": "dbfd5dfa-1cfe-4010-bd39-ea7ea9d48f7c",
+			"id": "a6e5e936-b518-4606-873f-38eb826e778f",
 			"request": {
 				"method": "POST",
 				"header": [
@@ -7421,7 +7143,7 @@
 			},
 			"response": [
 				{
-					"id": "9fc8a8ac-93ed-497f-836a-7b845a831d20",
+					"id": "14fb94d5-c53b-45d8-b690-ae5a6f311a58",
 					"name": "GetItemAutounlinkEnabled response",
 					"originalRequest": {
 						"method": "POST",
@@ -7445,13 +7167,10 @@
 							}
 						},
 						"url": {
-							"raw": "http://172.25.20.61/AutodeskDM/Services/v26/ItemService.svc",
+							"raw": "http://{{ServerIP}}/AutodeskDM/Services/v26/ItemService.svc",
 							"protocol": "http",
 							"host": [
-								"172",
-								"25",
-								"20",
-								"61"
+								"{{ServerIP}}"
 							],
 							"path": [
 								"AutodeskDM",
@@ -7478,7 +7197,7 @@
 		},
 		{
 			"name": "SetItemAutounlinkEnabled",
-			"id": "52af4a8e-c8e6-402b-9d91-69be6e301c4d",
+			"id": "9f67da2a-1945-4a54-8632-cd3b4300ad84",
 			"request": {
 				"method": "POST",
 				"header": [
@@ -7515,7 +7234,7 @@
 			},
 			"response": [
 				{
-					"id": "80c3471b-f6e6-491c-a536-4309faeb4a10",
+					"id": "8102f398-185b-49d5-aaf8-461c07648018",
 					"name": "SetItemAutounlinkEnabled response",
 					"originalRequest": {
 						"method": "POST",
@@ -7539,13 +7258,10 @@
 							}
 						},
 						"url": {
-							"raw": "http://172.25.20.61/AutodeskDM/Services/v26/ItemService.svc",
+							"raw": "http://{{ServerIP}}/AutodeskDM/Services/v26/ItemService.svc",
 							"protocol": "http",
 							"host": [
-								"172",
-								"25",
-								"20",
-								"61"
+								"{{ServerIP}}"
 							],
 							"path": [
 								"AutodeskDM",
@@ -7572,7 +7288,7 @@
 		},
 		{
 			"name": "GetItemAutogroupBehavior",
-			"id": "c1261bf4-3f92-4fe6-ba2f-439ae235bec7",
+			"id": "2f955ff9-b08f-42c0-be15-6f9a544e1b44",
 			"request": {
 				"method": "POST",
 				"header": [
@@ -7609,7 +7325,7 @@
 			},
 			"response": [
 				{
-					"id": "24c18455-be9d-41fb-bea4-b03b8912036f",
+					"id": "50c7b904-7dd3-4428-bad5-e7305d64c7dc",
 					"name": "GetItemAutogroupBehavior response",
 					"originalRequest": {
 						"method": "POST",
@@ -7633,13 +7349,10 @@
 							}
 						},
 						"url": {
-							"raw": "http://172.25.20.61/AutodeskDM/Services/v26/ItemService.svc",
+							"raw": "http://{{ServerIP}}/AutodeskDM/Services/v26/ItemService.svc",
 							"protocol": "http",
 							"host": [
-								"172",
-								"25",
-								"20",
-								"61"
+								"{{ServerIP}}"
 							],
 							"path": [
 								"AutodeskDM",
@@ -7666,7 +7379,7 @@
 		},
 		{
 			"name": "SetItemAutogroupBehavior",
-			"id": "eae9c29b-8caa-4af4-9c54-375a5b66ff89",
+			"id": "4fcf3e00-5880-4d03-b251-81f27641061f",
 			"request": {
 				"method": "POST",
 				"header": [
@@ -7703,7 +7416,7 @@
 			},
 			"response": [
 				{
-					"id": "603ab94a-dc6b-4c10-abe7-5cf3d328a5b5",
+					"id": "2f12bc87-d80e-4a93-a96e-60bfcee57a99",
 					"name": "SetItemAutogroupBehavior response",
 					"originalRequest": {
 						"method": "POST",
@@ -7727,13 +7440,10 @@
 							}
 						},
 						"url": {
-							"raw": "http://172.25.20.61/AutodeskDM/Services/v26/ItemService.svc",
+							"raw": "http://{{ServerIP}}/AutodeskDM/Services/v26/ItemService.svc",
 							"protocol": "http",
 							"host": [
-								"172",
-								"25",
-								"20",
-								"61"
+								"{{ServerIP}}"
 							],
 							"path": [
 								"AutodeskDM",
@@ -7760,7 +7470,7 @@
 		},
 		{
 			"name": "GetSubComponentLinkTypeForAssignItem",
-			"id": "54b22a94-67a4-4e21-b8e3-8bd7fcffce92",
+			"id": "fb727707-c674-4b4e-b65f-6927da9b7ef2",
 			"request": {
 				"method": "POST",
 				"header": [
@@ -7797,7 +7507,7 @@
 			},
 			"response": [
 				{
-					"id": "311886e3-b30c-41b1-b0db-c83413df24ed",
+					"id": "0db39739-e18a-42b4-ac78-bbc4223128b6",
 					"name": "GetSubComponentLinkTypeForAssignItem response",
 					"originalRequest": {
 						"method": "POST",
@@ -7821,13 +7531,10 @@
 							}
 						},
 						"url": {
-							"raw": "http://172.25.20.61/AutodeskDM/Services/v26/ItemService.svc",
+							"raw": "http://{{ServerIP}}/AutodeskDM/Services/v26/ItemService.svc",
 							"protocol": "http",
 							"host": [
-								"172",
-								"25",
-								"20",
-								"61"
+								"{{ServerIP}}"
 							],
 							"path": [
 								"AutodeskDM",
@@ -7854,7 +7561,7 @@
 		},
 		{
 			"name": "SetSubComponentLinkTypeForAssignItem",
-			"id": "898efe05-367b-449b-82a7-8b07b3b15671",
+			"id": "6613b7ab-e55a-4ada-af4d-fdcb8bb7d22c",
 			"request": {
 				"method": "POST",
 				"header": [
@@ -7891,7 +7598,7 @@
 			},
 			"response": [
 				{
-					"id": "838dd371-e1c5-4d5f-b36d-9ec3351e7725",
+					"id": "dcb53da2-5add-4ed9-9157-13dafded4f63",
 					"name": "SetSubComponentLinkTypeForAssignItem response",
 					"originalRequest": {
 						"method": "POST",
@@ -7915,13 +7622,10 @@
 							}
 						},
 						"url": {
-							"raw": "http://172.25.20.61/AutodeskDM/Services/v26/ItemService.svc",
+							"raw": "http://{{ServerIP}}/AutodeskDM/Services/v26/ItemService.svc",
 							"protocol": "http",
 							"host": [
-								"172",
-								"25",
-								"20",
-								"61"
+								"{{ServerIP}}"
 							],
 							"path": [
 								"AutodeskDM",
@@ -7948,7 +7652,7 @@
 		},
 		{
 			"name": "GetComponentProperties",
-			"id": "7c6ae019-e4cb-4069-baa3-0dcd31008bbf",
+			"id": "0821c182-8170-4dba-9a57-979e01579f65",
 			"request": {
 				"method": "POST",
 				"header": [
@@ -7985,7 +7689,7 @@
 			},
 			"response": [
 				{
-					"id": "2e3474c0-ba4b-4c18-a81b-e1027ca73fe9",
+					"id": "8fb837fb-0808-48e1-8b6f-4ccae3fbc15b",
 					"name": "GetComponentProperties response",
 					"originalRequest": {
 						"method": "POST",
@@ -8009,13 +7713,10 @@
 							}
 						},
 						"url": {
-							"raw": "http://172.25.20.61/AutodeskDM/Services/v26/ItemService.svc",
+							"raw": "http://{{ServerIP}}/AutodeskDM/Services/v26/ItemService.svc",
 							"protocol": "http",
 							"host": [
-								"172",
-								"25",
-								"20",
-								"61"
+								"{{ServerIP}}"
 							],
 							"path": [
 								"AutodeskDM",
@@ -8042,7 +7743,7 @@
 		},
 		{
 			"name": "UpdateItemLifeCycleStates",
-			"id": "6a7668ec-d99c-4627-9cc0-002e53c5190f",
+			"id": "b0930ceb-07fe-41f6-b4a3-39e519910070",
 			"request": {
 				"method": "POST",
 				"header": [
@@ -8079,7 +7780,7 @@
 			},
 			"response": [
 				{
-					"id": "24717379-3ea2-4ca5-a83a-6a9748e6ec31",
+					"id": "da809e3b-0cf2-4c4b-aaf0-98c85bf0a134",
 					"name": "UpdateItemLifeCycleStates response",
 					"originalRequest": {
 						"method": "POST",
@@ -8103,13 +7804,10 @@
 							}
 						},
 						"url": {
-							"raw": "http://172.25.20.61/AutodeskDM/Services/v26/ItemService.svc",
+							"raw": "http://{{ServerIP}}/AutodeskDM/Services/v26/ItemService.svc",
 							"protocol": "http",
 							"host": [
-								"172",
-								"25",
-								"20",
-								"61"
+								"{{ServerIP}}"
 							],
 							"path": [
 								"AutodeskDM",
@@ -8130,13 +7828,13 @@
 					],
 					"cookie": [],
 					"responseTime": null,
-					"body": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<soap:Envelope xmlns:soap=\"http://schemas.xmlsoap.org/soap/envelope/\">\n\t<soap:Body>\n\t\t<UpdateItemLifeCycleStatesResponse xmlns=\"http://AutodeskDM/Services/Item/1/7/2020/\">\n\t\t\t<UpdateItemLifeCycleStatesResult>\n\t\t\t\t<Item RevId=\"100\" RevNum=\"string\" LastModUserName=\"string\" LastModUserId=\"100\" LastModDate=\"2022-01-20T20:35:36.803Z\" MasterId=\"100\" ItemNum=\"string\" Title=\"string\" Detail=\"string\" Id=\"100\" VerNum=\"100\" Comm=\"string\" Units=\"string\" LfCycStateId=\"100\" UnitId=\"100\" NumSchmId=\"100\" CadBOMStruct=\"Normal\" ControlledByChangeOrder=\"true\" MaxCommittedId=\"100\" IsCloaked=\"true\" Locked=\"true\">\n\t\t\t\t\t<Cat CatId=\"100\" CatName=\"string\"/>\n\t\t\t\t\t<LfCyc LfCycStateId=\"100\" LfCycDefId=\"100\" Consume=\"true\" Obsolete=\"true\"/>\n\t\t\t\t</Item>\n\t\t\t</UpdateItemLifeCycleStatesResult>\n\t\t</UpdateItemLifeCycleStatesResponse>\n\t</soap:Body>\n</soap:Envelope>\n"
+					"body": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<soap:Envelope xmlns:soap=\"http://schemas.xmlsoap.org/soap/envelope/\">\n\t<soap:Body>\n\t\t<UpdateItemLifeCycleStatesResponse xmlns=\"http://AutodeskDM/Services/Item/1/7/2020/\">\n\t\t\t<UpdateItemLifeCycleStatesResult>\n\t\t\t\t<Item RevId=\"100\" RevNum=\"string\" LastModUserName=\"string\" LastModUserId=\"100\" LastModDate=\"2023-02-09T19:11:46.904Z\" MasterId=\"100\" ItemNum=\"string\" Title=\"string\" Detail=\"string\" Id=\"100\" VerNum=\"100\" Comm=\"string\" Units=\"string\" LfCycStateId=\"100\" UnitId=\"100\" NumSchmId=\"100\" CadBOMStruct=\"Normal\" ControlledByChangeOrder=\"true\" MaxCommittedId=\"100\" IsCloaked=\"true\" Locked=\"true\">\n\t\t\t\t\t<Cat CatId=\"100\" CatName=\"string\"/>\n\t\t\t\t\t<LfCyc LfCycStateId=\"100\" LfCycDefId=\"100\" Consume=\"true\" Obsolete=\"true\"/>\n\t\t\t\t</Item>\n\t\t\t</UpdateItemLifeCycleStatesResult>\n\t\t</UpdateItemLifeCycleStatesResponse>\n\t</soap:Body>\n</soap:Envelope>\n"
 				}
 			]
 		},
 		{
 			"name": "UpdateItemLifeCycleDefinitions",
-			"id": "21eb8483-b94c-406a-8fe8-c7d788c95f5a",
+			"id": "183baaa3-c95c-4531-a19e-0c2a40924cea",
 			"request": {
 				"method": "POST",
 				"header": [
@@ -8173,7 +7871,7 @@
 			},
 			"response": [
 				{
-					"id": "6a2c719b-2a39-43f5-bcf0-71d3547aaaaa",
+					"id": "2f386bd0-66f6-4121-8d4a-932f868e7587",
 					"name": "UpdateItemLifeCycleDefinitions response",
 					"originalRequest": {
 						"method": "POST",
@@ -8197,13 +7895,10 @@
 							}
 						},
 						"url": {
-							"raw": "http://172.25.20.61/AutodeskDM/Services/v26/ItemService.svc",
+							"raw": "http://{{ServerIP}}/AutodeskDM/Services/v26/ItemService.svc",
 							"protocol": "http",
 							"host": [
-								"172",
-								"25",
-								"20",
-								"61"
+								"{{ServerIP}}"
 							],
 							"path": [
 								"AutodeskDM",
@@ -8224,13 +7919,13 @@
 					],
 					"cookie": [],
 					"responseTime": null,
-					"body": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<soap:Envelope xmlns:soap=\"http://schemas.xmlsoap.org/soap/envelope/\">\n\t<soap:Body>\n\t\t<UpdateItemLifeCycleDefinitionsResponse xmlns=\"http://AutodeskDM/Services/Item/1/7/2020/\">\n\t\t\t<UpdateItemLifeCycleDefinitionsResult>\n\t\t\t\t<Item RevId=\"100\" RevNum=\"string\" LastModUserName=\"string\" LastModUserId=\"100\" LastModDate=\"2022-01-20T20:35:36.804Z\" MasterId=\"100\" ItemNum=\"string\" Title=\"string\" Detail=\"string\" Id=\"100\" VerNum=\"100\" Comm=\"string\" Units=\"string\" LfCycStateId=\"100\" UnitId=\"100\" NumSchmId=\"100\" CadBOMStruct=\"Normal\" ControlledByChangeOrder=\"true\" MaxCommittedId=\"100\" IsCloaked=\"true\" Locked=\"true\">\n\t\t\t\t\t<Cat CatId=\"100\" CatName=\"string\"/>\n\t\t\t\t\t<LfCyc LfCycStateId=\"100\" LfCycDefId=\"100\" Consume=\"true\" Obsolete=\"true\"/>\n\t\t\t\t</Item>\n\t\t\t</UpdateItemLifeCycleDefinitionsResult>\n\t\t</UpdateItemLifeCycleDefinitionsResponse>\n\t</soap:Body>\n</soap:Envelope>\n"
+					"body": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<soap:Envelope xmlns:soap=\"http://schemas.xmlsoap.org/soap/envelope/\">\n\t<soap:Body>\n\t\t<UpdateItemLifeCycleDefinitionsResponse xmlns=\"http://AutodeskDM/Services/Item/1/7/2020/\">\n\t\t\t<UpdateItemLifeCycleDefinitionsResult>\n\t\t\t\t<Item RevId=\"100\" RevNum=\"string\" LastModUserName=\"string\" LastModUserId=\"100\" LastModDate=\"2023-02-09T19:11:46.904Z\" MasterId=\"100\" ItemNum=\"string\" Title=\"string\" Detail=\"string\" Id=\"100\" VerNum=\"100\" Comm=\"string\" Units=\"string\" LfCycStateId=\"100\" UnitId=\"100\" NumSchmId=\"100\" CadBOMStruct=\"Normal\" ControlledByChangeOrder=\"true\" MaxCommittedId=\"100\" IsCloaked=\"true\" Locked=\"true\">\n\t\t\t\t\t<Cat CatId=\"100\" CatName=\"string\"/>\n\t\t\t\t\t<LfCyc LfCycStateId=\"100\" LfCycDefId=\"100\" Consume=\"true\" Obsolete=\"true\"/>\n\t\t\t\t</Item>\n\t\t\t</UpdateItemLifeCycleDefinitionsResult>\n\t\t</UpdateItemLifeCycleDefinitionsResponse>\n\t</soap:Body>\n</soap:Envelope>\n"
 				}
 			]
 		},
 		{
 			"name": "UpdateItemCategories",
-			"id": "bc7b7450-41da-42fc-b9f4-3d517388ebb8",
+			"id": "21108212-3d6d-490a-a6f8-0af92aa28c82",
 			"request": {
 				"method": "POST",
 				"header": [
@@ -8267,7 +7962,7 @@
 			},
 			"response": [
 				{
-					"id": "c63e2602-65df-46e6-b509-cbdbcb1ef311",
+					"id": "7447c4b6-ed24-4ac4-8d0d-8688950a77dc",
 					"name": "UpdateItemCategories response",
 					"originalRequest": {
 						"method": "POST",
@@ -8291,13 +7986,10 @@
 							}
 						},
 						"url": {
-							"raw": "http://172.25.20.61/AutodeskDM/Services/v26/ItemService.svc",
+							"raw": "http://{{ServerIP}}/AutodeskDM/Services/v26/ItemService.svc",
 							"protocol": "http",
 							"host": [
-								"172",
-								"25",
-								"20",
-								"61"
+								"{{ServerIP}}"
 							],
 							"path": [
 								"AutodeskDM",
@@ -8318,36 +8010,14 @@
 					],
 					"cookie": [],
 					"responseTime": null,
-					"body": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<soap:Envelope xmlns:soap=\"http://schemas.xmlsoap.org/soap/envelope/\">\n\t<soap:Body>\n\t\t<UpdateItemCategoriesResponse xmlns=\"http://AutodeskDM/Services/Item/1/7/2020/\">\n\t\t\t<UpdateItemCategoriesResult>\n\t\t\t\t<Item RevId=\"100\" RevNum=\"string\" LastModUserName=\"string\" LastModUserId=\"100\" LastModDate=\"2022-01-20T20:35:36.804Z\" MasterId=\"100\" ItemNum=\"string\" Title=\"string\" Detail=\"string\" Id=\"100\" VerNum=\"100\" Comm=\"string\" Units=\"string\" LfCycStateId=\"100\" UnitId=\"100\" NumSchmId=\"100\" CadBOMStruct=\"Normal\" ControlledByChangeOrder=\"true\" MaxCommittedId=\"100\" IsCloaked=\"true\" Locked=\"true\">\n\t\t\t\t\t<Cat CatId=\"100\" CatName=\"string\"/>\n\t\t\t\t\t<LfCyc LfCycStateId=\"100\" LfCycDefId=\"100\" Consume=\"true\" Obsolete=\"true\"/>\n\t\t\t\t</Item>\n\t\t\t</UpdateItemCategoriesResult>\n\t\t</UpdateItemCategoriesResponse>\n\t</soap:Body>\n</soap:Envelope>\n"
+					"body": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<soap:Envelope xmlns:soap=\"http://schemas.xmlsoap.org/soap/envelope/\">\n\t<soap:Body>\n\t\t<UpdateItemCategoriesResponse xmlns=\"http://AutodeskDM/Services/Item/1/7/2020/\">\n\t\t\t<UpdateItemCategoriesResult>\n\t\t\t\t<Item RevId=\"100\" RevNum=\"string\" LastModUserName=\"string\" LastModUserId=\"100\" LastModDate=\"2023-02-09T19:11:46.904Z\" MasterId=\"100\" ItemNum=\"string\" Title=\"string\" Detail=\"string\" Id=\"100\" VerNum=\"100\" Comm=\"string\" Units=\"string\" LfCycStateId=\"100\" UnitId=\"100\" NumSchmId=\"100\" CadBOMStruct=\"Normal\" ControlledByChangeOrder=\"true\" MaxCommittedId=\"100\" IsCloaked=\"true\" Locked=\"true\">\n\t\t\t\t\t<Cat CatId=\"100\" CatName=\"string\"/>\n\t\t\t\t\t<LfCyc LfCycStateId=\"100\" LfCycDefId=\"100\" Consume=\"true\" Obsolete=\"true\"/>\n\t\t\t\t</Item>\n\t\t\t</UpdateItemCategoriesResult>\n\t\t</UpdateItemCategoriesResponse>\n\t</soap:Body>\n</soap:Envelope>\n"
 				}
 			]
 		}
 	],
-	"event": [
-		{
-			"listen": "prerequest",
-			"script": {
-				"id": "b542a190-9eec-4453-b351-97d4309773cf",
-				"type": "text/javascript",
-				"exec": [
-					""
-				]
-			}
-		},
-		{
-			"listen": "test",
-			"script": {
-				"id": "eede7b0d-b437-47cc-bd70-671aec38fb17",
-				"type": "text/javascript",
-				"exec": [
-					""
-				]
-			}
-		}
-	],
 	"variable": [
 		{
-			"id": "555f5493-b5c1-4445-a17f-184bdd3375f1",
+			"id": "1bfe355e-070f-4800-b853-6e6430b6c350",
 			"key": "ItemServiceSoapBaseUrl",
 			"value": "http://{{ServerIP}}",
 			"type": "any"

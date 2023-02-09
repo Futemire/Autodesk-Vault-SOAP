@@ -3938,7 +3938,7 @@
 	</wsdl:binding>
 	<wsdl:service name="ItemService">
 		<wsdl:port name="ItemServiceSoap" binding="tns:ItemServiceSoap">
-			<soap:address location="http://172.25.20.61/AutodeskDM/Services/v26/ItemService.svc"/>
+			<soap:address location="http://{{ServerIP}}/AutodeskDM/Services/v26/ItemService.svc"/>
 		</wsdl:port>
 	</wsdl:service>
 </wsdl:definitions>
